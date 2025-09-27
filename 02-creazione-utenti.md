@@ -34,6 +34,38 @@ sudo cp /home/admin/.ssh/authorized_keys /home/gisadmin/.ssh/
 sudo chown -R gisadmin:gisadmin /home/gisadmin/.ssh
 sudo chmod 600 /home/gisadmin/.ssh/authorized_keys
 ```
+Per completezza si riporta il contenuto del file `/etc/ssh/sshd_config` con le modifiche applicate:
+
+```conf
+# This is the sshd server system-wide configuration file.  See
+# sshd_config(5) for more information.
+
+# The strategy used for options in the default sshd_config shipped with
+# OpenSSH is to specify options with their default value where
+# possible, but leave them commented.  Uncommented options override the
+# default value.
+
+Include /etc/ssh/sshd_config.d/*.conf
+
+#Port 22
+#AddressFamily any
+#ListenAddress 0.0.0.0
+#ListenAddress ::
+
+# Authentication
+PubkeyAuthentication yes
+PasswordAuthentication no
+PermitEmptyPasswords no
+ChallengeResponseAuthentication no
+KbdInteractiveAuthentication no
+UsePAM no
+
+# Session
+ClientAliveInterval 120
+
+# permette solo a gisadmin di collegarsi tramite SSH
+AllowUsers gisadmin
+```
 
 ---
 
@@ -78,42 +110,6 @@ Dopo aver verificato l’accesso di `gisadmin`:
 sudo deluser --remove-home admin
 ```
 
----
-
-## 📄 Configurazione completa `sshd_config`
-
-Per completezza si riporta il contenuto del file `/etc/ssh/sshd_config` con le modifiche applicate:
-
-```conf
-# This is the sshd server system-wide configuration file.  See
-# sshd_config(5) for more information.
-
-# The strategy used for options in the default sshd_config shipped with
-# OpenSSH is to specify options with their default value where
-# possible, but leave them commented.  Uncommented options override the
-# default value.
-
-Include /etc/ssh/sshd_config.d/*.conf
-
-#Port 22
-#AddressFamily any
-#ListenAddress 0.0.0.0
-#ListenAddress ::
-
-# Authentication
-PubkeyAuthentication yes
-PasswordAuthentication no
-PermitEmptyPasswords no
-ChallengeResponseAuthentication no
-KbdInteractiveAuthentication no
-UsePAM no
-
-# Session
-ClientAliveInterval 120
-
-# permette solo a gisadmin di collegarsi tramite SSH
-AllowUsers gisadmin
-```
 
 ---
 
