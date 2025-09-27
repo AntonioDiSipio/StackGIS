@@ -6,33 +6,28 @@ Repository di configurazione e gestione della VPS utilizzata per il progetto **S
 
 ## 🛠️ Tecnologie
 
-<table align="center" style="border: none; border-collapse: collapse;">
-  <tr>
-    <td align="center" style="padding: 0 25px; border: none;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Horned_logo.svg/250px-Horned_logo.svg.png" height="70"/><br/>
-      <span style="font-size:12px;"><b>Debian</b></span>
-    </td>
-    <td align="center" style="padding: 0 25px; border: none;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/QGIS_logo_new.svg/250px-QGIS_logo_new.svg.png" height="70"/><br/>
-      <span style="font-size:12px;"><b>QGIS</b></span>
-    </td>
-    <td align="center" style="padding: 0 25px; border: none;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Apache_Feather_Logo.svg/250px-Apache_Feather_Logo.svg.png" height="70"/><br/>
-      <span style="font-size:12px;"><b>Apache</b></span>
-    </td>
-    <td align="center" style="padding: 0 25px; border: none;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" height="70"/><br/>
-      <span style="font-size:12px;"><b>Python</b></span>
-    </td>
-    <td align="center" style="padding: 0 25px; border: none;">
-      <img src="https://docs.lizmap.com/3.8/it/_static/logo.png" height="70"/><br/>
-      <span style="font-size:12px;"><b>Lizmap</b></span>
-    </td>
-  </tr>
-</table>
-
-
-
+<p align="center">
+  <span style="display:inline-block; text-align:center; margin: 0 25px;">
+    <img src="https://www.debian.org/logos/openlogo-nd-100.png" height="70"/><br/>
+    <b>Debian</b>
+  </span>
+  <span style="display:inline-block; text-align:center; margin: 0 25px;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/QGIS_logo_new.svg" height="70"/><br/>
+    <b>QGIS</b>
+  </span>
+  <span style="display:inline-block; text-align:center; margin: 0 25px;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Apache_Feather_Logo.svg" height="70"/><br/>
+    <b>Apache</b>
+  </span>
+  <span style="display:inline-block; text-align:center; margin: 0 25px;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" height="70"/><br/>
+    <b>Python</b>
+  </span>
+  <span style="display:inline-block; text-align:center; margin: 0 25px;">
+    <img src="https://docs.lizmap.com/3.8/it/_static/logo.png" height="70"/><br/>
+    <b>Lizmap</b>
+  </span>
+</p>
 
 ---
 
