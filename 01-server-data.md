@@ -12,8 +12,7 @@ Questa pagina descrive le caratteristiche principali della VPS utilizzata per il
 | **Nome server**   | `gisserver` (vmi2264216)       |
 | **Piano**         | VPS 1 SSD – 400 GB – EU DC     |
 | **Sistema Operativo** | Debian 13 (Linux)          |
-| **IP pubblico**   | `109.199.109.228`              |
-| **Data creazione**| 09/11/2024                     |
+
 
 ---
 
