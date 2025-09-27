@@ -12,3 +12,9 @@ La pagina ufficiale ci rimanda al seguente pagina per installare QGIS Server su 
 ```
 sudo apt install gnupg software-properties-common
 ```
+e passiamo direttamente all'installazione delle chiavi per installare qgis server
+
+```
+sudo mkdir -m755 -p /etc/apt/keyrings  # not needed since apt version 2.4.0 like Debian 12 and Ubuntu 22 or newer
+sudo wget -O /etc/apt/keyrings/qgis-archive-keyring.gpg https://download.qgis.org/downloads/qgis-archive-keyring.gpg
+```
