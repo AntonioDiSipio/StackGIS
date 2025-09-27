@@ -74,6 +74,54 @@ bantime  = 3600
 findtime = 600
 ```
 
+
+
+### Esempio di configurazione `jail.local` completa
+
+```ini
+# File jail.local
+# Configurazione Fail2ban su Debian 13
+
+[INCLUDES]
+
+#before = paths-distro.conf
+before = paths-debian.conf
+
+[DEFAULT]
+bantime  = 10m
+findtime = 10m
+maxretry = 5
+backend  = auto
+usedns   = warn
+logencoding = auto
+enabled = false
+mode = normal
+filter = %(__name__)s[mode=%(mode)s]
+destemail = root@localhost
+sender = root@<fq-hostname>
+mta = sendmail
+protocol = tcp
+chain = <known/chain>
+port = 0:65535
+fail2ban_agent = Fail2Ban/%(fail2ban_version)s
+banaction = iptables-multiport
+banaction_allports = iptables-allports
+action = %(banaction)s[port="%(port)s", protocol="%(protocol)s", chain="%(chain)s"]
+
+[sshd]
+enabled  = true
+port     = 22
+filter   = sshd
+logpath  = /var/log/auth.log
+maxretry = 5
+bantime  = 3600
+findtime = 600
+
+# Altri jail disponibili (apache, nginx, dovecot, postfix, ecc.)
+# Si possono attivare modificando "enabled = true" e adattando logpath/port
+```
+
+
 Abilita e avvia:
 ```bash
 sudo systemctl enable fail2ban
@@ -104,8 +152,3 @@ Con queste configurazioni hai:
 - **Firewall UFW** che permette solo ciò che serve.
 - **Fail2ban** per proteggere da brute-force SSH.
 - **Aggiornamenti automatici** per patch di sicurezza.
-
-Prossimi passi (opzionali):
-- Configurare Fail2ban per Nginx/Apache.
-- Backup automatici.
-- Monitoraggio e alert email.
