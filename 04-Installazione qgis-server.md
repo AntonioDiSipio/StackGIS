@@ -65,11 +65,15 @@ sudo apt install qgis-server
 ---
 
 ## 6️⃣ Test dell’installazione
-
-Verifichiamo che l’eseguibile funzioni:
-
+Verifichiamo la versione di qgis installate dando:
 ```bash
 /usr/lib/cgi-bin/qgis_mapserv.fcgi --version
+```
+
+e che l’eseguibile funzioni:
+
+```bash
+/usr/lib/cgi-bin/qgis_mapserv.fcgi
 ```
 
 Se l’output mostra la versione, QGIS Server è installato correttamente ✅
