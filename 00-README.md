@@ -2,7 +2,9 @@
 
 Repository di configurazione e gestione della VPS utilizzata per il progetto **StackGIS**.
 
+
 ---
+
 
 ## 🛠️ Tecnologie
 
@@ -13,7 +15,9 @@ Repository di configurazione e gestione della VPS utilizzata per il progetto **S
   <img src="https://docs.lizmap.com/3.8/it/_static/logo.png" height="70"/>
 </p>
 
+
 ---
+
 
 ## 📂 Contenuto
 
