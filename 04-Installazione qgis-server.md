@@ -42,3 +42,9 @@ adesso aggiorniamo il sistema dando
 ```
 sudo apt update
 ```
+
+ed installiamo qgis-server con 
+
+```
+sudo apt install qgis-server
+```
