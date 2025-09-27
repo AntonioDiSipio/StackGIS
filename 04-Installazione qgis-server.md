@@ -1,34 +1,39 @@
-qgis-server è installato seguendo la guida sulla pagina ufficiale
+# 🗺️ Installazione di QGIS Server su Debian 13 (Trixie)
 
-https://docs.qgis.org/3.40/it/docs/server_manual/index.html
+👉 Guida ufficiale: [QGIS Server Manuale](https://docs.qgis.org/3.40/it/docs/server_manual/index.html)
 
---------
+---
 
-Nel mio caso ho installato ho seguito la procedura di installaizone su sistemi Debian
-La pagina ufficiale ci rimanda al seguente pagina per installare QGIS Server su un sistema basato su Debian sono forniti in`QGIS installers page <https://qgis.org/resources/installation-guide/#linux>. Dovresti installare l’ultima versione a lungo termine.
+## 1️⃣ Preparazione
 
-**saltiamo questo comando perchè in Debian 13 non è necessario**
+Su **Debian 13** non serve installare pacchetti aggiuntivi come `gnupg` o `software-properties-common`, quindi **saltiamo questo passaggio**.
 
+---
+
+## 2️⃣ Aggiunta delle chiavi
+
+Scarichiamo la chiave del repository QGIS:
+
+```bash
+sudo wget -O /etc/apt/keyrings/qgis-archive-keyring.gpg \
+  https://download.qgis.org/downloads/qgis-archive-keyring.gpg
 ```
-sudo apt install gnupg software-properties-common
-```
-e passiamo direttamente all'installazione delle chiavi per installare qgis server
 
-```
-sudo mkdir -m755 -p /etc/apt/keyrings  # not needed since apt version 2.4.0 like Debian 12 and Ubuntu 22 or newer
-sudo wget -O /etc/apt/keyrings/qgis-archive-keyring.gpg https://download.qgis.org/downloads/qgis-archive-keyring.gpg
-```
-aggiungiamo i repo per l'ultima versione stabile di qgis nel file `/etc/apt/sources.list.d/qgis.sources`
+> ℹ️ La cartella `/etc/apt/keyrings` è già presente in Debian 12+ (apt ≥ 2.4.0), quindi non serve crearla manualmente.
 
-quindi creiamo il file con questo comando
+---
 
-```
+## 3️⃣ Creazione del repository QGIS
+
+Creiamo il file dei repository:
+
+```bash
 sudo nano /etc/apt/sources.list.d/qgis.sources
 ```
 
-e incolliamoci dentro queste righe
+Incolliamo al suo interno:
 
-```
+```text
 Types: deb deb-src
 URIs: https://qgis.org/debian
 Suites: trixie
@@ -37,24 +42,42 @@ Components: main
 Signed-By: /etc/apt/keyrings/qgis-archive-keyring.gpg
 ```
 
-adesso aggiorniamo il sistema dando
+---
 
-```
+## 4️⃣ Aggiornamento pacchetti
+
+Aggiorniamo la lista dei pacchetti:
+
+```bash
 sudo apt update
 ```
 
-ed installiamo qgis-server con 
+---
 
-```
+## 5️⃣ Installazione di QGIS Server
+
+Installiamo QGIS Server:
+
+```bash
 sudo apt install qgis-server
 ```
 
-finita la procedura di installazione testiamo qgis server con il comando  
+---
 
+## 6️⃣ Test dell’installazione
+
+Verifichiamo che l’eseguibile funzioni:
+
+```bash
+/usr/lib/cgi-bin/qgis_mapserv.fcgi --version
 ```
-/usr/lib/cgi-bin/qgis_mapserv.fcgi
-```
 
---------
+Se l’output mostra la versione, QGIS Server è installato correttamente ✅
 
-A questo punto dobbiamo installare Apache e configurarlo per esporre i servizi di qgis server sul web
+---
+
+## 7️⃣ Configurazione Apache (prossimo passo)
+
+Dopo l’installazione, bisogna configurare Apache per esporre i servizi di QGIS Server sul web.
+
+---
