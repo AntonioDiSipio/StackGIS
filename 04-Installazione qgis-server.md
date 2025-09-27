@@ -9,8 +9,7 @@ La pagina ufficiale ci rimanda al seguente pagina per installare QGIS Server su 
 
 saltiamo questo comando perchè in Debian 13 non è necessario
 
+
 `
-
 sudo apt install gnupg software-properties-common
-
 `
