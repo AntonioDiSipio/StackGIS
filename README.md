@@ -4,10 +4,10 @@ Repository di configurazione e gestione della VPS utilizzata per il progetto **S
 
 ## Contenuto
 
-- **01-dati-macchina.md**  
+- **01-dati-macchina**  
   Dettagli tecnici e caratteristiche della VPS (sistema operativo, risorse, configurazione iniziale).
 
-- **02-creazione-utenti.md**  
+- **02-creazione-utenti**  
   Procedura di creazione e configurazione dell'utente `gisadmin` con privilegi di amministratore e accesso tramite chiave SSH.
 
 ## Obiettivo
