@@ -7,11 +7,11 @@ Repository di configurazione e gestione della VPS utilizzata per il progetto **S
 ## 🛠️ Tecnologie
 
 <p align="center">
-  <img src="https://www.debian.org/Pics/debian-logo-1024x576.png" alt="apache" width="90"/>
-  <img src="https://qgis.org/img/logosign.svg" alt="QGIS" width="90"/>
-  <img src="https://www.python.org/static/community_logos/python-logo.png" alt="Python" width="130"/>
-  <img src="https://httpd.apache.org/images/httpd_logo_wide_new.png" alt="Apache" width="350"/>
-  <img src="https://docs.lizmap.com/3.8/it/_static/logo.png" alt="Lizmap" width="80"/>
+  <img src="https://www.debian.org/Pics/debian-logo-1024x576.png" alt="Debian" height="80"/>
+  <img src="https://qgis.org/img/logosign.svg" alt="QGIS" height="80"/>
+  <img src="https://www.python.org/static/community_logos/python-logo.png" alt="Python" height="80"/>
+  <img src="https://httpd.apache.org/images/httpd_logo_wide_new.png" alt="Apache" height="80"/>
+  <img src="https://docs.lizmap.com/3.8/it/_static/logo.png" alt="Lizmap" height="80"/>
 </p>
 
 ---
