@@ -2,9 +2,7 @@
 
 Repository di configurazione e gestione della VPS utilizzata per il progetto **StackGIS**.
 
-
 ---
-
 
 ## 🛠️ Tecnologie
 
@@ -15,18 +13,23 @@ Repository di configurazione e gestione della VPS utilizzata per il progetto **S
   <img src="https://docs.lizmap.com/3.8/it/_static/logo.png" height="70"/>
 </p>
 
-
 ---
-
 
 ## 📂 Contenuto
 
-- 🖥️ [01 - Dati della macchina](https://github.com/AntonioDiSipio/StackGIS/blob/main/01-server-data.md)  
+- 🖥️ [01 - Dati della macchina](01-server-data.md)  
   Dettagli tecnici e caratteristiche della VPS (sistema operativo, risorse, configurazione iniziale).
 
-- 🔑 [02 - Creazione utenti](https://github.com/AntonioDiSipio/StackGIS/blob/main/02-creazione-utenti.md)  
+- 🔑 [02 - Creazione utenti](02-creazione-utenti.md)  
   Procedura di creazione e configurazione dell'utente `gisadmin` con privilegi di amministratore e accesso tramite chiave SSH.
 
+- 🔒 [03 - Hardening VPS](03-hardening-VPS.md)  
+  Configurazioni di sicurezza con **UFW**, **Fail2ban** e aggiornamenti automatici.
+
+- 🗺️ [04 - Installazione QGIS Server](04-Installazione qgis-server.md)  
+  Guida passo-passo per installare e verificare **QGIS Server** su Debian 13.
+
+---
 
 ## 🎯 Obiettivo
 
