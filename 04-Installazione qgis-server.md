@@ -15,8 +15,8 @@ Su **Debian 13** non serve installare pacchetti aggiuntivi come `gnupg` o `softw
 Scarichiamo la chiave del repository QGIS:
 
 ```bash
-sudo wget -O /etc/apt/keyrings/qgis-archive-keyring.gpg \
-  https://download.qgis.org/downloads/qgis-archive-keyring.gpg
+sudo mkdir -m755 -p /etc/apt/keyrings
+sudo wget -O /etc/apt/keyrings/qgis-archive-keyring.gpg https://download.qgis.org/downloads/qgis-archive-keyring.gpg
 ```
 
 > ℹ️ La cartella `/etc/apt/keyrings` è già presente in Debian 12+ (apt ≥ 2.4.0), quindi non serve crearla manualmente.
