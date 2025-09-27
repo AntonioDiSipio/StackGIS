@@ -1,6 +1,6 @@
 # 🌍 StackGIS / VPS / Qgis / Qgiserver / Lizmap
 
-Repository di configurazione e gestione della VPS utilizzata per il progetto **StackGIS**.
+***StackGIS*** è un progetto dedicato all’installazione, configurazione e gestione di una VPS per l’erogazione di servizi GIS con QGIS Server e Lizmap. Questo repository raccoglie tutta la documentazione tecnica necessaria per replicare e mantenere l’infrastruttura, facilitando sia la gestione sistemistica sia l’aggiornamento dei servizi cartografici.
 
 ---
 
