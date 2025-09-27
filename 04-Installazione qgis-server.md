@@ -37,4 +37,8 @@ Components: main
 Signed-By: /etc/apt/keyrings/qgis-archive-keyring.gpg
 ```
 
+adesso aggiorniamo il sistema dando
 
+```
+sudo apt update
+```
