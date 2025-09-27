@@ -10,8 +10,8 @@ Repository di configurazione e gestione della VPS utilizzata per il progetto **S
   <img src="https://qgis.org/en/_static/logo.png" alt="QGIS" width="90"/>
   <img src="https://qgis.org/en/_static/logo.png" alt="QGIS Server" width="90"/>
   <img src="https://www.python.org/static/community_logos/python-logo.png" alt="Python" width="130"/>
-  <img src="https://httpd.apache.org/images/httpd_logo_wide_new.png" alt="Apache" width="300"/>
-  <img src="https://docs.lizmap.com/3.8/it/_static/logo.png" alt="Lizmap" width="60"/>
+  <img src="https://httpd.apache.org/images/httpd_logo_wide_new.png" alt="Apache" width="350"/>
+  <img src="https://docs.lizmap.com/3.8/it/_static/logo.png" alt="Lizmap" width="80"/>
 </p>
 
 ---
