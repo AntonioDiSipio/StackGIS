@@ -1,4 +1,4 @@
-# 🔒 Hardening VPS Debian 13 (Contabo)
+# 🔒 Hardening VPS
 
 Questa guida riassume i passaggi principali per mettere in sicurezza una VPS Debian 13 usando **UFW** e **Fail2ban**.
 
