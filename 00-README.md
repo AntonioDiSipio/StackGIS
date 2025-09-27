@@ -7,8 +7,8 @@ Repository di configurazione e gestione della VPS utilizzata per il progetto **S
 ## 🛠️ Tecnologie
 
 <p align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Openlogo-debianV2.svg" alt="Debian" height="70"/>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/QGIS_logo_new.svg/256px-QGIS_logo_new.svg.png" alt="QGIS" height="70"/>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Horned_logo.svg/250px-Horned_logo.svg.png" alt="Debian" height="70"/>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/QGIS_logo_new.svg/250px-QGIS_logo_new.svg.png" alt="QGIS" height="70"/>
   <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" height="70"/>
   <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Apache_HTTP_Server_logo_%28inverse%29.svg" alt="Apache" height="70"/>
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Lizmap_logo.svg" alt="Lizmap" height="70"/>
