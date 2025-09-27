@@ -1,4 +1,4 @@
-# 🌍 StackGIS
+# 🌍 StackGIS / VPS / Qgis / Qgiserver / Lizmap
 
 Repository di configurazione e gestione della VPS utilizzata per il progetto **StackGIS**.
 
