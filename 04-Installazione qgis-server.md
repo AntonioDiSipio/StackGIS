@@ -48,3 +48,9 @@ ed installiamo qgis-server con
 ```
 sudo apt install qgis-server
 ```
+
+finita la procedura di installazione verifichiamo la versione di qgis server installata con 
+
+```
+/usr/lib/cgi-bin/qgis_mapserv.fcgi
+```
