@@ -34,6 +34,37 @@ sudo cp /home/admin/.ssh/authorized_keys /home/gisadmin/.ssh/
 sudo chown -R gisadmin:gisadmin /home/gisadmin/.ssh
 sudo chmod 600 /home/gisadmin/.ssh/authorized_keys
 ```
+
+---
+
+## 4️⃣ Test accesso SSH
+Da locale:  
+```bash
+ssh gisadmin@<server_ip>
+```
+
+---
+
+## 5️⃣ Hardening SSH (disabilitare password)
+Modificare il file di configurazione:  
+```bash
+sudo nano /etc/ssh/sshd_config
+```
+
+Assicurarsi di impostare almeno:  
+```conf
+PubkeyAuthentication yes
+PasswordAuthentication no
+PermitEmptyPasswords no
+ChallengeResponseAuthentication no
+KbdInteractiveAuthentication no
+UsePAM no
+ClientAliveInterval 120
+
+# permette solo a gisadmin di collegarsi tramite SSH
+AllowUsers gisadmin
+```
+
 Per completezza si riporta il contenuto del file `/etc/ssh/sshd_config` con le modifiche applicate:
 
 ```conf
@@ -67,35 +98,6 @@ ClientAliveInterval 120
 AllowUsers gisadmin
 ```
 
----
-
-## 4️⃣ Test accesso SSH
-Da locale:  
-```bash
-ssh gisadmin@<server_ip>
-```
-
----
-
-## 5️⃣ Hardening SSH (disabilitare password)
-Modificare il file di configurazione:  
-```bash
-sudo nano /etc/ssh/sshd_config
-```
-
-Assicurarsi di impostare almeno:  
-```conf
-PubkeyAuthentication yes
-PasswordAuthentication no
-PermitEmptyPasswords no
-ChallengeResponseAuthentication no
-KbdInteractiveAuthentication no
-UsePAM no
-ClientAliveInterval 120
-
-# permette solo a gisadmin di collegarsi tramite SSH
-AllowUsers gisadmin
-```
 
 🔄 Riavviare il servizio:  
 ```bash
