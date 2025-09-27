@@ -6,29 +6,30 @@ Repository di configurazione e gestione della VPS utilizzata per il progetto **S
 
 ## 🛠️ Tecnologie
 
-<div style="display: flex; justify-content: center; align-items: center; gap: 40px;">
-  <div style="text-align: center;">
-    <img src="https://www.debian.org/logos/openlogo-nd-100.png" height="70"/><br/>
-    <b>Debian</b>
-  </div>
-  <div style="text-align: center;">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/QGIS_logo_new.svg" height="70"/><br/>
-    <b>QGIS</b>
-  </div>
-  <div style="text-align: center;">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Apache_Feather_Logo.svg" height="70"/><br/>
-    <b>Apache</b>
-  </div>
-  <div style="text-align: center;">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" height="70"/><br/>
-    <b>Python</b>
-  </div>
-  <div style="text-align: center;">
-    <img src="https://docs.lizmap.com/3.8/it/_static/logo.png" height="70"/><br/>
-    <b>Lizmap</b>
+<div align="center">
+  <div style="display: flex; justify-content: center; align-items: center; gap: 40px;">
+    <div style="text-align: center;">
+      <img src="https://www.debian.org/logos/openlogo-nd-100.png" height="70"/><br/>
+      <b>Debian</b>
+    </div>
+    <div style="text-align: center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/QGIS_logo_new.svg" height="70"/><br/>
+      <b>QGIS</b>
+    </div>
+    <div style="text-align: center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Apache_Feather_Logo.svg" height="70"/><br/>
+      <b>Apache</b>
+    </div>
+    <div style="text-align: center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" height="70"/><br/>
+      <b>Python</b>
+    </div>
+    <div style="text-align: center;">
+      <img src="https://docs.lizmap.com/3.8/it/_static/logo.png" height="70"/><br/>
+      <b>Lizmap</b>
+    </div>
   </div>
 </div>
-
 
 ---
 
