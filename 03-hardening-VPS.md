@@ -1089,6 +1089,10 @@ sudo fail2ban-client status
 sudo fail2ban-client status sshd
 ```
 
+> ℹ️ **Nota**: se esiste `jail.local`, Fail2ban lo usa al posto di `jail.conf`.  
+> Il file `jail.conf` resta solo come modello e può essere sovrascritto dagli aggiornamenti.
+
+
 ---
 
 ## 3. Aggiornamenti automatici
