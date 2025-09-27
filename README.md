@@ -6,30 +6,31 @@ Repository di configurazione e gestione della VPS utilizzata per il progetto **S
 
 ## 🛠️ Tecnologie
 
-<table align="center" border="0" style="border-collapse: collapse;">
+<table align="center" style="border: none; border-collapse: collapse;">
   <tr>
     <td align="center" style="padding: 0 25px; border: none;">
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Horned_logo.svg/250px-Horned_logo.svg.png" height="70"/><br/>
-      <b>Hornet</b>
+      <span style="font-size:12px;"><b>Debian</b></span>
     </td>
     <td align="center" style="padding: 0 25px; border: none;">
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/QGIS_logo_new.svg/250px-QGIS_logo_new.svg.png" height="70"/><br/>
-      <b>QGIS</b>
+      <span style="font-size:12px;"><b>QGIS</b></span>
     </td>
     <td align="center" style="padding: 0 25px; border: none;">
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Apache_Feather_Logo.svg/250px-Apache_Feather_Logo.svg.png" height="70"/><br/>
-      <b>Apache</b>
+      <span style="font-size:12px;"><b>Apache</b></span>
     </td>
     <td align="center" style="padding: 0 25px; border: none;">
       <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" height="70"/><br/>
-      <b>Python</b>
+      <span style="font-size:12px;"><b>Python</b></span>
     </td>
     <td align="center" style="padding: 0 25px; border: none;">
       <img src="https://docs.lizmap.com/3.8/it/_static/logo.png" height="70"/><br/>
-      <b>Lizmap</b>
+      <span style="font-size:12px;"><b>Lizmap</b></span>
     </td>
   </tr>
 </table>
+
 
 
 
