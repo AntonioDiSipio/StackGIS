@@ -6,24 +6,13 @@ Repository di configurazione e gestione della VPS utilizzata per il progetto **S
 
 ## 🛠️ Tecnologie
 
-<p align="center">
-  <div style="display:inline-block; text-align:center; margin: 0 30px;">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Horned_logo.svg/250px-Horned_logo.svg.png" height="70"/><br>
-    Debian
-  </div>
-  <div style="display:inline-block; text-align:center; margin: 0 30px;">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/QGIS_logo_new.svg/250px-QGIS_logo_new.svg.png" height="70"/><br>
-    QGIS
-  </div>
-  <div style="display:inline-block; text-align:center; margin: 0 30px;">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" height="70"/><br>
-    Python
-  </div>
-  <div style="display:inline-block; text-align:center; margin: 0 30px;">
-    <img src="https://docs.lizmap.com/3.8/it/_static/logo.png" height="70"/><br>
-    Lizmap
-  </div>
-</p>
+## 🛠️ Tecnologie
+
+| Debian | QGIS | Python | Lizmap |
+|--------|------|--------|--------|
+| <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Horned_logo.svg/250px-Horned_logo.svg.png" height="70"/> | <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/QGIS_logo_new.svg/250px-QGIS_logo_new.svg.png" height="70"/> | <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" height="70"/> | <img src="https://docs.lizmap.com/3.8/it/_static/logo.png" height="70"/> |
+| Debian | QGIS | Python | Lizmap |
+
 
 ---
 
