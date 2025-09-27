@@ -51,10 +51,19 @@ Modificare il file di configurazione SSH:
 sudo nano /etc/ssh/sshd_config
 ```
 
-Impostare i parametri:  
+Impostare i parametri principali:  
+
 ```
+PubkeyAuthentication yes
 PasswordAuthentication no
-PermitRootLogin no
+PermitEmptyPasswords no
+ChallengeResponseAuthentication no
+KbdInteractiveAuthentication no
+UsePAM no
+ClientAliveInterval 120
+
+# permette solo a gisadmin di collegarsi tramite SSH
+AllowUsers gisadmin
 ```
 
 Riavviare il servizio:  
