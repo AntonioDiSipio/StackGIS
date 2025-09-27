@@ -20,7 +20,7 @@ sudo wget -O /etc/apt/keyrings/qgis-archive-keyring.gpg https://download.qgis.or
 ```
 aggiungiamo i repo per l'ultima versione stabile di qgis nel file `/etc/apt/sources.list.d/qgis.sources`
 
-quindi 
+quindi creiamo il file con questo comando
 
 ```
 sudo nano /etc/apt/sources.list.d/qgis.sources
