@@ -19,7 +19,7 @@ sudo mkdir -m755 -p /etc/apt/keyrings
 sudo wget -O /etc/apt/keyrings/qgis-archive-keyring.gpg https://download.qgis.org/downloads/qgis-archive-keyring.gpg
 ```
 
-> ℹ️ La cartella `/etc/apt/keyrings` è già presente in Debian 12+ (apt ≥ 2.4.0), quindi non serve crearla manualmente.
+> ℹ️ La cartella `/etc/apt/keyrings` è già presente in Debian 12+ (apt ≥ 2.4.0), quindi eventualmente non serve crearla manualmente.
 
 ---
 
