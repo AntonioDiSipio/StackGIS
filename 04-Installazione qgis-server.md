@@ -56,3 +56,5 @@ finita la procedura di installazione testiamo qgis server con il comando
 ```
 
 --------
+
+A questo punto dobbiamo installare Apache e configurarlo per esporre i servizi di qgis server sul web
