@@ -54,3 +54,5 @@ finita la procedura di installazione testiamo qgis server con il comando
 ```
 /usr/lib/cgi-bin/qgis_mapserv.fcgi
 ```
+
+--------
