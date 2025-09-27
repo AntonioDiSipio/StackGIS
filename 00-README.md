@@ -7,10 +7,13 @@ Repository di configurazione e gestione della VPS utilizzata per il progetto **S
 ## 🛠️ Tecnologie
 
 
-| Debian &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | QGIS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Python &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Lizmap &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
-|---------------------------------------------|-------------------------------------------|---------------------------------------------|---------------------------------------------|
-| <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Horned_logo.svg/250px-Horned_logo.svg.png" height="70"/> | <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/QGIS_logo_new.svg/250px-QGIS_logo_new.svg.png" height="70"/> | <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" height="70"/> | <img src="https://docs.lizmap.com/3.8/it/_static/logo.png" height="70"/> |
-| Debian | QGIS | Python | Lizmap |
+<p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Horned_logo.svg/250px-Horned_logo.svg.png" height="70"/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/QGIS_logo_new.svg/250px-QGIS_logo_new.svg.png" height="70"/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" height="70"/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://docs.lizmap.com/3.8/it/_static/logo.png" height="70"/>
+</p>
+
 
 
 ---
