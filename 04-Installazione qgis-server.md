@@ -26,4 +26,15 @@ quindi creiamo il file con questo comando
 sudo nano /etc/apt/sources.list.d/qgis.sources
 ```
 
+e incolliamoci dentro queste righe
+
+```
+Types: deb deb-src
+URIs: https://qgis.org/debian
+Suites: trixie
+Architectures: amd64
+Components: main
+Signed-By: /etc/apt/keyrings/qgis-archive-keyring.gpg
+```
+
 
