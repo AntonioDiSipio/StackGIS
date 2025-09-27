@@ -17,11 +17,11 @@ Repository di configurazione e gestione della VPS utilizzata per il progetto **S
 ## 🛠️ Tecnologie
 
 <p align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/QGIS_logo_new.svg" alt="QGIS" width="80"/>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/QGIS_logo_new.svg" alt="QGIS Server" width="80"/>
-  <img src="https://www.python.org/static/community_logos/python-logo.png" alt="Python" width="120"/>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Apache_HTTP_server_logo_%282019-present%29.svg" alt="Apache" width="100"/>
-  <img src="https://github.com/3liz/lizmap-web-client/raw/master/lizmap.png" alt="Lizmap" width="120"/>
+  <img src="https://qgis.org/en/_static/logo.png" alt="QGIS" width="90"/>
+  <img src="https://qgis.org/en/_static/logo.png" alt="QGIS Server" width="90"/>
+  <img src="https://www.python.org/static/community_logos/python-logo.png" alt="Python" width="130"/>
+  <img src="https://svn.apache.org/repos/asf/comdev/project-logos/originals/httpd.png" alt="Apache" width="110"/>
+  <img src="https://raw.githubusercontent.com/3liz/lizmap-documentation/master/source/_static/lizmap-logo.png" alt="Lizmap" width="130"/>
 </p>
 
 ---
