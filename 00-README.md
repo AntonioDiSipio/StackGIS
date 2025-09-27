@@ -4,8 +4,6 @@ Repository di configurazione e gestione della VPS utilizzata per il progetto **S
 
 ---
 
----
-
 ## 🛠️ Tecnologie
 
 <p align="center">
