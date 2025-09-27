@@ -26,7 +26,7 @@ Repository di configurazione e gestione della VPS utilizzata per il progetto **S
 - 🔒 [03 - Hardening VPS](03-hardening-VPS.md)  
   Configurazioni di sicurezza con **UFW**, **Fail2ban** e aggiornamenti automatici.
 
-- 🗺️ [04 - Installazione QGIS Server](04-Installazione qgis-server.md)  
+- 🗺️ [04 - Installazione QGIS Server](04-Installazione-qgis-server.md)  
   Guida passo-passo per installare e verificare **QGIS Server** su Debian 13.
 
 ---
