@@ -105,6 +105,8 @@ sudo touch /gisserver/qgisserverdb/qgis-auth.db
 ```bash
 # cartella progetti QGIS
 sudo mkdir -p /gisserver/
+# diamo i permessi a gisadmin
+sudo chown -R gisadmin:gisadmin /gisserver
 ```
 Ora possiamo abilitare l’host virtuale e il mod "fcgid", se non è già stato fatto:
 ```bash
