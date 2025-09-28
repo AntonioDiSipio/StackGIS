@@ -124,6 +124,6 @@ Sul sito ho messo a disposizione un file zip contenente un esempio di progetto q
 
 adesso se tutto è andato a buon fine al seguente link dovresti vedere le capibilities del progetto pubblicato
 ```
-http://disipio.io/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities&MAP=/gisserver/datigis/ComuniISTAT.qgz
+http://disipio.io/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities&MAP=/gisserver/datigis/ComuniItaliani/ComuniISTAT.qgz
 ```
 
