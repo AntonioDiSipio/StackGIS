@@ -102,7 +102,11 @@ sudo mkdir -p /home/gisadmin/gisserver/qgisserverdb
 # cartella progetti QGIS
 sudo mkdir -p /home/gisadmin/gisserver/gisdata
 ```
-
-
+Ora possiamo abilitare l’host virtuale e il mod "fcgid", se non è già stato fatto:
+```bash
+a2enmod fcgid
+a2enmod rewrite
+a2ensite gisserver.conf
+```
 
 
