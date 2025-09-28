@@ -71,7 +71,7 @@ filter   = sshd                # usa il filtro predefinito "sshd"
 logpath  = /var/log/auth.log   # legge i tentativi di accesso falliti da questo log
 maxretry = 5                   # massimo 5 tentativi falliti...
 findtime = 600                 # ...nell ^`^yarco di 10 minuti
-bantime  = -1                  # ban permanente (finch   non sblocchi manualmente)
+bantime  = -1                  # ban permanente (finchè non sblocchi manualmente)
 ```
 
 Abilita e avvia:
