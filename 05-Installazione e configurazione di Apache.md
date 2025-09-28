@@ -252,6 +252,9 @@ systemctl status xvfb.service
 ### 4️⃣ Integrazione con Apache
 
 Aggiungi alla configurazione Fcgid in Apache il parametro:
+```bash
+sudo nano /etc/apache2/sites-available/gisserver.conf
+```
 
 ```apache
 FcgidInitialEnv DISPLAY ":99"
