@@ -1,3 +1,11 @@
+# Amministrare Debian 13
+
+<tr>
+    <td align="center" style="border: none; padding: 0 50px;">
+      <img src="https://www.debian.org/logos/openlogo-nd-100.png" height="70"/><br/>
+      <b>Debian</b>
+    </td>
+
 # 👤 Creazione Utente Amministrativo `gisadmin`
 
 Questa pagina documenta i passaggi effettuati per la creazione e configurazione dell’utente amministrativo **`gisadmin`** sulla VPS **Debian 13**.
