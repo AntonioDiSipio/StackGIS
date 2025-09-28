@@ -111,6 +111,7 @@ Con le seguenti impostazioni:
 
 ## 🔹 Creazione cartelle necessarie
 
+Per comodità mettero i dati nella cartella root del server, quasto ha una diplice finalità, accorciare l'url della chiamata MAP e bypassare le restrizioni di un'eventuale installazione sulla cartella dell'utente.
 Creiamo ora le cartelle che ospiteranno i progetti e i registri di QGIS Server e il database di autenticazione:
 
 ```bash
