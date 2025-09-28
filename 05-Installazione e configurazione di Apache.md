@@ -103,8 +103,6 @@ chown www-data:www-data /home/gisadmin/gisserver/qgisserverdb
 ```bash
 # cartella progetti QGIS
 sudo mkdir -p /home/gisadmin/gisserver/gisdata
-```
-```bash
 # diamo i permessi sull'intera cartella gisserver all'utente gisadmin con
 sudo chown -R gisadmin:gisadmin /home/gisadmin/gisserver
 ```
