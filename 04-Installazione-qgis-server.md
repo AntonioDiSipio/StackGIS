@@ -130,6 +130,8 @@ e che l’eseguibile funzioni:
 
 questo dovrebbe essere il risultato:
 ```
+## Log QGIS Server (colorato)
+
 ```diff
 Application path not initialized
 Application path not initialized
@@ -152,6 +154,16 @@ Content-Length: 0
 Location: http:/index.json
 Server:  QGIS FCGI server - QGIS version 3.44.3-Solothurn
 Status:  302
+```
+
+### Errore 400
+
+```json
+{
+  "code": "Bad request error",
+  "description": "Requested URI does not match any registered API handler"
+}
+```
 
 ```
 
