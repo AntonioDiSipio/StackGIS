@@ -109,4 +109,8 @@ sudo a2enmod rewrite
 sudo a2ensite gisserver.conf
 ```
 
+Ora riavvia Apache per usare la nuova configurazione:
+```bash
+systemctl restart apache2
+```
 
