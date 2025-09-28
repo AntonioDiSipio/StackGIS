@@ -1,3 +1,38 @@
+# QGIS Server
+
+## Cosa è QGIS Server
+
+QGIS Server è un’applicazione open source scritta in C++ che si integra con un server web (come Apache o Nginx) e implementa servizi cartografici compatibili con gli standard OGC (come WMS, WFS, WCS), con supporto anche per OGC API for Features (WFS3).
+
+Utilizza le stesse librerie del client desktop QGIS, quindi il rendering cartografico, la simbologia e gli stili definiti nei progetti desktop possono essere riprodotti **così come sono** sul server.
+
+QGIS Server supporta inoltre plugin in Python per estendere le sue funzionalità.
+
+---
+
+## A cosa serve / quali servizi offre
+
+| Servizio / funzione | Descrizione |
+|---------------------|-------------|
+| **WMS (Web Map Service)** | Genera immagini (mappe) su richiesta secondo stili e layer definiti nel progetto QGIS. |
+| **WFS (Web Feature Service)** | Permette l’accesso ai dati vettoriali (feature) per lettura, interrogazione e, se configurato, modifica. |
+| **WCS (Web Coverage Service)** | Consente l’accesso a dati raster come coperture e immagini geospaziali. |
+| **OGC API for Features / WFS3** | Interfaccia moderna RESTful per l’accesso ai feature geospaziali. |
+| **Rendering avanzato / cartografia tematica** | Supporta simboli, etichette, regole di classifica e stili complessi, come in QGIS Desktop. |
+| **Integrazione con progetti QGIS** | I progetti creati in QGIS Desktop possono essere pubblicati direttamente su QGIS Server senza conversioni. |
+| **Estensibilità tramite plugin Python** | Aggiunta di funzionalità personalizzate, filtri e automazioni lato server. |
+
+---
+
+## Vantaggi / punti di forza
+
+- Coerenza tra ambiente desktop e server: i progetti QGIS usati localmente possono essere serviti senza conversioni.  
+- Aderenza agli standard OGC = interoperabilità con client GIS, applicazioni web e altri server.  
+- Flessibilità e personalizzazione grazie a plugin e configurazioni.  
+- Open source: senza costi di licenza, con possibilità di contributo e adattamento.  
+- Implementazione di riferimento per lo standard **WMS 1.3**.
+
+
 # 🗺️ Installazione di QGIS Server su Debian 13 (Trixie)
 
 👉 Guida ufficiale: [QGIS Server Guida/Manuale](https://docs.qgis.org/3.40/it/docs/server_manual/index.html)
