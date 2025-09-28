@@ -25,7 +25,7 @@ http://tuo-server/
 dovrebbe comparire la pagina web di default di Apache.
 
 <p align="center">
-  <img src="img/apachedefaultpage.jpg" width="400">
+  <img src="img/apachedefaultpage.jpg" width="800">
 </p>
 
 ⚠️ **Nota bene:**  
