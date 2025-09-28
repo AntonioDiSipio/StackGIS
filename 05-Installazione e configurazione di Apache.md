@@ -64,15 +64,15 @@ con le seguenti impostazioni
   FcgidInitialEnv QGIS_SERVER_LOG_LEVEL 0
 
   # cartella contenente i progetti QGIS
-  SetEnv QGIS_PROJECT_PATH /gisdata/
+  SetEnv QGIS_PROJECT_PATH /giserver/
 
   # QGIS_AUTH_DB_DIR_PATH deve puntare a una cartella scrivibile dall’utente FCGI (www-data)
-  FcgidInitialEnv QGIS_AUTH_DB_DIR_PATH "/home/gisadmin/qgisserverdb/"
-  FcgidInitialEnv QGIS_AUTH_PASSWORD_FILE "/home/gisadmin/qgisserverdb/qgis-auth.db"
+  FcgidInitialEnv QGIS_AUTH_DB_DIR_PATH "/gisserver/qgisserverdb/"
+  FcgidInitialEnv QGIS_AUTH_PASSWORD_FILE "/gisserver/qgisserverdb/qgis-auth.db"
 
   # Configurazione per accesso PostgreSQL via pg_service
-  SetEnv PGSERVICEFILE /home/gisadmin/.pg_service.conf
-  FcgidInitialEnv PGPASSFILE "/home/gisadmin/.pgpass"
+  SetEnv PGSERVICEFILE /gisserver/.pg_service.conf
+  FcgidInitialEnv PGPASSFILE "/gisserver/.pgpass"
 
   # Dove si trova qgis_mapserv.fcgi
   ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
