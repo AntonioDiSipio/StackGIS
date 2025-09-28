@@ -130,28 +130,25 @@ e che l’eseguibile funzioni:
 
 questo dovrebbe essere il risultato:
 ```
-## Log QGIS Server (colorato con HTML)
+Application path not initialized
+Application path not initialized
+Application path not initialized
+Application path not initialized
+QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-gisadmin'
+Warning 1: Unable to find driver ECW to unload from GDAL_SKIP environment variable.
+Warning 1: Unable to find driver ECW to unload from GDAL_SKIP environment variable.
+Warning 1: Unable to find driver JP2ECW to unload from GDAL_SKIP environment variable.
+"Loading native module /usr/lib/qgis/server/liblandingpage.so"
+"Loading native module /usr/lib/qgis/server/libwcs.so"
+"Loading native module /usr/lib/qgis/server/libwfs.so"
+"Loading native module /usr/lib/qgis/server/libwfs3.so"
+"Loading native module /usr/lib/qgis/server/libwms.so"
+"Loading native module /usr/lib/qgis/server/libwmts.so"
+Content-Length: 0
+Location: http:/index.json
+Server:  QGIS FCGI server - QGIS version 3.44.3-Solothurn
+Status:  302
 
-Application path not initialized  
-Application path not initialized  
-Application path not initialized  
-Application path not initialized  
-QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-gisadmin'  
-
-<font color="red">Warning 1: Unable to find driver ECW to unload from GDAL_SKIP environment variable.</font>  
-<font color="red">Warning 1: Unable to find driver JP2ECW to unload from GDAL_SKIP environment variable.</font>  
-
-<font color="green">"Loading native module /usr/lib/qgis/server/liblandingpage.so"</font>  
-<font color="green">"Loading native module /usr/lib/qgis/server/libwcs.so"</font>  
-<font color="green">"Loading native module /usr/lib/qgis/server/libwfs.so"</font>  
-<font color="green">"Loading native module /usr/lib/qgis/server/libwfs3.so"</font>  
-<font color="green">"Loading native module /usr/lib/qgis/server/libwms.so"</font>  
-<font color="green">"Loading native module /usr/lib/qgis/server/libwmts.so"</font>  
-
-Content-Length: 0  
-Location: http:/index.json  
-Server: QGIS FCGI server - QGIS version 3.44.3-Solothurn  
-Status: 302  
 ```
 
 
