@@ -93,17 +93,14 @@ Creiamo ora le cartelle che ospiteranno i progetti e i registri di QGIS Server e
 ```bash
 # cartella log dedicata a QGIS Server
 sudo mkdir -p /var/log/qgis/
-sudo chown www-data:www-data /var/log/qgis
 ```
 ```bash
 # cartella database di autenticazione
 sudo mkdir -p /home/qgis/qgisserverdb
-sudo chown www-data:www-data /home/qgis/qgisserverdb
 ```
 ```bash
 # cartella progetti QGIS
 sudo mkdir -p /home/gisadmin/gisdata
-sudo chown -R www-data:www-data /home/gisadmin/gisdata
 ```
 
 
