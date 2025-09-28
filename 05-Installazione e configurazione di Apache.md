@@ -93,18 +93,20 @@ Creiamo ora le cartelle che ospiteranno i progetti e i registri di QGIS Server e
 ```bash
 # cartella log dedicata a QGIS Server
 sudo mkdir -p /var/log/qgis/
+chown www-data:www-data /var/log/qgis
 ```
 ```bash
 # cartella database di autenticazione
 sudo mkdir -p /home/gisadmin/gisserver/qgisserverdb
-```
-```bash
-# diamo i permessi sull'intera cartella gisserver al'utente gisadmin con
-sudo chown -R gisadmin:gisadmin /home/gisadmin/gisserver
+chown www-data:www-data /home/gisadmin/gisserver/qgisserverdb
 ```
 ```bash
 # cartella progetti QGIS
 sudo mkdir -p /home/gisadmin/gisserver/gisdata
+```
+```bash
+# diamo i permessi sull'intera cartella gisserver all'utente gisadmin con
+sudo chown -R gisadmin:gisadmin /home/gisadmin/gisserver
 ```
 Ora possiamo abilitare l’host virtuale e il mod "fcgid", se non è già stato fatto:
 ```bash
