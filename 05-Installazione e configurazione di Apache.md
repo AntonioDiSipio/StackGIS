@@ -10,19 +10,19 @@ Progettato per essere **sicuro**, **efficiente** ed **estensibile**, Apache offr
 
 ## 🔹 Installazione di Apache
 
-Installiamo apache lanciando il comando:
+Installiamo Apache lanciando il comando:
 
 ```bash
 sudo apt install apache2 libapache2-mod-fcgid
 ```
 
-Al termine del processo di installazione e aver avviato apache se apri un browser e digiti:
+Al termine del processo di installazione e aver avviato Apache, se apri un browser e digiti:
 
 ```
 http://tuo-server/
 ```
 
-dovrebbe comparire la pagina web di default di apache.
+dovrebbe comparire la pagina web di default di Apache.
 
 <p align="center">
   <img src="img/apachedefaultpage.jpg" width="400">
@@ -49,9 +49,9 @@ sudo ufw reload
 
 ## 🔹 Configurazione Virtual Host per QGIS Server
 
-Per far funzionare qgis-server su apache e quindi esporre i servizi, bisogna configurare un virtual host.  
+Per far funzionare QGIS Server su Apache e quindi esporre i servizi, bisogna configurare un Virtual Host.  
 
-Lascio la configurazione di default di apache ```000-default.conf``` e creo un nuovo virtual host con la configurazione suggerita dalla guida, ma apportando alcune modifiche necessarie al mio caso per far funzionare la configurazione, quindi:
+Lascio la configurazione di default di Apache (`000-default.conf`) e creo un nuovo Virtual Host con la configurazione suggerita dalla guida, ma apportando alcune modifiche necessarie al mio caso.  
 
 Creiamo subito il file **`gisserver.conf`** in `/etc/apache2/sites-available/` con il comando:
 
@@ -64,8 +64,8 @@ Con le seguenti impostazioni:
 ```apache
 <VirtualHost *:80>
   ServerAdmin webmaster@localhost
-  ServerName  disipio.io
-  
+  ServerName disipio.io
+
   # Apache logs (diversi dai log di QGIS Server)
   ErrorLog ${APACHE_LOG_DIR}/gisserver.error.log
   CustomLog ${APACHE_LOG_DIR}/gisserver.access.log combined
@@ -82,7 +82,7 @@ Con le seguenti impostazioni:
   FcgidInitialEnv QGIS_SERVER_LOG_LEVEL 0
 
   # cartella contenente i progetti QGIS
-  SetEnv QGIS_PROJECT_PATH /giserver/
+  SetEnv QGIS_PROJECT_PATH /gisserver/
 
   # QGIS_AUTH_DB_DIR_PATH deve puntare a una cartella scrivibile dall’utente FCGI (www-data)
   FcgidInitialEnv QGIS_AUTH_DB_DIR_PATH "/gisserver/qgisserverdb/"
@@ -111,8 +111,11 @@ Con le seguenti impostazioni:
 
 ## 🔹 Creazione cartelle necessarie
 
-Per comodità mettero i dati nella cartella root del server. questo ha una diplice finalità, accorciare l'url della chiamata MAP e bypassare le restrizioni di un'eventuale installazione sulla cartella dell'utente.
-Creiamo ora le cartelle che ospiteranno i progetti e i registri di QGIS Server e il database di autenticazione:
+Per comodità metterò i dati nella cartella root del server. Questo ha una duplice finalità:  
+1. accorciare l’URL della chiamata MAP  
+2. bypassare le restrizioni di un’eventuale installazione nella cartella utente.  
+
+Creiamo ora le cartelle che ospiteranno i progetti, i registri di QGIS Server e il database di autenticazione:
 
 ```bash
 # cartella log dedicata a QGIS Server
@@ -140,7 +143,7 @@ sudo chown -R gisadmin:gisadmin /gisserver
 
 ## 🔹 Abilitazione Virtual Host e moduli
 
-Ora possiamo abilitare l’host virtuale e il mod `fcgid`, se non è già stato fatto:
+Ora possiamo abilitare l’host virtuale e il modulo `fcgid`, se non è già stato fatto:
 
 ```bash
 sudo a2enmod fcgid
@@ -148,41 +151,79 @@ sudo a2enmod rewrite
 sudo a2ensite gisserver.conf
 ```
 
-Ora riavvia Apache per usare la nuova configurazione:
+---
+
+## 🔹 Riavvio e verifica di Apache
+
+Dopo aver abilitato moduli o configurazioni, riavvia Apache per applicare le modifiche:
 
 ```bash
 sudo systemctl restart apache2
+```
+
+Puoi verificarne lo stato con:
+
+```bash
+systemctl status apache2
+```
+
+Se il servizio è attivo, vedrai **active (running)** evidenziato in verde.  
+
+👉 Per ricaricare la configurazione senza interrompere Apache (utile in produzione):
+
+```bash
+sudo systemctl reload apache2
+```
+
+In caso di problemi, controlla:  
+
+```bash
+sudo apache2ctl configtest
+sudo tail -f /var/log/apache2/error.log
 ```
 
 ---
 
 ## 🔹 Progetto di esempio
 
-Sul sito ho messo a disposizione un file zip contenente un esempio di progetto qgis con i confini amministrativi dei comuni italiani da scaricare al link:  
+Sul sito è disponibile un file zip contenente un esempio di progetto QGIS con i confini amministrativi dei comuni italiani:  
 
 👉 [www.disipio.io/ComuniISTAT.zip](http://www.disipio.io/ComuniISTAT.zip)
 
-per poter testare le funzionalità di qgis-server.
+per poter testare le funzionalità di QGIS Server.
 
 ---
 
 ## 🔹 Test finale
 
-Adesso se tutto è andato a buon fine, al seguente link dovresti vedere le **capabilities** del progetto pubblicato:
+Se tutto è andato a buon fine, al seguente link dovresti vedere le **capabilities** del progetto pubblicato:
 
 ```
 http://disipio.io/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities&MAP=/gisserver/datigis/ComuniItaliani/ComuniISTAT.qgz
 ```
 
-QGIS Server ha bisogno di un server X funzionante per essere pienamente utilizzabile, in particolare per la stampa. Sui server di solito si raccomanda di non installarlo, quindi si può usare xvfb per avere un ambiente X virtuale.
+---
 
-Se stai eseguendo il server in ambiente grafico/X11, non è necessario installare xvfb. Maggiori informazioni su https://www.itopen.it/qgis-server-setup-notes/.
+## 🔹 X Virtual Frame Buffer (xvfb)
 
-Per installare il package:
+QGIS Server ha bisogno di un server X funzionante per essere pienamente utilizzabile, in particolare per la stampa.  
+Sui server si raccomanda di non installare un server grafico, quindi si può usare **xvfb** per avere un ambiente X virtuale.  
 
-apt install xvfb
-Crea il file di servizio, /etc/systemd/system/xvfb.service, con questo contenuto:
+---
 
+### 1️⃣ Installazione di xvfb
+
+```bash
+sudo apt install xvfb
+```
+
+---
+
+### 2️⃣ Configurazione del servizio
+
+Crea il file di servizio `/etc/systemd/system/xvfb.service` con questo contenuto:
+
+```ini
 [Unit]
 Description=X Virtual Frame Buffer Service
 After=network.target
@@ -192,17 +233,29 @@ ExecStart=/usr/bin/Xvfb :99 -screen 0 1024x768x24 -ac +extension GLX +render -no
 
 [Install]
 WantedBy=multi-user.target
-Abilita, avvia e verifica lo stato di xvfb.service:
+```
 
-systemctl enable --now xvfb.service
+---
+
+### 3️⃣ Abilitazione e avvio del servizio
+
+```bash
+sudo systemctl enable --now xvfb.service
 systemctl status xvfb.service
-Quindi, a seconda del server HTTP, devi configurare il parametro DISPLAY o usare direttamente xvfb-run.
+```
 
-Utilizzandio Apache:
+---
 
-Aggiungi alla tua configurazione Fcgid (vedi Apache HTTP Server):
+### 4️⃣ Integrazione con Apache
 
-FcgidInitialEnv DISPLAY       ":99"
-Riavvia Apache affinché la nuova configurazione venga presa in carico:
+Aggiungi alla configurazione Fcgid in Apache il parametro:
 
-systemctl restart apache2
+```apache
+FcgidInitialEnv DISPLAY ":99"
+```
+
+Poi riavvia Apache affinché la nuova configurazione venga presa in carico:
+
+```bash
+sudo systemctl restart apache2
+```
