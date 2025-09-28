@@ -173,3 +173,36 @@ Adesso se tutto è andato a buon fine, al seguente link dovresti vedere le **cap
 ```
 http://disipio.io/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities&MAP=/gisserver/datigis/ComuniItaliani/ComuniISTAT.qgz
 ```
+
+QGIS Server ha bisogno di un server X funzionante per essere pienamente utilizzabile, in particolare per la stampa. Sui server di solito si raccomanda di non installarlo, quindi si può usare xvfb per avere un ambiente X virtuale.
+
+Se stai eseguendo il server in ambiente grafico/X11, non è necessario installare xvfb. Maggiori informazioni su https://www.itopen.it/qgis-server-setup-notes/.
+
+Per installare il package:
+
+apt install xvfb
+Crea il file di servizio, /etc/systemd/system/xvfb.service, con questo contenuto:
+
+[Unit]
+Description=X Virtual Frame Buffer Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/Xvfb :99 -screen 0 1024x768x24 -ac +extension GLX +render -noreset
+
+[Install]
+WantedBy=multi-user.target
+Abilita, avvia e verifica lo stato di xvfb.service:
+
+systemctl enable --now xvfb.service
+systemctl status xvfb.service
+Quindi, a seconda del server HTTP, devi configurare il parametro DISPLAY o usare direttamente xvfb-run.
+
+Utilizzandio Apache:
+
+Aggiungi alla tua configurazione Fcgid (vedi Apache HTTP Server):
+
+FcgidInitialEnv DISPLAY       ":99"
+Riavvia Apache affinché la nuova configurazione venga presa in carico:
+
+systemctl restart apache2
