@@ -221,11 +221,11 @@ sudo apt install xvfb
 
 ### 2️⃣ Configurazione del servizio
 
-Crea il file di servizio `/etc/systemd/system/xvfb.service` con questo contenuto:
+Crea il file di servizio `/etc/systemd/system/xvfb.service`
 ```bash
 sudo nano /etc/systemd/system/xvfb.service
 ```
-
+incollando questo contenuto:
 ```ini
 [Unit]
 Description=X Virtual Frame Buffer Service
