@@ -130,24 +130,29 @@ e che l’eseguibile funzioni:
 
 questo dovrebbe essere il risultato:
 ```
+```diff
 Application path not initialized
 Application path not initialized
 Application path not initialized
 Application path not initialized
 QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-gisadmin'
-Warning 1: Unable to find driver ECW to unload from GDAL_SKIP environment variable.
-Warning 1: Unable to find driver ECW to unload from GDAL_SKIP environment variable.
-Warning 1: Unable to find driver JP2ECW to unload from GDAL_SKIP environment variable.
-"Loading native module /usr/lib/qgis/server/liblandingpage.so"
-"Loading native module /usr/lib/qgis/server/libwcs.so"
-"Loading native module /usr/lib/qgis/server/libwfs.so"
-"Loading native module /usr/lib/qgis/server/libwfs3.so"
-"Loading native module /usr/lib/qgis/server/libwms.so"
-"Loading native module /usr/lib/qgis/server/libwmts.so"
+
+- Warning 1: Unable to find driver ECW to unload from GDAL_SKIP environment variable.
+- Warning 1: Unable to find driver ECW to unload from GDAL_SKIP environment variable.
+- Warning 1: Unable to find driver JP2ECW to unload from GDAL_SKIP environment variable.
+
++ "Loading native module /usr/lib/qgis/server/liblandingpage.so"
++ "Loading native module /usr/lib/qgis/server/libwcs.so"
++ "Loading native module /usr/lib/qgis/server/libwfs.so"
++ "Loading native module /usr/lib/qgis/server/libwfs3.so"
++ "Loading native module /usr/lib/qgis/server/libwms.so"
++ "Loading native module /usr/lib/qgis/server/libwmts.so"
+
 Content-Length: 0
 Location: http:/index.json
 Server:  QGIS FCGI server - QGIS version 3.44.3-Solothurn
 Status:  302
+
 ```
 
 
