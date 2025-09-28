@@ -66,8 +66,6 @@ Con le seguenti impostazioni:
   ServerAdmin webmaster@localhost
   ServerName  disipio.io
   
-  DocumentRoot /var/www/html
-
   # Apache logs (diversi dai log di QGIS Server)
   ErrorLog ${APACHE_LOG_DIR}/gisserver.error.log
   CustomLog ${APACHE_LOG_DIR}/gisserver.access.log combined
