@@ -96,11 +96,11 @@ sudo mkdir -p /var/log/qgis/
 ```
 ```bash
 # cartella database di autenticazione
-sudo mkdir -p /home/gisadmin/qgisserverdb
+sudo mkdir -p /gisserver/qgisserverdb
 ```
 ```bash
 # file database autenticazione (se non già presente)
-sudo touch /home/gisadmin/qgisserverdb/qgis-auth.db
+sudo touch /gisserver/qgisserverdb/qgis-auth.db
 ```
 ```bash
 # cartella progetti QGIS
