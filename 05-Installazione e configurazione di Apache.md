@@ -40,7 +40,7 @@ creiamo subito il file gisserver.conf in /etc/apache2/sites-available/ con il co
 ```bash
 sudo nano /etc/apache2/sites-available/gisserver.conf
 ```
-
+con le seguenti impostazioni
 ```bash
 <VirtualHost *:80>
   ServerAdmin webmaster@localhost
