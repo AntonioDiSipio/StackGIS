@@ -255,7 +255,7 @@ Aggiungi alla configurazione Fcgid in Apache il parametro:
 ```bash
 sudo nano /etc/apache2/sites-available/gisserver.conf
 ```
-
+ed incolla questo script
 ```apache
 FcgidInitialEnv DISPLAY ":99"
 ```
