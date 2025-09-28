@@ -33,7 +33,7 @@ QGIS Server supporta inoltre plugin in Python per estendere le sue funzionalità
 - Implementazione di riferimento per lo standard **WMS 1.3**.
 
 
-
+---
 
 
 # 🗺️ Installazione di QGIS Server su Debian 13 (Trixie)
