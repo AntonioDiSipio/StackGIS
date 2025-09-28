@@ -65,13 +65,13 @@ sudo nano /etc/fail2ban/jail.local
 Configura la sezione SSH (porta adattata se modificata):
 ```
 [sshd]
-enabled  = true
-port     = 22
-filter   = sshd
-logpath  = /var/log/auth.log
-maxretry = 5
-bantime  = 3600
-findtime = 600
+enabled  = true                # attiva la jail per SSH
+port     = 22                  # monitora la porta SSH (22 di default)
+filter   = sshd                # usa il filtro predefinito "sshd"
+logpath  = /var/log/auth.log   # legge i tentativi di accesso falliti da questo log
+maxretry = 5                   # massimo 5 tentativi falliti...
+findtime = 600                 # ...nell ^`^yarco di 10 minuti
+bantime  = -1                  # ban permanente (finch   non sblocchi manualmente)
 ```
 
 Abilita e avvia:
