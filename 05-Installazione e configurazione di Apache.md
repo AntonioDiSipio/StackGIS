@@ -204,7 +204,7 @@ http://disipio.io/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&REQUEST=Ge
 
 ---
 
-## 🔹 X Virtual Frame Buffer (xvfb)
+## 🔹 Xvfb
 
 QGIS Server ha bisogno di un server X funzionante per essere pienamente utilizzabile, in particolare per la stampa.  
 Sui server si raccomanda di non installare un server grafico, quindi si può usare **xvfb** per avere un ambiente X virtuale.  
