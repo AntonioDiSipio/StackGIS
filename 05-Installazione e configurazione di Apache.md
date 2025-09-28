@@ -120,7 +120,7 @@ Ora riavvia Apache per usare la nuova configurazione:
 sudo systemctl restart apache2
 ```
 
-Sul sito ho messo a disposizione un file zip contenente un esempio di progetto qgis con i confini amministrativi dei comuni italiani da scaricare al link [www.disipio.io/ComuniISTAT.zip](www.disipio.io/ComuniISTAT.zip) e per poter testare le funzionalità di qgis-server.
+Sul sito ho messo a disposizione un file zip contenente un esempio di progetto qgis con i confini amministrativi dei comuni italiani da scaricare al link [www.disipio.io/ComuniISTAT.zip](http://www.disipio.io/ComuniISTAT.zip) e per poter testare le funzionalità di qgis-server.
 
 adesso se tutto è andato a buon fine al seguente link dovresti vedere le capibilities del progetto pubblicato
 ```
