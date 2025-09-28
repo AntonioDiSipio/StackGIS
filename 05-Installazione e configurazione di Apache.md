@@ -44,7 +44,7 @@ con le seguenti impostazioni
 ```bash
 <VirtualHost *:80>
   ServerAdmin webmaster@localhost
-  ServerName qgis.demo
+  ServerName gisserver
 
   DocumentRoot /var/www/html
 
@@ -64,7 +64,7 @@ con le seguenti impostazioni
   FcgidInitialEnv QGIS_SERVER_LOG_LEVEL 0
 
   # default QGIS project
-  SetEnv QGIS_PROJECT_FILE /home/qgis/projects/world.qgs
+  SetEnv QGIS_PROJECT_PATH /gisdata
 
   # QGIS_AUTH_DB_DIR_PATH must lead to a directory writeable by the Server's FCGI process user
   FcgidInitialEnv QGIS_AUTH_DB_DIR_PATH "/home/qgis/qgisserverdb/"
