@@ -1,4 +1,4 @@
-## Apache HTTP Server
+# Apache HTTP Server
 
 [Apache HTTP Server](https://httpd.apache.org/), spesso chiamato semplicemente **Apache**, è un server web open source molto diffuso, sviluppato e mantenuto dalla Apache Software Foundation.  
 
@@ -6,13 +6,23 @@ Il suo scopo principale è gestire le richieste HTTP provenienti dai client (ad 
 
 Progettato per essere **sicuro**, **efficiente** ed **estensibile**, Apache offre un’architettura modulare che consente di aggiungere funzionalità come il rewriting degli URL, l’autenticazione o l’utilizzo come proxy, adattandosi a diverse esigenze.
 
-Installazione di Apache
 ---
+
+## 🔹 Installazione di Apache
+
 Installiamo apache lanciando il comando:
+
 ```bash
 sudo apt install apache2 libapache2-mod-fcgid
 ```
-al termine del processo di installazione e aver avviato apache se apri un browser e digiti ```http://tuo-server/``` dovrebbe comparire la pagina web di default di apache
+
+Al termine del processo di installazione e aver avviato apache se apri un browser e digiti:
+
+```
+http://tuo-server/
+```
+
+dovrebbe comparire la pagina web di default di apache.
 
 <p align="center">
   <img src="img/apachedefaultpage.jpg" width="400">
@@ -20,28 +30,38 @@ al termine del processo di installazione e aver avviato apache se apri un browse
 
 ⚠️ **Nota bene:**  
 Se la pagina di default di Apache non dovesse essere visibile, verifica che il **firewall** non stia bloccando la porta **80** (HTTP).  
+
 Su sistemi con `ufw`, ad esempio, puoi aprire la porta con:  
- 
+
 ```bash
 sudo ufw allow 80/tcp
 sudo ufw reload
 ```
-  
+
 Se invece usi HTTPS, ricordati di aprire anche la porta **443**:  
- 
+
 ```bash
 sudo ufw allow 443/tcp
 sudo ufw reload
 ```
 
-per far funzionare qgis-server su apache e quindi esporre i servizi, bisogna configurare un virtua host, nel lascio la configurazione di default di apache e creo un nuovo virtual host con la configurazione suggerita dalla guida, ma apportando alcune modifiche necessarie al mio caso per far funzionare la configurazione, quindi
+---
 
-creiamo subito il file gisserver.conf in /etc/apache2/sites-available/ con il comando
+## 🔹 Configurazione Virtual Host per QGIS Server
+
+Per far funzionare qgis-server su apache e quindi esporre i servizi, bisogna configurare un virtual host.  
+
+Lascio la configurazione di default di apache e creo un nuovo virtual host con la configurazione suggerita dalla guida, ma apportando alcune modifiche necessarie al mio caso per far funzionare la configurazione, quindi:
+
+Creiamo subito il file **`gisserver.conf`** in `/etc/apache2/sites-available/` con il comando:
+
 ```bash
 sudo nano /etc/apache2/sites-available/gisserver.conf
 ```
-con le seguenti impostazioni
-```bash
+
+Con le seguenti impostazioni:
+
+```apache
 <VirtualHost *:80>
   ServerAdmin webmaster@localhost
   ServerName  disipio.io
@@ -89,26 +109,40 @@ con le seguenti impostazioni
 </VirtualHost>
 ```
 
+---
+
+## 🔹 Creazione cartelle necessarie
+
 Creiamo ora le cartelle che ospiteranno i progetti e i registri di QGIS Server e il database di autenticazione:
+
 ```bash
 # cartella log dedicata a QGIS Server
 sudo mkdir -p /var/log/qgis/
 ```
+
 ```bash
 # cartella database di autenticazione
 sudo mkdir -p /gisserver/qgisserverdb
 ```
+
 ```bash
 # file database autenticazione (se non già presente)
 sudo touch /gisserver/qgisserverdb/qgis-auth.db
 ```
+
 ```bash
 # cartella progetti QGIS
 sudo mkdir -p /gisserver/
 # diamo i permessi a gisadmin
 sudo chown -R gisadmin:gisadmin /gisserver
 ```
-Ora possiamo abilitare l’host virtuale e il mod "fcgid", se non è già stato fatto:
+
+---
+
+## 🔹 Abilitazione Virtual Host e moduli
+
+Ora possiamo abilitare l’host virtuale e il mod `fcgid`, se non è già stato fatto:
+
 ```bash
 sudo a2enmod fcgid
 sudo a2enmod rewrite
@@ -116,14 +150,27 @@ sudo a2ensite gisserver.conf
 ```
 
 Ora riavvia Apache per usare la nuova configurazione:
+
 ```bash
 sudo systemctl restart apache2
 ```
 
-Sul sito ho messo a disposizione un file zip contenente un esempio di progetto qgis con i confini amministrativi dei comuni italiani da scaricare al link [www.disipio.io/ComuniISTAT.zip](http://www.disipio.io/ComuniISTAT.zip) e per poter testare le funzionalità di qgis-server.
+---
 
-adesso se tutto è andato a buon fine al seguente link dovresti vedere le capibilities del progetto pubblicato
+## 🔹 Progetto di esempio
+
+Sul sito ho messo a disposizione un file zip contenente un esempio di progetto qgis con i confini amministrativi dei comuni italiani da scaricare al link:  
+
+👉 [www.disipio.io/ComuniISTAT.zip](http://www.disipio.io/ComuniISTAT.zip)
+
+per poter testare le funzionalità di qgis-server.
+
+---
+
+## 🔹 Test finale
+
+Adesso se tutto è andato a buon fine, al seguente link dovresti vedere le **capabilities** del progetto pubblicato:
+
 ```
 http://disipio.io/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities&MAP=/gisserver/datigis/ComuniItaliani/ComuniISTAT.qgz
 ```
-
