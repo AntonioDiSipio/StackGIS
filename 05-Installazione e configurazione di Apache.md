@@ -6,6 +6,7 @@ Il suo scopo principale è gestire le richieste HTTP provenienti dai client (ad 
 
 Progettato per essere **sicuro**, **efficiente** ed **estensibile**, Apache offre un’architettura modulare che consente di aggiungere funzionalità come il rewriting degli URL, l’autenticazione o l’utilizzo come proxy, adattandosi a diverse esigenze.
 
+Installazione di Apache
 ---
 Installiamo apache lanciando il comando:
 ```bash
