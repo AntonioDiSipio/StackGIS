@@ -104,9 +104,9 @@ sudo mkdir -p /home/gisadmin/gisserver/gisdata
 ```
 Ora possiamo abilitare l’host virtuale e il mod "fcgid", se non è già stato fatto:
 ```bash
-a2enmod fcgid
-a2enmod rewrite
-a2ensite gisserver.conf
+sudo a2enmod fcgid
+sudo a2enmod rewrite
+sudo a2ensite gisserver.conf
 ```
 
 
