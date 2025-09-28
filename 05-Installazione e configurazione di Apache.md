@@ -14,4 +14,7 @@ sudo apt install apache2 libapache2-mod-fcgid
 ```
 al termine del processo di installaiozne e aver avviato apache se apri un browser e digiti ```http://tuo-server/``` dovrebbe comparire la pagina web di default di apache
 
-<img src="img/apachedefaultpage.jpg" width="400">
+<p align="center">
+  <img src="img/apachedefaultpage.jpg" width="400">
+</p>
+
