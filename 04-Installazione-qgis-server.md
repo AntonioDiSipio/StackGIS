@@ -38,7 +38,7 @@ QGIS Server supporta inoltre plugin in Python per estendere le sue funzionalità
 
 # 🗺️ Installazione di QGIS Server su Debian 13 (Trixie)
 
-👉 Guida ufficiale: [QGIS Server Guida/Manuale](https://qgis.org/resources/installation-guide/#linux)
+👉 Pagina ufficiale di QGIS Installers: [QGIS Server Guida/Manuale](https://qgis.org/resources/installation-guide/#linux)
 
 ---
 
