@@ -13,4 +13,4 @@ Installiamo apache lanciando il comando:
 sudo apt install apache2 libapache2-mod-fcgid
 ```
 al termine del processo di installaiozne e aver avviato apache se apri un browser e digiti ```http://tuo-server/``` dovrebbe comparire la pagina web di default di apache
-(https://github.com/AntonioDiSipio/StackGIS/blob/42d65c580eea7795a84fcdeacbdb8d7205b8d572/img/apachedefaultpage.jpg)
+(img/apachedefaultpage.jpg)
