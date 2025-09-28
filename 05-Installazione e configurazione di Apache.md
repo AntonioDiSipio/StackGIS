@@ -44,8 +44,8 @@ con le seguenti impostazioni
 ```bash
 <VirtualHost *:80>
   ServerAdmin webmaster@localhost
-  ServerName gisserver
-
+  ServerName  disipio.io
+  
   DocumentRoot /var/www/html
 
   # Apache logs (diversi dai log di QGIS Server)
