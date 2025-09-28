@@ -51,7 +51,7 @@ sudo ufw reload
 
 Per far funzionare qgis-server su apache e quindi esporre i servizi, bisogna configurare un virtual host.  
 
-Lascio la configurazione di default di apache e creo un nuovo virtual host con la configurazione suggerita dalla guida, ma apportando alcune modifiche necessarie al mio caso per far funzionare la configurazione, quindi:
+Lascio la configurazione di default di apache ```000-default.conf``` e creo un nuovo virtual host con la configurazione suggerita dalla guida, ma apportando alcune modifiche necessarie al mio caso per far funzionare la configurazione, quindi:
 
 Creiamo subito il file **`gisserver.conf`** in `/etc/apache2/sites-available/` con il comando:
 
