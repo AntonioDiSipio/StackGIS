@@ -19,6 +19,10 @@
     <td align="center" style="border: none; padding: 0 50px;">
       <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Apache_Feather_Logo.svg" height="70"/><br/>
       <b>Apache</b>
+    <td align="center" style="border: none; padding: 0 50px;">
+      <img src="https://postgis.net/brand.svg" height="70"/><br/>
+      <b>Postgis</b>
+    </td>
     </td>
     <td align="center" style="border: none; padding: 0 50px;">
       <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" height="70"/><br/>
@@ -27,8 +31,8 @@
     <td align="center" style="border: none; padding: 0 50px;">
       <img src="https://docs.lizmap.com/3.8/it/_static/logo.png" height="70"/><br/>
       <b>Lizmap</b>
-    </td>
-  </tr>
+       </td>
+</tr>
 </table>
 
 
