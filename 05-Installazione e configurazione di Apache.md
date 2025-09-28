@@ -15,6 +15,22 @@ sudo apt install apache2 libapache2-mod-fcgid
 al termine del processo di installaiozne e aver avviato apache se apri un browser e digiti ```http://tuo-server/``` dovrebbe comparire la pagina web di default di apache
 
 <p align="center">
-  <img src="img/apachedefaultpage.jpg" width="400">
+  <img src="img/apachedefaultpage.jpg" width="200">
 </p>
+
+> ⚠️ **Nota bene:**  
+> Se la pagina di default di Apache non dovesse essere visibile, verifica che il **firewall** non stia bloccando la porta **80** (HTTP).  
+> Su sistemi con `ufw`, ad esempio, puoi aprire la porta con:  
+> 
+> ```bash
+> sudo ufw allow 80/tcp
+> sudo ufw reload
+> ```
+>  
+> Se invece usi HTTPS, ricordati di aprire anche la porta **443**:  
+> 
+> ```bash
+> sudo ufw allow 443/tcp
+> sudo ufw reload
+> ```
 
