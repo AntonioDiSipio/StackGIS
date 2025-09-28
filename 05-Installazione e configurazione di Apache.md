@@ -222,6 +222,9 @@ sudo apt install xvfb
 ### 2️⃣ Configurazione del servizio
 
 Crea il file di servizio `/etc/systemd/system/xvfb.service` con questo contenuto:
+```bash
+sudo nano /etc/systemd/system/xvfb.service
+```
 
 ```ini
 [Unit]
