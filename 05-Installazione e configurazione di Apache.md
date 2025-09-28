@@ -48,11 +48,11 @@ con le seguenti impostazioni
 
   DocumentRoot /var/www/html
 
-  # Apache logs (different than QGIS Server log)
-  ErrorLog ${APACHE_LOG_DIR}/qgis.demo.error.log
-  CustomLog ${APACHE_LOG_DIR}/qgis.demo.access.log combined
+  # Apache logs (diversi dai log di QGIS Server)
+  ErrorLog ${APACHE_LOG_DIR}/gisserver.error.log
+  CustomLog ${APACHE_LOG_DIR}/gisserver.access.log combined
 
-  # Longer timeout for WPS... default = 40
+  # Timeout più lungo per WPS... default = 40
   FcgidIOTimeout 120
 
   FcgidInitialEnv LC_ALL "en_US.UTF-8"
@@ -63,19 +63,18 @@ con le seguenti impostazioni
   FcgidInitialEnv QGIS_SERVER_LOG_STDERR 1
   FcgidInitialEnv QGIS_SERVER_LOG_LEVEL 0
 
-  # default QGIS project
+  # cartella contenente i progetti QGIS
   SetEnv QGIS_PROJECT_PATH /gisdata
 
-  # QGIS_AUTH_DB_DIR_PATH must lead to a directory writeable by the Server's FCGI process user
-  FcgidInitialEnv QGIS_AUTH_DB_DIR_PATH "/home/qgis/qgisserverdb/"
-  FcgidInitialEnv QGIS_AUTH_PASSWORD_FILE "/home/qgis/qgisserverdb/qgis-auth.db"
+  # QGIS_AUTH_DB_DIR_PATH deve puntare a una cartella scrivibile dall’utente FCGI (www-data)
+  FcgidInitialEnv QGIS_AUTH_DB_DIR_PATH "/home/gisadmin/qgisserverdb/"
+  FcgidInitialEnv QGIS_AUTH_PASSWORD_FILE "/home/gisadmin/qgisserverdb/qgis-auth.db"
 
-  # Set pg access via pg_service file
-  SetEnv PGSERVICEFILE /home/qgis/.pg_service.conf
-  FcgidInitialEnv PGPASSFILE "/home/qgis/.pgpass"
+  # Configurazione per accesso PostgreSQL via pg_service
+  SetEnv PGSERVICEFILE /home/gisadmin/.pg_service.conf
+  FcgidInitialEnv PGPASSFILE "/home/gisadmin/.pgpass"
 
-  # if qgis-server is installed from packages in debian based distros this is usually /usr/lib/cgi-bin/
-  # run "locate qgis_mapserv.fcgi" if you don't know where qgis_mapserv.fcgi is
+  # Dove si trova qgis_mapserv.fcgi
   ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
   <Directory "/usr/lib/cgi-bin/">
     AllowOverride None
@@ -84,10 +83,9 @@ con le seguenti impostazioni
   </Directory>
 
   <IfModule mod_fcgid.c>
-  FcgidMaxRequestLen 26214400
-  FcgidConnectTimeout 60
+    FcgidMaxRequestLen 26214400
+    FcgidConnectTimeout 60
   </IfModule>
-
 </VirtualHost>
 ```
 
