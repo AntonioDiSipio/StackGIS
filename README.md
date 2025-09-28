@@ -52,6 +52,9 @@
 - 🗺️ [04 - Installazione QGIS Server](04-Installazione-qgis-server.md)  
   Guida passo-passo per installare e verificare **QGIS Server** su Debian 13.
 
+- 🗺️ [05 - Installazione e configurazione di Apache](05-Installazione%20e%20configurazione%20di%20Apache.md)  
+  Guida passo-passo per installare e verificare **QGIS Server** su Debian 13.
+
 ---
 
 ## 🎯 Obiettivo
