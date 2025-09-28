@@ -64,7 +64,7 @@ con le seguenti impostazioni
   FcgidInitialEnv QGIS_SERVER_LOG_LEVEL 0
 
   # cartella contenente i progetti QGIS
-  SetEnv QGIS_PROJECT_PATH /gisdata
+  SetEnv QGIS_PROJECT_PATH /home/gisadmin/gisdata
 
   # QGIS_AUTH_DB_DIR_PATH deve puntare a una cartella scrivibile dall’utente FCGI (www-data)
   FcgidInitialEnv QGIS_AUTH_DB_DIR_PATH "/home/gisadmin/qgisserverdb/"
