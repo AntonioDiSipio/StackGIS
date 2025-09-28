@@ -89,5 +89,8 @@ con le seguenti impostazioni
 </VirtualHost>
 ```
 
+Creiamo ora le cartelle che ospiteranno i progetti e i registri di QGIS Server e il database di autenticazione:
+
+
 
 
