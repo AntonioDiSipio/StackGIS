@@ -12,7 +12,7 @@ Installiamo apache lanciando il comando:
 ```bash
 sudo apt install apache2 libapache2-mod-fcgid
 ```
-al termine del processo di installaiozne e aver avviato apache se apri un browser e digiti ```http://tuo-server/``` dovrebbe comparire la pagina web di default di apache
+al termine del processo di installazione e aver avviato apache se apri un browser e digiti ```http://tuo-server/``` dovrebbe comparire la pagina web di default di apache
 
 <p align="center">
   <img src="img/apachedefaultpage.jpg" width="200">
