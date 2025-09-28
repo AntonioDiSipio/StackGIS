@@ -99,6 +99,10 @@ sudo mkdir -p /var/log/qgis/
 sudo mkdir -p /home/gisadmin/gisserver/qgisserverdb
 ```
 ```bash
+# diamo i permessi sull'intera cartella gisserver al'utente gisadmin con
+sudo chown -R gisadmin:gisadmin /home/gisadmin/gisserver
+```
+```bash
 # cartella progetti QGIS
 sudo mkdir -p /home/gisadmin/gisserver/gisdata
 ```
