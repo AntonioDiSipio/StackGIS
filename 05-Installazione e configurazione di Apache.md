@@ -104,7 +104,7 @@ sudo touch /gisserver/qgisserverdb/qgis-auth.db
 ```
 ```bash
 # cartella progetti QGIS
-sudo mkdir -p /gisdata
+sudo mkdir -p /gisserver/
 ```
 Ora possiamo abilitare l’host virtuale e il mod "fcgid", se non è già stato fatto:
 ```bash
