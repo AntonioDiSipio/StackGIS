@@ -148,11 +148,12 @@ Content-Length: 0
 Location: http:/index.json
 Server:  QGIS FCGI server - QGIS version 3.44.3-Solothurn
 Status:  302
-
 ```
 
-
 Se l’output mostra la versione, QGIS Server è installato correttamente ✅
+
+---
+Installiamo ora i plugin dper qgis server, questo ci servirà successivamente per configurare lizmap 
 
 ---
 
