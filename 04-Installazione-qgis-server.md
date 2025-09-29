@@ -153,11 +153,12 @@ Status:  302
 Se l’output mostra la versione, QGIS Server è installato correttamente ✅
 
 ---
+## 7 Test dell’installazione
 Installiamo ora i plugin dper qgis server, questo ci servirà successivamente per configurare lizmap 
 
 ---
 
-## 7️⃣ Configurazione Apache (prossimo passo)
+## 8 Configurazione Apache (prossimo passo)
 
 Dopo l’installazione, bisogna configurare Apache per esporre i servizi di QGIS Server sul web.
 
