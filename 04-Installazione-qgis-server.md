@@ -153,8 +153,16 @@ Status:  302
 Se l’output mostra la versione, QGIS Server è installato correttamente ✅
 
 ---
-## 7 Test dell’installazione
-Installiamo ora i plugin dper qgis server, questo ci servirà successivamente per configurare lizmap 
+## 7 Installare Plugin per qgis server
+Installiamo ora i plugin dper qgis server, questo ci servirà successivamente per configurare lizmap
+
+diamo il comando per installare pip
+pip è il gestore di pacchetti di Python.
+Serve per installare, aggiornare e rimuovere librerie e moduli scritti in Python da PyPI (Python Package Index)
+```bash
+sudo apt update
+sudo apt install python3-pip
+```
 
 ---
 
