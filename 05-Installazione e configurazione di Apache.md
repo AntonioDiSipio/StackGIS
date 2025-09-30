@@ -216,7 +216,7 @@ sudo rm -r RegioniISTAT.zip
 Se tutto è andato a buon fine, al seguente link dovresti vedere le **capabilities** del progetto pubblicato:
 
 ```
-http://disipio.io/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities&MAP=/gisserver/datigis/RegioniISTAT/RegioniISTAT.qgz
+http://disipio.io/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities&MAP=/gisserver/datigis/RegioniISTAT.qgz
 ```
 
 ---
