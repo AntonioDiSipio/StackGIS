@@ -16,7 +16,7 @@ Installiamo Apache lanciando il comando:
 sudo apt install apache2 libapache2-mod-fcgid
 ```
 
-Al termine del processo di installazione e aver avviato Apache, se apri un browser e digiti:
+Al termine del processo di installazione e dopo aver avviato Apache, se apri un browser e digiti:
 
 ```
 http://tuo-server/
