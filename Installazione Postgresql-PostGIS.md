@@ -1,18 +1,10 @@
 ## Installazione di PostgreSQL su Debian 13
 
-PostgreSQL è un potente database relazionale open-source, molto
-utilizzato in ambito GIS grazie all'estensione **PostGIS**.
+PostgreSQL è un potente database relazionale open-source, molto utilizzato in ambito GIS grazie all'estensione **PostGIS**.
 
-Su Debian 13 può essere installato facilmente tramite i repository
-ufficiali.\
-Se necessario, è possibile aggiungere il repository ufficiale PostgreSQL
-(PGDG) per disporre di versioni più recenti rispetto a quelle incluse in
-Debian.
+Su Debian 13 può essere installato facilmente tramite i repositoryufficiali.\
+Se necessario, è possibile aggiungere il repository ufficiale PostgreSQL (PGDG) per disporre di versioni più recenti rispetto a quelle incluse in Debian.
 
-Una volta installato, il servizio si avvia automaticamente e può essere
-amministrato tramite l'utente di sistema `postgres`.
+Una volta installato, il servizio si avvia automaticamente e può essere amministrato tramite l'utente di sistema `postgres`.
 
-Per l'integrazione con **QGIS Server** è consigliato configurare i file
-**`.pg_service.conf`** e **`.pgpass`**, che consentono di gestire
-connessioni e credenziali in modo centralizzato e sicuro, evitando di
-inserire username e password direttamente nei progetti.
+Per l'integrazione con **QGIS Server** è consigliato configurare i file **`.pg_service.conf`** e **`.pgpass`**, che consentono di gestire connessioni e credenziali in modo centralizzato e sicuro, evitando di inserire username e password direttamente nei progetti.
