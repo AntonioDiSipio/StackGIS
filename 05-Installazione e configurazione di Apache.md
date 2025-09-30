@@ -195,6 +195,7 @@ Installiamo un gestore di pacchetti zip con:
 sudo apt-get install unzip
 ```
 per poter testare le funzionalità di QGIS Server.
+Su GitHub i file binari vanno scaricati usando il link “Download raw” (cioè il contenuto effettivo, non la pagina). L’URL giusto deve passare per ```raw.githubusercontent.com```.
 scarichiamo il file zip con 
 ```bash
 wget https://raw.githubusercontent.com/AntonioDiSipio/StackGIS/main/RegioniISTAT.zip
