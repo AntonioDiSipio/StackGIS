@@ -37,3 +37,9 @@ poi crea il file ```sudo nano /etc/apt/sources.list.d/pgdg.list```
 # sostituisci con la tua versione di debian (trixie)
 deb [signed-by=/usr/share/postgresql-common/pgdg/apt.postgresql.org.asc] https://apt.postgresql.org/pub/repos/apt trixie -pgdg main
 ```
+
+Infine, aggiorna gli elenchi dei pacchetti e inizia a installare i pacchetti:
+```bash
+sudo apt update
+sudo apt install postgresql-17
+```
