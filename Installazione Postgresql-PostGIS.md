@@ -32,3 +32,9 @@ sudo install -d /usr/share/postgresql-common/pgdg
 sudo curl -o /usr/share/postgresql-common/pgdg/apt.postgresql.org.asc --fail https://www.postgresql.org/media/keys/ACCC4CF8.asc
 ```
 poi crea il file ```sudo nano /etc/apt/sources.list.d/pgdg.list```
+
+# sostituisci con la tua versione di debian (trixie)
+
+```bash
+deb [signed-by=/usr/share/postgresql-common/pgdg/apt.postgresql.org.asc] https://apt.postgresql.org/pub/repos/apt trixie -pgdg main
+```
