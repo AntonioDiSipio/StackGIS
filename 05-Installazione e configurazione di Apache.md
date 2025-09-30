@@ -186,9 +186,9 @@ sudo tail -f /var/log/apache2/error.log
 
 ## 🔹 Progetto di esempio
 
-Sul sito è disponibile un file zip contenente un esempio di progetto QGIS con i confini amministrativi dei comuni italiani:  
+Sul sito è disponibile un file zip contenente un esempio di progetto QGIS con i confini amministrativi delle Regioni italiane:  
 
-👉 [www.disipio.io/ComuniISTAT.zip](http://www.disipio.io/ComuniISTAT.zip)
+👉 [Regioni Italiane](RegioniISTAT.zip)
 
 per poter testare le funzionalità di QGIS Server.
 
