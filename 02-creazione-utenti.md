@@ -54,7 +54,7 @@ ssh gisadmin@<server_ip>
 ---
 
 ## 5️⃣ Hardening SSH (disabilitare password)
-Modificare il file di configurazione:  
+Collegarsi con il nuovo utente tramite ssh e modificare il file di configurazione:  
 ```bash
 sudo nano /etc/ssh/sshd_config
 ```
