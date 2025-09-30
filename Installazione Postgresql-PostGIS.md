@@ -43,3 +43,11 @@ Infine, aggiorna gli elenchi dei pacchetti e inizia a installare i pacchetti:
 sudo apt update
 sudo apt install postgresql-17
 ```
+
+# Amministrare postgresql
+
+Entrare nel database con
+```bash
+sudo -u postgres psql
+```
+
