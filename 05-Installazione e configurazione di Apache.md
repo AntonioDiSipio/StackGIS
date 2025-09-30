@@ -204,6 +204,10 @@ ed estraiamolo
 ```bash
 sudo unzip RegioniISTAT.zip
 ```
+rimuoviamo il file zip per non creare dati superflui
+```bash
+sudo rm -r RegioniISTAT.zip
+```
 
 ---
 
