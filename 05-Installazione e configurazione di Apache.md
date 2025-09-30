@@ -196,7 +196,8 @@ sudo apt-get install unzip
 ```
 per poter testare le funzionalità di QGIS Server.
 scarichiamo il file zip con 
-```bash wget https://raw.githubusercontent.com/AntonioDiSipio/StackGIS/main/RegioniISTAT.zip
+```bash
+wget https://raw.githubusercontent.com/AntonioDiSipio/StackGIS/main/RegioniISTAT.zip
 ```
 ed estraiamolo
 
