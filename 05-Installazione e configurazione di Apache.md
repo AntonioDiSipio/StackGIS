@@ -201,7 +201,9 @@ scarichiamo il file zip con
 wget https://raw.githubusercontent.com/AntonioDiSipio/StackGIS/main/RegioniISTAT.zip
 ```
 ed estraiamolo
-
+```bash
+sudo unzip RegioniISTAT.zip
+```
 
 ---
 
