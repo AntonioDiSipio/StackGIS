@@ -24,8 +24,11 @@ Configurazione manuale del repository
 
 Importare la chiave del repository da https://www.postgresql.org/media/keys/ACCC4CF8.asc
 
+lancia il comando
+
 ```bash
 sudo apt install curl ca-certificates
 sudo install -d /usr/share/postgresql-common/pgdg
 sudo curl -o /usr/share/postgresql-common/pgdg/apt.postgresql.org.asc --fail https://www.postgresql.org/media/keys/ACCC4CF8.asc
 ```
+poi crea il file ```sudo nano /etc/apt/sources.list.d/pgdg.list```
