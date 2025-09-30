@@ -190,7 +190,14 @@ Sul sito è disponibile un file zip contenente un esempio di progetto QGIS con i
 
 👉 [Regioni Italiane](RegioniISTAT.zip)
 
+Installiamo un gestore di pacchetti zip con:
+```bash
+sudo apt-get install unzip
+```
 per poter testare le funzionalità di QGIS Server.
+scarichiamo il file zip con ```bash wget https://raw.githubusercontent.com/AntonioDiSipio/StackGIS/main/RegioniISTAT.zip```
+ed estraiamolo
+
 
 ---
 
