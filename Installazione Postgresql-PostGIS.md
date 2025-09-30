@@ -2,7 +2,7 @@
 
 PostgreSQL è un potente database relazionale open-source, molto utilizzato in ambito GIS grazie all'estensione **PostGIS**.
 
-Su Debian 13 può essere installato facilmente tramite i repositoryufficiali.\
+Su Debian 13 può essere installato facilmente tramite i repositoryufficiali.
 Se necessario, è possibile aggiungere il repository ufficiale PostgreSQL (PGDG) per disporre di versioni più recenti rispetto a quelle incluse in Debian.
 
 Una volta installato, il servizio si avvia automaticamente e può essere amministrato tramite l'utente di sistema `postgres`.
