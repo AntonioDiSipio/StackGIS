@@ -51,3 +51,8 @@ Entrare nel database con
 sudo -u postgres psql
 ```
 
+# Aggiungere l'estensione spaziale Postgis
+
+```bash
+CREATE EXTENSION postgis;
+```
