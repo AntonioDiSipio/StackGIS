@@ -8,7 +8,8 @@ Se necessario, è possibile aggiungere il repository ufficiale PostgreSQL (PGDG)
 Una volta installato, il servizio si avvia automaticamente e può essere amministrato tramite l'utente di sistema `postgres`.
 
 Per l'integrazione con **QGIS Server** è consigliato configurare i file **`.pg_service.conf`** e **`.pgpass`**, che consentono di gestire connessioni e credenziali in modo centralizzato e sicuro, evitando di inserire username e password direttamente nei progetti.
-
+```bash
 sudo su # only necessary if you are not logged in as root
 apt update # update packages list
 apt install curl openssl libssl3 nginx-full nginx nginx-common
+```
