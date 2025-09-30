@@ -54,5 +54,15 @@ sudo -u postgres psql
 # Aggiungere l'estensione spaziale Postgis
 
 ```bash
+sudo apt install postgresql-17-postgis-3 postgresql-17-postgis-3-scripts
+```
+entrare nel database
+```bash
+sudo -u postgres psql
+```
+ed abilitare le estensioni spaziali
+```bash
 CREATE EXTENSION postgis;
 ```
+
+
