@@ -1,7 +1,6 @@
 ```bash
-sudo su # only necessary if you are not logged in as root
-apt update # update packages list
-apt install curl openssl libssl3 nginx-full nginx nginx-common
+sudo apt update # update packages list
+sudo apt install curl openssl libssl3 nginx-full nginx nginx-common
 ```
 
 installiamo php
