@@ -15,34 +15,13 @@ Per l'integrazione con **QGIS Server** è consigliato configurare i file **`.pg_
 
 ## Installazione
 
-PostgreSQL è disponibile di default in tutte le versioni di Debian. Tuttavia, Debian crea uno "snapshot" di una versione specifica di PostgreSQL, che sarà poi supportata per tutta la durata di vita di quella versione. Il progetto PostgreSQL gestisce un repository Apt con tutte le versioni di PostgreSQL supportate.
-
-Se la versione inclusa nella tua versione di Debian non è quella che desideri, puoi utilizzare il [PostgreSQL Apt Repository](https://wiki.postgresql.org/wiki/Apt). Questo repository si integrerà con i tuoi normali sistemi e con la gestione delle patch, e fornirà aggiornamenti automatici per tutte le versioni supportate di PostgreSQL per tutta la durata del supporto di PostgreSQL.
-
-Configurazione manuale del repository
----
-
-Importare la chiave del repository da https://www.postgresql.org/media/keys/ACCC4CF8.asc
-
-lancia il comando
-
+Installiamo postgresql dando il comando
 ```bash
-sudo apt install curl ca-certificates
-sudo install -d /usr/share/postgresql-common/pgdg
-sudo curl -o /usr/share/postgresql-common/pgdg/apt.postgresql.org.asc --fail https://www.postgresql.org/media/keys/ACCC4CF8.asc
+apt install postgresql
 ```
-poi crea il file ```sudo nano /etc/apt/sources.list.d/pgdg.list```
+questo installerà la versione di default di postgresql.
 
-```bash
-# sostituisci con la tua versione di debian (trixie)
-deb [signed-by=/usr/share/postgresql-common/pgdg/apt.postgresql.org.asc] https://apt.postgresql.org/pub/repos/apt trixie -pgdg main
-```
-
-Infine, aggiorna gli elenchi dei pacchetti e inizia a installare i pacchetti:
-```bash
-sudo apt update
-sudo apt install postgresql-17
-```
+----
 
 # Amministrare postgresql
 
@@ -50,6 +29,8 @@ Entrare nel database con
 ```bash
 sudo -u postgres psql
 ```
+
+-----
 
 # Aggiungere l'estensione spaziale Postgis
 
