@@ -17,9 +17,9 @@ Per l'integrazione con **QGIS Server** è consigliato configurare i file **`.pg_
 
 Installiamo postgresql dando il comando
 ```bash
-apt install postgresql
+apt install postgresql-17
 ```
-questo installerà la versione di default di postgresql.
+questo installerà la versione di default di postgresql, ovvero ad oggi su Debian trixie la 17.
 
 ----
 
