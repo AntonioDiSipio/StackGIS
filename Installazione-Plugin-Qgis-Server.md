@@ -13,10 +13,10 @@ I plugin possono essere installati sia **manualmente** che utilizzando un **gest
 Ad esempio, per installare il plugin **HelloWorld** per testare il server, utilizzando una cartella specifica, devi prima creare una cartella per contenere i plugin del server.  
 Questa sarà specificata nella configurazione dell’host virtuale e passata al server attraverso una variabile d’ambiente.  
 
-Io voglio installare i miei plugin in `/usr/share/qgis/python/plugins`:  
+Io voglio installare i miei plugin in `/usr/lib/qgis/plugins`:  
 
 ```bash
-cd /var/www/qgis-server/plugins
+cd /usr/lib/qgis/plugins
 wget https://github.com/elpaso/qgis-helloserver/archive/master.zip
 unzip master.zip
 mv qgis-helloserver-master HelloServer
