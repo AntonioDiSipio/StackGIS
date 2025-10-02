@@ -54,6 +54,11 @@ Testa:
 qgis-plugin-manager list
 ```
 
+Devi dire a qgis-plugin-manager quali repository usare (quello ufficiale di QGIS, o uno personalizzato).
+Quindi fai:
+```
+qgis-plugin-manager init
+```
 Installa un plugin di prova (es. Lizmap):
 ```
 qgis-plugin-manager install Lizmap server
