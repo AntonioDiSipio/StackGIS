@@ -85,7 +85,7 @@ sudo qgis-plugin-manager install Data Plotly
 sudo qgis-plugin-manager install wfsOutputExtension
 ```
 
-- `"Lizmap server"`: plugin per pubblicare progetti QGIS sul web tramite Lizmap.  
+- `Lizmap server`: plugin per pubblicare progetti QGIS sul web tramite Lizmap.  
 - `atlasprint`: plugin per la generazione di atlanti in stampa server-side.  
 - `Data Plotly`: plugin per grafici interattivi con Plotly.  
 - `wfsOutputExtension`: plugin per estendere l’output WFS di QGIS Server.  
