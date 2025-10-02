@@ -53,3 +53,8 @@ Testa:
 ```
 qgis-plugin-manager list
 ```
+
+Installa un plugin di prova (es. Lizmap):
+```
+qgis-plugin-manager install Lizmap server
+```
