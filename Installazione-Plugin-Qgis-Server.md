@@ -49,3 +49,7 @@ Dì a qgis-plugin-manager dove mettere i plugin:
 ```
 export QGIS_PLUGINPATH=$HOME/.local/share/QGIS/QGIS3/profiles/default/python/plugins
 ```
+Testa:
+```
+qgis-plugin-manager list
+```
