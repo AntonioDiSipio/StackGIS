@@ -24,9 +24,9 @@ Esempio con il plugin **HelloWorld** (utile per testare la configurazione del se
 
 ```bash
 cd /usr/lib/qgis/plugins
-wget https://github.com/elpaso/qgis-helloserver/archive/master.zip
-unzip master.zip
-mv qgis-helloserver-master HelloServer
+sudo wget https://github.com/elpaso/qgis-helloserver/archive/master.zip
+sudo unzip master.zip
+sudo mv qgis-helloserver-master HelloServer
 ```
 
 👉 Questo metodo è utile quando un plugin non è disponibile sul repository ufficiale dei plugin QGIS, ma solo su GitHub o come ZIP rilasciato dallo sviluppatore.  
