@@ -65,5 +65,5 @@ Inoltre, un’autorizzazione HTTP di base è necessaria per lavorare con il plug
 
 Poi, riavvia Apache:
 ```bash
-systemctl restart apache2
+sudo systemctl restart apache2
 ```
