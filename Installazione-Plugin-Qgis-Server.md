@@ -130,14 +130,11 @@ FcgidInitialEnv QGIS_PLUGINPATH "/var/www/qgis-server/plugins"
 </IfModule>
 ```
 
-👉 Questo assicura che le credenziali (username/password) inviate dal client vengano ricevute da QGIS Server.  
-
----
-
-### 🔄 Riavvia Apache
-Dopo ogni modifica alla configurazione di Apache, riavvia il servizio:  
+👉 **Nota:** questo richiede che il modulo `mod_rewrite` sia attivato.  
+Puoi abilitarlo con:  
 
 ```bash
+sudo a2enmod rewrite
 sudo systemctl restart apache2
 ```
 
