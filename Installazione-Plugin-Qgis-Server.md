@@ -1,8 +1,8 @@
-## Installare Plugin su qgis server
+# Installare Plugin su qgis server
 Per impostazione predefinita, sui sistemi basati su Debian, QGIS Server cercherà i plugin situati in /usr/lib/qgis/plugins. Il valore predefinito viene visualizzato all’avvio di QGIS Server, nei log. È possibile impostare un percorso personalizzato definendo la variabile d’ambiente ```QGIS_PLUGINPATH``` nella configurazione del server web.
 I plugin possono essere installati sia manualmente che utilizzando un gestore di plugin python
 
-Manualmente con uno ZIP
+##Manualmente con uno ZIP
 -
 Ad esempio, per installare il plugin HelloWorld per testare il server, utilizzando una cartella specifica, devi prima creare una cartella per contenere i plugin del server.
 Questa sarà specificata nella configurazione dell’host virtuale e passata al server attraverso una variabile d’ambiente.
@@ -14,7 +14,7 @@ unzip master.zip
 mv qgis-helloserver-master HelloServer
 ```
 
-# 🔧 Installazione e configurazione dei plugin QGIS Server con `qgis-plugin-manager`
+### 🔧 Installazione e configurazione dei plugin QGIS Server con `qgis-plugin-manager`
 
 ### 1. Installare **pip**, il gestore pacchetti di Python  
 `pip` è l’utility che permette di installare, aggiornare e rimuovere librerie Python da **PyPI**.  
