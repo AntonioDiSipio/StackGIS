@@ -1,4 +1,4 @@
-## 7 Installare Plugin per qgis server
+## Installare Plugin per qgis server
 Installiamo ora i plugin dper qgis server, questo ci servirà successivamente per configurare lizmap
 
 diamo il comando per installare pip
