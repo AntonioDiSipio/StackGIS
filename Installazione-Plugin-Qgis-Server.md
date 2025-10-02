@@ -49,7 +49,7 @@ sudo qgis-plugin-manager install 'Lizmap server'
 ```
 
 Per poter utilizzare i plugin del server, FastCGI deve sapere dove cercare. Quindi, dobbiamo modificare il file di configurazione di Apache per indicare a FastCGI la variabile d’ambiente QGIS_PLUGINPATH:
-```
+```bash
 FcgidInitialEnv QGIS_PLUGINPATH "/var/www/qgis-server/plugins"
 ```
 
