@@ -7,18 +7,12 @@ Manualmente con uno ZIP
 Ad esempio, per installare il plugin HelloWorld per testare il server, utilizzando una cartella specifica, devi prima creare una cartella per contenere i plugin del server.
 Questa sarà specificata nella configurazione dell’host virtuale e passata al server attraverso una variabile d’ambiente.
 Io volgio installare i miei plugin in ```/usr/share/qgis/python/plugins```
-
-mkdir -p /var/www/qgis-server/plugins
+```bash
 cd /var/www/qgis-server/plugins
 wget https://github.com/elpaso/qgis-helloserver/archive/master.zip
 unzip master.zip
 mv qgis-helloserver-master HelloServer
-
-
-
-
-
-
+```
 
 Installiamo ora i plugin dper qgis server, questo ci servirà successivamente per configurare lizmap
 
