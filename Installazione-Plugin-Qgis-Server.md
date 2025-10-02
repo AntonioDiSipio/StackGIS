@@ -37,7 +37,7 @@ cd /usr/lib/qgis/plugins
 Devi dire a qgis-plugin-manager quali repository usare (quello ufficiale di QGIS, o uno personalizzato).
 Quindi fai:
 ```
-qgis-plugin-manager init
+sudo qgis-plugin-manager init
 ```
 Installa un plugin di prova (es. Lizmap):
 ```
