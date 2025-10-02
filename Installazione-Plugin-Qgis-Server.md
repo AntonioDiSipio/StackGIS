@@ -86,7 +86,9 @@ qgis-plugin-manager search lizmap
 ### 5. Configurare Apache per QGIS Server e i plugin  
 
 #### 🔹 Indicare a FastCGI dove si trovano i plugin  
-Nel file di configurazione di Apache aggiungi:  
+SE necessario indicare a FastCGI dove si trovano i plugin, questo è necessario solo se si caambia la directory di default dei plugin di qgis-server /usr/lib/qgis/plugins
+
+ad esempio nel file di configurazione di Apache si può ggiungere un percorso tipo questo:  
 
 ```apache
 FcgidInitialEnv QGIS_PLUGINPATH "/var/www/qgis-server/plugins"
