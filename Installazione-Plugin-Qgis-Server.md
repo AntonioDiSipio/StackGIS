@@ -73,6 +73,9 @@ Per installare Lizmap Server:
 
 ```bash
 sudo qgis-plugin-manager install "Lizmap server"
+sudo qgis-plugin-manager install atlasprint
+sudo qgis-plugin-manager install Data Plotly
+sudo qgis-plugin-manager install wfsOutputExtension
 ```
 
 Puoi anche cercare i plugin disponibili con:  
