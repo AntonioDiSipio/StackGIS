@@ -81,6 +81,12 @@ Puoi anche cercare i plugin disponibili con:
 qgis-plugin-manager search lizmap
 ```
 
+oppure puoi cercare nella lista dei plugin installati
+
+```bash
+qgis-plugin-manager list
+```
+
 ---
 
 ### 5. Configurare Apache per QGIS Server e i plugin  
