@@ -1,30 +1,38 @@
-# Requisiti per Lizmap Web Client
+# 09 - Installazione di Lizmap Web Client
 
-## Conoscenze richieste
-- Amministrazione server (Nginx, Apache, variabili d’ambiente, log, cURL).  
-- Gestione database PostgreSQL.  
+Guida completa: [Requisiti necessari per Lizmap Web Client](https://docs.lizmap.com/3.9/it/install/pre_requirements.html)
 
-## Dati GIS
-- Archiviazione libera (es. `/srv/lizmap/data/`).  
-- Trasferimento file manuale dal desktop al server.  
+## 1. Conoscenze necessarie
+- Amministrazione di un server (Nginx/Apache, stack LAMP).  
+- Variabili d’ambiente, log di sistema e QGIS Server.  
+- Gestione PostgreSQL e debug HTTP (cURL).  
 
-## QGIS Server
-- Stessa versione di QGIS Desktop e Server.  
-- Consigliato uso di **Py-QGIS-Server**.  
-- Installare **XVFB** per stampa PDF.  
-- Proteggere l’URL del server (solo accesso via Lizmap).  
+## 2. Dati GIS e file QGS
+- Archiviazione libera dei dati (es. `/srv/lizmap/data/`).  
+- Definire `rootRepositories` o usare percorsi assoluti.  
+- Nessun trasferimento automatico: caricare i file manualmente sul server.  
 
-## Plugin QGIS Server
-- **Obbligatorio:** Lizmap server plugin.  
+## 3. QGIS Server
+- Usare **stessa versione** di QGIS Desktop e Server.  
+- Consigliato **Py-QGIS-Server** (altrimenti configurare FCGI).  
+- Impostare `QGIS_OPTIONS_PATH` e installare **XVFB** (per stampa PDF).  
+- Verificare che l’URL di QGIS Server funzioni (XML atteso).  
+- Proteggere l’host: QGIS Server deve essere accessibile solo da Lizmap.  
+
+## 4. Plugin QGIS Server
+- **Obbligatorio:** `Lizmap server`.  
 - **Opzionali:** AtlasPrint, Cadastre, DataPlotly, WfsOutputExtension.  
-- Installabili con `qgis-plugin-manager`.  
+- Installazione consigliata con `qgis-plugin-manager`.  
+- Attenzione: non confondere con il plugin desktop Lizmap.  
 
-## Amministrazione Lizmap
-- Configurare endpoint API Lizmap (diverso per FCGI o Py-QGIS-Server).  
-- Proteggere `/lizmap/server.json` da accessi esterni.  
+## 5. Configurazione API Lizmap
+- Con FCGI: URL API vuoto.  
+- Con Py-QGIS-Server: configurare endpoint `/lizmap`.  
+- Variabile d’ambiente: `QGIS_SERVER_LIZMAP_REVEAL_SETTINGS=True`.  
+- Proteggere `http://your.qgis.server.url/lizmap/server.json`.  
 
-## PostgreSQL
-- Possibili usi:
-  - Archiviazione dati GIS.  
-  - Gestione utenti e azioni Lizmap.  
-  - Funzione `lizmap_search`.
+## 6. PostgreSQL
+- Possibili usi:  
+  1. Archiviazione dati GIS.  
+  2. Gestione utenti e azioni Lizmap.  
+  3. Funzione `lizmap_search`.  
