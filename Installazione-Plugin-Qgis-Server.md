@@ -3,7 +3,6 @@ Per impostazione predefinita, sui sistemi basati su Debian, QGIS Server cercher�
 I plugin possono essere installati sia manualmente che utilizzando un gestore di plugin python
 
 ## Manualmente con uno ZIP
--
 Ad esempio, per installare il plugin HelloWorld per testare il server, utilizzando una cartella specifica, devi prima creare una cartella per contenere i plugin del server.
 Questa sarà specificata nella configurazione dell’host virtuale e passata al server attraverso una variabile d’ambiente.
 Io volgio installare i miei plugin in ```/usr/share/qgis/python/plugins```
