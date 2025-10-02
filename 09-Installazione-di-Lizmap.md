@@ -3,7 +3,8 @@
 Guida completa: [Requisiti necessari per Lizmap Web Client](https://docs.lizmap.com/3.9/it/install/pre_requirements.html)
 
 ## 1. Conoscenze necessarie
-- Amministrazione di un server (Nginx/Apache, stack LAMP).  
+- Amministrazione di un server (Nginx/Apache, stack **LAMP**).  
+- **PHP** (Lizmap è un’applicazione PHP e richiede un ambiente configurato).  
 - Variabili d’ambiente, log di sistema e QGIS Server.  
 - Gestione PostgreSQL e debug HTTP (cURL).  
 
