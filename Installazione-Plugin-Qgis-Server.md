@@ -41,3 +41,7 @@ Per farlo disponibile sempre, aggiungi questa riga al tuo ~/.bashrc:
 ```
 echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
 ```
+Poi ricarica:
+```
+source ~/.bashrc
+```
