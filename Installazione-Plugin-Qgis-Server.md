@@ -36,3 +36,8 @@ sudo mkdir /home/gisadmin/.local/share/QGIS/QGIS3/profiles/default/python/plugin
 ```
 cd /home/gisadmin/.local/share/QGIS/QGIS3/profiles/default/python/plugins/
 ```
+
+Per farlo disponibile sempre, aggiungi questa riga al tuo ~/.bashrc:
+```
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
+```
