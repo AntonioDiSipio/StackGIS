@@ -14,7 +14,9 @@ unzip master.zip
 mv qgis-helloserver-master HelloServer
 ```
 
-Installiamo ora i plugin dper qgis server, questo ci servirà successivamente per configurare lizmap
+Con qgis-plugin-manager
+-
+Installiamo ora i plugin per qgis server, questo ci servirà successivamente per configurare lizmap
 
 diamo il comando per installare pip
 pip è il gestore di pacchetti di Python.
