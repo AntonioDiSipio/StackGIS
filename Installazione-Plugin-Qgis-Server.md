@@ -47,3 +47,23 @@ Installa un plugin di prova (es. Lizmap):
 ```
 sudo qgis-plugin-manager install 'Lizmap server'
 ```
+
+Per poter utilizzare i plugin del server, FastCGI deve sapere dove cercare. Quindi, dobbiamo modificare il file di configurazione di Apache per indicare a FastCGI la variabile d’ambiente QGIS_PLUGINPATH:
+```
+FcgidInitialEnv QGIS_PLUGINPATH "/var/www/qgis-server/plugins"
+```
+
+Inoltre, un’autorizzazione HTTP di base è necessaria per lavorare con il plugin HelloWorld precedentemente introdotto. Quindi dobbiamo aggiornare il file di configurazione di Apache un’ultima volta:
+```bash
+# Needed for QGIS HelloServer plugin HTTP BASIC auth
+<IfModule mod_fcgid.c>
+    RewriteEngine on
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+</IfModule>
+```
+
+Poi, riavvia Apache:
+```bash
+systemctl restart apache2
+```
