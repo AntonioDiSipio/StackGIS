@@ -1,4 +1,4 @@
-## Installare Plugin per qgis server
+## Installare Plugin su qgis server
 Per impostazione predefinita, sui sistemi basati su Debian, QGIS Server cercherà i plugin situati in /usr/lib/qgis/plugins. Il valore predefinito viene visualizzato all’avvio di QGIS Server, nei log. È possibile impostare un percorso personalizzato definendo la variabile d’ambiente ```QGIS_PLUGINPATH``` nella configurazione del server web.
 I plugin possono essere installati sia manualmente che utilizzando un gestore di plugin python
 
