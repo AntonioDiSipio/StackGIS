@@ -39,7 +39,11 @@ Quindi fai:
 ```
 sudo qgis-plugin-manager init
 ```
+```
+sudo qgis-plugin-manager update
+```
+
 Installa un plugin di prova (es. Lizmap):
 ```
-qgis-plugin-manager install Lizmap server
+sudo qgis-plugin-manager install 'Lizmap server'
 ```
