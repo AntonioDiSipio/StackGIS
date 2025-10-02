@@ -30,3 +30,6 @@ In pratica Debian vuole che non si installino pacchetti Python globalmente con p
 ```
 pip install --break-system-packages qgis-plugin-manager
 ```
+```
+sudo mkdir /home/gisadmin/.local/share/QGIS/QGIS3/profiles/default/python/plugins
+```
