@@ -30,6 +30,10 @@ In pratica Debian vuole che non si installino pacchetti Python globalmente con p
 ```
 sudo pip3 install qgis-plugin-manager --break-system-packages
 ```
+```
+sudo mkdir -p /opt/qgis-server/plugins
+sudo chown -R www-data:www-data /opt/qgis-server/plugins
+```
 
 Devi dire a qgis-plugin-manager quali repository usare (quello ufficiale di QGIS, o uno personalizzato).
 Quindi fai:
