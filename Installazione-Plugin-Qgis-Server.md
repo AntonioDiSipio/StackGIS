@@ -1,19 +1,26 @@
-# Installare Plugin su QGIS Server
+# 📘 Installare Plugin su QGIS Server
 
-Per impostazione predefinita, sui sistemi basati su Debian, QGIS Server cercherà i plugin situati in `/usr/lib/qgis/plugins`.  
-Il valore predefinito viene visualizzato all’avvio di QGIS Server, nei log.  
-È possibile impostare un percorso personalizzato definendo la variabile d’ambiente `QGIS_PLUGINPATH` nella configurazione del server web.  
+Per impostazione predefinita, sui sistemi basati su Debian, **QGIS Server** carica i plugin dalla cartella:  
+```
+/usr/lib/qgis/plugins
+```
+Questo percorso viene mostrato nei log all’avvio di QGIS Server.  
 
-I plugin possono essere installati sia **manualmente** che utilizzando un **gestore di plugin Python**.
+➡️ Se vuoi usare un percorso diverso, devi impostare la variabile d’ambiente `QGIS_PLUGINPATH` nella configurazione del server web (Apache/FastCGI).  
+
+I plugin possono essere installati in due modi:  
+1. **Manuale** (scaricando un archivio ZIP e copiandolo nella cartella dei plugin).  
+2. **Automatico** con `qgis-plugin-manager` (più comodo per plugin ufficiali da PyPI).  
 
 ---
 
-## Installazione manuale con uno ZIP
+## 🛠 Installazione manuale con uno ZIP
 
-Ad esempio, per installare il plugin **HelloWorld** per testare il server, utilizzando una cartella specifica, devi prima creare una cartella per contenere i plugin del server.  
-Questa sarà specificata nella configurazione dell’host virtuale e passata al server attraverso una variabile d’ambiente.  
+Esempio con il plugin **HelloWorld** (utile per testare la configurazione del server):  
 
-Io voglio installare i miei plugin in `/usr/lib/qgis/plugins`:  
+1. Mi sposto nella cartella dei plugin. In questo esempio uso quella di default `/usr/lib/qgis/plugins`.  
+2. Scarico il plugin HelloWorld da GitHub.  
+3. Lo decomprimo e rinomino la cartella, in modo che QGIS Server lo riconosca correttamente.  
 
 ```bash
 cd /usr/lib/qgis/plugins
@@ -22,13 +29,16 @@ unzip master.zip
 mv qgis-helloserver-master HelloServer
 ```
 
+👉 Questo metodo è utile quando un plugin non è disponibile sul repository ufficiale dei plugin QGIS, ma solo su GitHub o come ZIP rilasciato dallo sviluppatore.  
+
 ---
 
-## 🔧 Installazione e configurazione dei plugin QGIS Server con `qgis-plugin-manager`
+## 🔧 Installazione e configurazione dei plugin con `qgis-plugin-manager`
 
-### 1. Installare **pip**, il gestore pacchetti di Python  
-`pip` è l’utility che permette di installare, aggiornare e rimuovere librerie Python da **PyPI**.  
-Su Debian/Ubuntu:  
+### 1. Installare **pip**
+- `pip` è il gestore pacchetti Python.  
+- Serve per scaricare, installare e aggiornare librerie e tool Python da **PyPI**.  
+- Senza `pip` non è possibile installare `qgis-plugin-manager`.  
 
 ```bash
 sudo apt update
@@ -37,39 +47,36 @@ sudo apt install python3-pip
 
 ---
 
-### 2. Installare **qgis-plugin-manager**  
-Su Debian, il sistema Python è “protetto” (PEP 668) e non permette di installare pacchetti globali con `pip` per evitare conflitti con `apt`.  
-Per forzare l’installazione:  
+### 2. Installare **qgis-plugin-manager**
+- Debian protegge Python con **PEP 668**, che impedisce di installare pacchetti globali con `pip` per non rompere pacchetti gestiti da `apt`.  
+- Per bypassare questa restrizione, uso l’opzione `--break-system-packages`.  
 
 ```bash
 sudo pip3 install qgis-plugin-manager --break-system-packages
 ```
 
+👉 Con questo comando installi `qgis-plugin-manager`, un tool CLI che gestisce i plugin di QGIS Server direttamente dai repository ufficiali QGIS.  
+
 ---
 
-### 3. Inizializzare e aggiornare il gestore dei plugin  
-Spostati nella cartella dei plugin di QGIS Server:  
+### 3. Inizializzare e aggiornare il gestore dei plugin
+- Mi sposto nella cartella dei plugin (default: `/usr/lib/qgis/plugins`).  
+- Inizializzo i repository dei plugin (ufficiale QGIS o personalizzati).  
+- Aggiorno l’indice dei plugin disponibili, scaricando la lista compatibile con la versione di QGIS installata.  
 
 ```bash
 cd /usr/lib/qgis/plugins
-```
-
-Inizializza i repository dei plugin (ufficiali o personalizzati):  
-
-```bash
 sudo qgis-plugin-manager init
-```
-
-Aggiorna l’indice dei plugin disponibili:  
-
-```bash
 sudo qgis-plugin-manager update
 ```
 
+👉 Questo step è fondamentale: senza aggiornamento, non puoi installare plugin perché il gestore non conosce la lista disponibile.  
+
 ---
 
-### 4. Installare un plugin (es. Lizmap Server)  
-Per installare Lizmap Server:  
+### 4. Installare plugin (es. Lizmap, AtlasPrint, DataPlotly, ecc.)
+Ora posso installare i plugin desiderati.  
+Esempio:  
 
 ```bash
 sudo qgis-plugin-manager install "Lizmap server"
@@ -78,36 +85,41 @@ sudo qgis-plugin-manager install Data Plotly
 sudo qgis-plugin-manager install wfsOutputExtension
 ```
 
-Puoi anche cercare i plugin disponibili con:  
+- `"Lizmap server"`: plugin per pubblicare progetti QGIS sul web tramite Lizmap.  
+- `atlasprint`: plugin per la generazione di atlanti in stampa server-side.  
+- `Data Plotly`: plugin per grafici interattivi con Plotly.  
+- `wfsOutputExtension`: plugin per estendere l’output WFS di QGIS Server.  
 
-```bash
-qgis-plugin-manager search lizmap
-```
-
-oppure puoi cercare nella lista dei plugin installati
-
-```bash
-qgis-plugin-manager list
-```
+Puoi anche:  
+- Cercare un plugin specifico:  
+  ```bash
+  qgis-plugin-manager search lizmap
+  ```
+- Elencare quelli già installati:  
+  ```bash
+  qgis-plugin-manager list
+  ```
 
 ---
 
-### 5. Configurare Apache per QGIS Server e i plugin  
+## ⚙️ Configurazione di Apache per QGIS Server
 
-#### 🔹 Indicare a FastCGI dove si trovano i plugin  
-SE necessario indicare a FastCGI dove si trovano i plugin, questo è necessario solo se si caambia la directory di default dei plugin di qgis-server /usr/lib/qgis/plugins
-
-ad esempio nel file di configurazione di Apache si può ggiungere un percorso tipo questo:  
+### 🔹 Indicare a FastCGI dove si trovano i plugin
+- Se usi la cartella di default `/usr/lib/qgis/plugins`, **non serve configurare nulla**.  
+- Se usi una cartella personalizzata (es. `/var/www/qgis-server/plugins`), devi dirlo ad Apache aggiungendo questa riga:  
 
 ```apache
 FcgidInitialEnv QGIS_PLUGINPATH "/var/www/qgis-server/plugins"
 ```
 
-In questo modo QGIS Server sa dove cercare i plugin.  
+👉 Così QGIS Server saprà dove cercare i plugin.  
 
-#### 🔹 Abilitare autenticazione HTTP Basic  
-Alcuni plugin (es. **HelloWorld**) richiedono di passare l’header `Authorization` a QGIS Server.  
-Per permettere ad Apache + FastCGI di propagare l’header, aggiungi:  
+---
+
+### 🔹 Abilitare autenticazione HTTP Basic
+- Alcuni plugin (es. HelloWorld) hanno bisogno di leggere l’header `Authorization`.  
+- Di default Apache non passa questo header ai processi FastCGI.  
+- Per abilitare il passaggio, aggiungi questa configurazione:  
 
 ```apache
 # Needed for QGIS HelloServer plugin HTTP BASIC auth
@@ -118,12 +130,12 @@ Per permettere ad Apache + FastCGI di propagare l’header, aggiungi:
 </IfModule>
 ```
 
-Questo assicura che QGIS Server riceva correttamente le credenziali di autenticazione.  
+👉 Questo assicura che le credenziali (username/password) inviate dal client vengano ricevute da QGIS Server.  
 
 ---
 
-### 6. Riavvia Apache  
-Per rendere effettive le modifiche:  
+### 🔄 Riavvia Apache
+Dopo ogni modifica alla configurazione di Apache, riavvia il servizio:  
 
 ```bash
 sudo systemctl restart apache2
@@ -131,4 +143,9 @@ sudo systemctl restart apache2
 
 ---
 
-✅ A questo punto i plugin per **QGIS Server** sono installati e pronti all’uso (compreso Lizmap).
+## ✅ Conclusione
+Dopo aver seguito questi passaggi:  
+- QGIS Server può caricare plugin dalla directory predefinita o personalizzata.  
+- I plugin possono essere installati manualmente o con `qgis-plugin-manager`.  
+- Apache è configurato per supportare correttamente i plugin, incluse le autenticazioni.  
+- Plugin come **Lizmap**, **AtlasPrint** o **HelloWorld** funzionano correttamente.  
