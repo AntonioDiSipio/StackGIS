@@ -28,7 +28,7 @@ adesso lanciano il comando
 Debian potrebbe bloccare l'installazione perchè il sistema Python è “gestito esternamente” (PEP 668).
 In pratica Debian vuole che non si installino pacchetti Python globalmente con pip, per non rompere i pacchetti gestiti da apt, allora forziamo pip sul sistema con
 ```
-pip install --break-system-packages qgis-plugin-manager
+sudo pip3 install qgis-plugin-manager --break-system-packages
 ```
 ```
 sudo mkdir /home/gisadmin/.local/share/QGIS/QGIS3/profiles/default/python/plugins
