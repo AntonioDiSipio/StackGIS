@@ -14,49 +14,73 @@ unzip master.zip
 mv qgis-helloserver-master HelloServer
 ```
 
-Con qgis-plugin-manager
--
-Installiamo ora i plugin per qgis server, questo ci servirà successivamente per configurare lizmap
+# 🔧 Installazione e configurazione dei plugin QGIS Server con `qgis-plugin-manager`
 
-diamo il comando per installare pip
-pip è il gestore di pacchetti di Python.
-Serve per installare, aggiornare e rimuovere librerie e moduli scritti in Python da PyPI (Python Package Index)
+### 1. Installare **pip**, il gestore pacchetti di Python  
+`pip` è l’utility che permette di installare, aggiornare e rimuovere librerie Python da **PyPI**.  
+Su Debian/Ubuntu:  
 ```bash
 sudo apt update
 sudo apt install python3-pip
 ```
-adesso lanciano il comando
-```pip3 install qgis-plugin-manager``` per instllare qgis-plugin-manager
-Debian potrebbe bloccare l'installazione perchè il sistema Python è “gestito esternamente” (PEP 668).
-In pratica Debian vuole che non si installino pacchetti Python globalmente con pip, per non rompere i pacchetti gestiti da apt, allora forziamo pip sul sistema con
-```
+
+---
+
+### 2. Installare **qgis-plugin-manager**  
+Su Debian, il sistema Python è “protetto” (PEP 668) e non permette di installare pacchetti globali con `pip` per evitare conflitti con `apt`.  
+Per forzare l’installazione:  
+```bash
 sudo pip3 install qgis-plugin-manager --break-system-packages
 ```
-```
+
+---
+
+### 3. Inizializzare e aggiornare il gestore dei plugin  
+Spostati nella cartella dei plugin di QGIS Server:  
+```bash
 cd /usr/lib/qgis/plugins
 ```
 
-Devi dire a qgis-plugin-manager quali repository usare (quello ufficiale di QGIS, o uno personalizzato).
-Quindi fai:
-```
+Inizializza i repository dei plugin (ufficiali o personalizzati):  
+```bash
 sudo qgis-plugin-manager init
 ```
-```
+
+Aggiorna l’indice dei plugin disponibili:  
+```bash
 sudo qgis-plugin-manager update
 ```
 
-Installa un plugin di prova (es. Lizmap):
-```
-sudo qgis-plugin-manager install 'Lizmap server'
+---
+
+### 4. Installare un plugin (es. Lizmap Server)  
+Per installare Lizmap Server:  
+```bash
+sudo qgis-plugin-manager install "Lizmap server"
 ```
 
-Per poter utilizzare i plugin del server, FastCGI deve sapere dove cercare. Quindi, dobbiamo modificare il file di configurazione di Apache per indicare a FastCGI la variabile d’ambiente QGIS_PLUGINPATH:
+Puoi anche cercare i plugin disponibili con:  
 ```bash
+qgis-plugin-manager search lizmap
+```
+
+---
+
+### 5. Configurare Apache per QGIS Server e i plugin  
+
+#### 🔹 Indicare a FastCGI dove si trovano i plugin  
+Nel file di configurazione di Apache aggiungi:  
+```apache
 FcgidInitialEnv QGIS_PLUGINPATH "/var/www/qgis-server/plugins"
 ```
 
-Inoltre, un’autorizzazione HTTP di base è necessaria per lavorare con il plugin HelloWorld precedentemente introdotto. Quindi dobbiamo aggiornare il file di configurazione di Apache un’ultima volta:
-```bash
+In questo modo QGIS Server sa dove cercare i plugin.  
+
+#### 🔹 Abilitare autenticazione HTTP Basic  
+Alcuni plugin (es. **HelloWorld**) richiedono di passare l’header `Authorization` a QGIS Server.  
+Per permettere ad Apache + FastCGI di propagare l’header, aggiungi:  
+
+```apache
 # Needed for QGIS HelloServer plugin HTTP BASIC auth
 <IfModule mod_fcgid.c>
     RewriteEngine on
@@ -65,7 +89,16 @@ Inoltre, un’autorizzazione HTTP di base è necessaria per lavorare con il plug
 </IfModule>
 ```
 
-Poi, riavvia Apache:
+Questo assicura che QGIS Server riceva correttamente le credenziali di autenticazione.  
+
+---
+
+### 6. Riavvia Apache  
+Per rendere effettive le modifiche:  
 ```bash
 sudo systemctl restart apache2
 ```
+
+---
+
+✅ A questo punto i plugin per **QGIS Server** sono installati e pronti all’uso (compreso Lizmap).
