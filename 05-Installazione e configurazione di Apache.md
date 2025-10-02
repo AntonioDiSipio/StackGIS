@@ -6,7 +6,7 @@ Il suo scopo principale è gestire le richieste HTTP provenienti dai client (ad 
 
 Progettato per essere **sicuro**, **efficiente** ed **estensibile**, Apache offre un’architettura modulare che consente di aggiungere funzionalità come il rewriting degli URL, l’autenticazione o l’utilizzo come proxy, adattandosi a diverse esigenze.
 
-Facciamo una configurazione minima pronta per far funzionare qgis-server e il nostro sito con apache
+Facciamo una configurazione minima pronta per far funzionare qgis-server e il nostro sito con apache:
 --
 
 ---
