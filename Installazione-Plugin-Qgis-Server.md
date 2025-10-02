@@ -30,29 +30,6 @@ In pratica Debian vuole che non si installino pacchetti Python globalmente con p
 ```
 sudo pip3 install qgis-plugin-manager --break-system-packages
 ```
-```
-sudo mkdir /home/gisadmin/.local/share/QGIS/QGIS3/profiles/default/python/plugins
-```
-```
-cd /home/gisadmin/.local/share/QGIS/QGIS3/profiles/default/python/plugins/
-```
-
-Per farlo disponibile sempre, aggiungi questa riga al tuo ~/.bashrc:
-```
-echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
-```
-Poi ricarica:
-```
-source ~/.bashrc
-```
-Dì a qgis-plugin-manager dove mettere i plugin:
-```
-export QGIS_PLUGINPATH=$HOME/.local/share/QGIS/QGIS3/profiles/default/python/plugins
-```
-Testa:
-```
-qgis-plugin-manager list
-```
 
 Devi dire a qgis-plugin-manager quali repository usare (quello ufficiale di QGIS, o uno personalizzato).
 Quindi fai:
