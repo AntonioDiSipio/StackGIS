@@ -33,3 +33,6 @@ pip install --break-system-packages qgis-plugin-manager
 ```
 sudo mkdir /home/gisadmin/.local/share/QGIS/QGIS3/profiles/default/python/plugins
 ```
+```
+cd /home/gisadmin/.local/share/QGIS/QGIS3/profiles/default/python/plugins/
+```
