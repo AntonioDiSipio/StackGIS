@@ -138,7 +138,7 @@ Impostare i diritti per Nginx/Apache, cosicché gli script PHP possano scrivere 
 ```bash
 cd /var/www/lizmap-web-client-$VERSION/
 lizmap/install/set_rights.sh www-data www-data
-```bash
+```
 Configurazione dell’installazione
 Create `lizmapConfig.ini.php`, `localconfig.ini.php` e modificateli per impostare i parametri specifici della vostra installazione. Potete modificare lizmapConfig.ini.php per impostare l’url di qgis map server e altre cose.
 ```bash
