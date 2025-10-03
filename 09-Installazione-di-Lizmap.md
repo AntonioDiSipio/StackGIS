@@ -106,4 +106,7 @@ Per la modifica dei livelli PostGIS in Web Client Lizmap, installare il supporto
 ```bash
 sudo apt install php8.4-pgsql
 ```
+```bash
+service php8.4-fpm restart
+```
 
