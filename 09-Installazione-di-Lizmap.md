@@ -162,6 +162,11 @@ Per testare lanciare: http://localhost/lizmap nel vostro browser.
 
 Se ottieni un errore 500 - internal server error, riesegui:
 
-cd /var/www/lizmap-web-client-$VERSION/
-lizmap/install/set_rights.sh www-data www-data
+```bash
+cd /var/www/lizmap-web-client-3.9.0/
+```
+
+```bash
+sudo lizmap/install/set_rights.sh www-data www-data
+```
 
