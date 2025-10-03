@@ -136,7 +136,9 @@ search_path=public
 Dai gli appropriati diritti alle cartelle e ai file
 Impostare i diritti per Nginx/Apache, cosicché gli script PHP possano scrivere alcuni file temporanei o fare modifiche.
 ```bash
-cd cd /var/www/lizmap-web-client-$VERSION/
+cd /var/www/lizmap-web-client-$VERSION/
+```
+```bash
 sudo lizmap/install/set_rights.sh www-data www-data
 ```
 Configurazione dell’installazione
