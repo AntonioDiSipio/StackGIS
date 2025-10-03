@@ -113,4 +113,24 @@ Per i log di Lizmap, gli utenti e i gruppi, possono essere memorizzati in SqLite
 
 In una nuova copia di `sudo nano var/www/lizmap-web-client-3.9.0/lizmap/var/config/profiles.ini.php` devi inserire le informazioni per la connessione al database postgresql
 
+```bash
+[jdb:jauth]
+driver=pgsql
+host=localhost
+port=5432
+database=lizmap
+user=lizmapadmin
+password=74038695
+search_path=public
+
+[jdb:lizlog]
+driver=pgsql
+host=localhost
+port=5432
+database=lizmap
+user=lizmapadmin
+password=74038695
+search_path=public
+```
+
 
