@@ -152,6 +152,6 @@ cd ../../..
 Lanciare il programma di installazione
 Dopo aver creato i file di configurazione, potete lanciare il programma di installazione
 ```bash
-php lizmap/install/installer.php
+sudo php lizmap/install/installer.php
 ```
 
