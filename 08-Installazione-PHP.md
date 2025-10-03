@@ -17,7 +17,6 @@ Queste estensioni sono generalmente abilitate di default in una normale installa
 ## Aggiornare i pacchetti e installare dipendenze di base
 
 ```bash
-sudo su # solo se non sei già root
 sudo apt update # aggiorna la lista pacchetti
 sudo apt install curl openssl libssl3
 ```
