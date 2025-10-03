@@ -102,6 +102,7 @@ cd /var/www/lizmap-web-client-3.9.0/lizmap/var/config
 sudo cp profiles.ini.php.dist profiles.ini.php
 cd ../../..
 ```
+Per la modifica dei livelli PostGIS in Web Client Lizmap, installare il supporto PostgreSQL per PHP. Nessun file di configurazione necessita di essere modificato per modificare i livelli PostgreSQL. Bisogna solo controllare che il server Lizmap possa accedere al database con le credenziali che sono memorizzate nel progetto QGIS (o con un file di servizio PostgreSQL).
 ```bash
 sudo apt install php8.4-pgsql
 ```
