@@ -99,7 +99,7 @@ Lizmap ha bisogno di un database per memorizzare i propri dati e per accedere ai
 Creare `profiles.ini.php` in `lizmap/var/config` copiando `profiles.ini.php.dist`.
 ```bash
 cd lizmap/var/config
-cp profiles.ini.php.dist profiles.ini.php
+sudo cp profiles.ini.php.dist profiles.ini.php
 cd ../../..
 ```
 
