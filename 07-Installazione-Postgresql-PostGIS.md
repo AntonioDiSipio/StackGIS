@@ -71,7 +71,7 @@ FcgidInitialEnv PGPASSFILE "/gisserver/.pgpass"
 
 ## creazione di un database e utente per lizmap
 ```bash
-psql -U postgres
+sudo -u postgres psql
 ```
 ```bash
 -- 1. Crea l’utente lizmapadmin con password
