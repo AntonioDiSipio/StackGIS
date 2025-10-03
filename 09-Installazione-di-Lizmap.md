@@ -73,5 +73,6 @@ NTP service: active
 
 # Instllazione Postgresql + Postgis
 adesso installiamo anche postgresql
+
 [07-Installazione-Postgresql+Postgis](07-Installazione-Postgresql-PostGIS.md)
 
