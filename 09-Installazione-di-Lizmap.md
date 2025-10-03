@@ -35,4 +35,6 @@ Guida: [Requisiti necessari](https://docs.lizmap.com/3.9/it/install/pre_requirem
 QGIS_SERVER_LIZMAP_REVEAL_SETTINGS con il valore impostato su True sul server QGIS.
 
 # Apache FCGI example
+```bash
 FcgidInitialEnv QGIS_SERVER_LIZMAP_REVEAL_SETTINGS True
+```
