@@ -29,3 +29,10 @@ Guida: [Requisiti necessari](https://docs.lizmap.com/3.9/it/install/pre_requirem
 - Dati GIS.  
 - Utenti e azioni Lizmap.  
 - Ricerca `lizmap_search`.  
+
+# Installazione
+## Per motivi di sicurezza, per abilitare l’API sul lato server QGIS, è necessario abilitare la variabile d’ambiente
+QGIS_SERVER_LIZMAP_REVEAL_SETTINGS con il valore impostato su True sul server QGIS.
+
+# Apache FCGI example
+FcgidInitialEnv QGIS_SERVER_LIZMAP_REVEAL_SETTINGS True
