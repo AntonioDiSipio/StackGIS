@@ -54,6 +54,17 @@ sudo dpkg-reconfigure locales
 ```bash
 sudo dpkg-reconfigure tzdata
 ```
+non è necessario lanciare questo comando sulla tua macchina non serviva installare ntp e ntpdate, perché sono pacchetti vecchi, ormai rimossi dai repository Debian/Ubuntu recenti, oggi il lavoro lo fa già systemd-simesyncd, che è incluso di default e molto più leggero, per i tuoi scopi (avere i log con data/ora corretta) è più che sufficiente.
 ```bash
 sudo apt install ntp ntpdate
 ```
+quindi per controllare
+```bash
+timedatectl status
+```
+Se vedi una riga tipo:
+```bash
+System clock synchronized: yes
+NTP service: active
+```
+
