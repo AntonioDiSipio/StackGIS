@@ -150,8 +150,18 @@ sudo cp localconfig.ini.php.dist localconfig.ini.php
 cd ../../..
 ```
 Lanciare il programma di installazione
+
 Dopo aver creato i file di configurazione, potete lanciare il programma di installazione
 ```bash
 sudo php lizmap/install/installer.php
 ```
+
+Primo test
+
+Per testare lanciare: http://localhost/lizmap nel vostro browser.
+
+Se ottieni un errore 500 - internal server error, riesegui:
+
+cd /var/www/lizmap-web-client-$VERSION/
+lizmap/install/set_rights.sh www-data www-data
 
