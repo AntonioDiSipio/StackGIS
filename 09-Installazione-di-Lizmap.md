@@ -109,4 +109,8 @@ sudo apt install php8.4-pgsql
 ```bash
 service php8.4-fpm restart
 ```
+Per i log di Lizmap, gli utenti e i gruppi, possono essere memorizzati in SqLite o PostgreSQL. Per memorizzare queste informazioni in PostgreSQL, seguire queste istruzioni.
+
+In una nuova copia di `sudo nano var/www/lizmap-web-client-3.9.0/lizmap/var/config/profiles.ini.php` devi inserire le informazioni per la connessione al database postgresql
+
 
