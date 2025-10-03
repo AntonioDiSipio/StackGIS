@@ -145,8 +145,8 @@ Configurazione dell’installazione
 Create `lizmapConfig.ini.php`, `localconfig.ini.php` e modificateli per impostare i parametri specifici della vostra installazione. Potete modificare lizmapConfig.ini.php per impostare l’url di qgis map server e altre cose.
 ```bash
 cd lizmap/var/config
-cp lizmapConfig.ini.php.dist lizmapConfig.ini.php
-cp localconfig.ini.php.dist localconfig.ini.php
+sudo cp lizmapConfig.ini.php.dist lizmapConfig.ini.php
+sudo cp localconfig.ini.php.dist localconfig.ini.php
 cd ../../..
 ```
 
