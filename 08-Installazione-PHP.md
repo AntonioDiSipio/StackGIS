@@ -1,16 +1,31 @@
-Installare i pacchetti necessari
-Avvertimento
+# Installazione pacchetti necessari
 
-You must install at least the 7.4 version of PHP. The dom, simplexml, pcre, session, tokenizer and spl extensions are required (they are generally turned on in a standard PHP 7/8 installation)
+⚠️ **Avvertimento**  
+È necessario installare almeno **PHP 7.4** o superiore.  
+Le estensioni richieste sono:  
+- `dom`  
+- `simplexml`  
+- `pcre`  
+- `session`  
+- `tokenizer`  
+- `spl`  
+
+Queste estensioni sono generalmente abilitate di default in una normale installazione PHP 7/8.
+
+---
+
+## Aggiornare i pacchetti e installare dipendenze di base
+
 ```bash
-sudo su # only necessary if you are not logged in as root
-apt update # update packages list
+sudo su # solo se non sei già root
+apt update # aggiorna la lista pacchetti
 sudo apt install curl openssl libssl3
 ```
 
+---
 
+## Installare i pacchetti PHP richiesti
 
-Install these PHP packages:
 ```bash
 sudo apt install php8.4-fpm php8.4-cli php8.4-bz2 php8.4-curl \
 php8.4-gd php8.4-intl php8.4-mbstring php8.4-pgsql \
