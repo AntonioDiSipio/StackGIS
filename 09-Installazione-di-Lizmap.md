@@ -76,3 +76,11 @@ adesso installiamo anche postgresql
 
 [07-Installazione-Postgresql+Postgis](07-Installazione-Postgresql-PostGIS.md)
 
+finiti i passaggi di instllazoine di php e postgresql installiamo lizmap.
+
+Impostiamo alcune variabili per facilitare le istruzioni. Impostiamo la versione e la posizione in cui verrà installato Lizmap. Adatta questi valori alle tue esigenze
+```bash
+VERSION=3.9.0 #metti la versione di tuo interesse
+LOCATION=/var/www #metti la location dove vuoi scaricare lizmap
+```
+
