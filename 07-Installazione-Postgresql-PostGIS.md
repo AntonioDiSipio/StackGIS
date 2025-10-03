@@ -65,6 +65,8 @@ sudo nano /etc/apache2/sites-available/gisserver.conf
 ```
 ed aggiungiamo il percorso dove verranno salvati i due file
 ```bash
-
+SetEnv PGSERVICEFILE /gisserver/.pg_service.conf
+FcgidInitialEnv PGPASSFILE "/gisserver/.pgpass"
+```
 
 
