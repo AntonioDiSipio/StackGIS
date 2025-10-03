@@ -103,6 +103,6 @@ sudo cp profiles.ini.php.dist profiles.ini.php
 cd ../../..
 ```
 ```bash
-sudo apt install php-pgsql
+sudo apt install php8.4-pgsql
 ```
 
