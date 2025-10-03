@@ -149,5 +149,9 @@ sudo cp lizmapConfig.ini.php.dist lizmapConfig.ini.php
 sudo cp localconfig.ini.php.dist localconfig.ini.php
 cd ../../..
 ```
-
+Lanciare il programma di installazione
+Dopo aver creato i file di configurazione, potete lanciare il programma di installazione
+```bash
+php lizmap/install/installer.php
+```
 
