@@ -98,7 +98,7 @@ sudo rm lizmap-web-client-$VERSION.zip
 Lizmap ha bisogno di un database per memorizzare i propri dati e per accedere ai dati utilizzati nei vostri progetti Qgis, con il suo strumento di editing.
 Creare `profiles.ini.php` in `lizmap/var/config` copiando `profiles.ini.php.dist`.
 ```bash
-cd lizmap/var/config
+cd /var/www/lizmap-web-client-3.9.0/lizmap/var/config
 sudo cp profiles.ini.php.dist profiles.ini.php
 cd ../../..
 ```
