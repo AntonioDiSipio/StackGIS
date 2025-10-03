@@ -43,14 +43,14 @@ FcgidInitialEnv QGIS_SERVER_LIZMAP_REVEAL_SETTINGS True
 Configurazioni locali
 Per semplicità, puoi configurare il server con la codifica UTF-8 di default.
 
-# configure locales
+# configura l'italiano
 ```bash
 sudo locale-gen it_IT.UTF-8 #replace fr with your language
 ```
 ```bash
 sudo dpkg-reconfigure locales
 ```
-# define your timezone [useful for logs]
+# definisci la timezone [useful for logs]
 ```bash
 sudo dpkg-reconfigure tzdata
 ```
