@@ -83,4 +83,16 @@ Impostiamo alcune variabili per facilitare le istruzioni. Impostiamo la versione
 VERSION=3.9.0 #metti la versione di tuo interesse
 LOCATION=/var/www #metti la location dove vuoi scaricare lizmap
 ```
+Quindi puoi installare il file zip:
+```bash
+cd $LOCATION
+wget https://github.com/3liz/lizmap-web-client/releases/download/$VERSION/lizmap-web-client-$VERSION.zip
+# Unzip archive
+unzip lizmap-web-client-$VERSION.zip
+
+# virtual link for http://localhost/lizmap/
+ln -s $LOCATION/lizmap-web-client-$VERSION/lizmap/www/ /var/www/html/lizmap
+# Remove archive
+rm lizmap-web-client-$VERSION.zip
+```
 
