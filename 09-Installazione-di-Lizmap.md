@@ -133,4 +133,19 @@ password=74038695
 search_path=public
 ```
 
+Dai gli appropriati diritti alle cartelle e ai file
+Impostare i diritti per Nginx/Apache, cosicché gli script PHP possano scrivere alcuni file temporanei o fare modifiche.
+```bash
+cd /var/www/lizmap-web-client-$VERSION/
+lizmap/install/set_rights.sh www-data www-data
+```bash
+Configurazione dell’installazione
+Create `lizmapConfig.ini.php`, `localconfig.ini.php` e modificateli per impostare i parametri specifici della vostra installazione. Potete modificare lizmapConfig.ini.php per impostare l’url di qgis map server e altre cose.
+```bash
+cd lizmap/var/config
+cp lizmapConfig.ini.php.dist lizmapConfig.ini.php
+cp localconfig.ini.php.dist localconfig.ini.php
+cd ../../..
+```
+
 
