@@ -102,4 +102,7 @@ cd /var/www/lizmap-web-client-3.9.0/lizmap/var/config
 sudo cp profiles.ini.php.dist profiles.ini.php
 cd ../../..
 ```
+```bash
+sudo apt install php-pgsql
+```
 
