@@ -69,4 +69,24 @@ SetEnv PGSERVICEFILE /gisserver/.pg_service.conf
 FcgidInitialEnv PGPASSFILE "/gisserver/.pgpass"
 ```
 
+## creazione di un database e utente per lizmap
+```bash
+psql -U postgres
+```
+```bash
+-- 1. Crea l’utente lizmapadmin con password
+CREATE ROLE lizmapadmin WITH LOGIN PASSWORD 'la_tua_password';
+
+-- 2. Dai privilegi di superuser (come postgres)
+ALTER ROLE lizmapadmin WITH SUPERUSER CREATEDB CREATEROLE REPLICATION;
+
+-- 3. Crea il database lizmap posseduto da lizmapadmin
+CREATE DATABASE lizmap OWNER lizmapadmin;
+
+-- 4. (Opzionale ma consigliato) abilita PostGIS
+\c lizmap
+CREATE EXTENSION postgis;
+```
+
+
 
