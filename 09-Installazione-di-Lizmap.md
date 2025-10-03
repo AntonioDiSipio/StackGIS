@@ -39,3 +39,21 @@ quindi ```sudo nano /etc/apache2/sites-available/gisserver.conf``` ed incollare 
 ```bash
 FcgidInitialEnv QGIS_SERVER_LIZMAP_REVEAL_SETTINGS True
 ```
+
+Configurazioni locali
+Per semplicità, puoi configurare il server con la codifica UTF-8 di default.
+
+# configure locales
+```bash
+sudo locale-gen it_IT.UTF-8 #replace fr with your language
+```
+```bash
+sudo dpkg-reconfigure locales
+```
+# define your timezone [useful for logs]
+```bash
+sudo dpkg-reconfigure tzdata
+```
+```bash
+sudo apt install ntp ntpdate
+```
