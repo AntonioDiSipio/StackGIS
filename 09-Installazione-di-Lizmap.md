@@ -68,3 +68,6 @@ System clock synchronized: yes
 NTP service: active
 ```
 
+# Adesso passiamo all'installazione di php
+[08-Installazione PHP](08-Installazione-PHP)
+
