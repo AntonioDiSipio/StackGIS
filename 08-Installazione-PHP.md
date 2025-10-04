@@ -26,5 +26,5 @@ sudo apt install curl openssl libssl3
 ## Installare i pacchetti PHP richiesti
 
 ```bash
-sudo apt install libapache2-mod-fcgid libapache2-mod-php8.4 php8.4-fpm php8.4-cli php8.4-bz2 php8.4-curl php8.4-gd php8.4-intl php8.4-mbstring php8.4-pgsql php8.4-sqlite3 php8.4-xml php8.4-ldap php8.4-redis
+sudo apt install libapache2-mod-fcgid libapache2-mod-php8.4 php8.4-fpm php8.4-cli php8.4-bz2 php8.4-curl php8.4-gd php8.4-intl php8.4-mbstring php8.4-pgsql php8.4-sqlite3 php8.4-xml php8.4-ldap php8.4-redis xauth htop curl php8.4-cgi php8.4-xmlrpc python-simplejson software-properties-common
 ```
