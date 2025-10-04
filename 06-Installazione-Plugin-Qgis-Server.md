@@ -121,6 +121,10 @@ FcgidInitialEnv QGIS_PLUGINPATH "/var/www/qgis-server/plugins"
 - Di default Apache non passa questo header ai processi FastCGI.  
 - Per abilitare il passaggio, aggiungi questa configurazione:  
 
+```bash
+sudo nano /etc/apache2/mods-available/fcgid.conf
+```
+
 ```apache
 # Needed for QGIS HelloServer plugin HTTP BASIC auth
 <IfModule mod_fcgid.c>
