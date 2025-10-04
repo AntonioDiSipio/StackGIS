@@ -61,7 +61,7 @@ SELECT postgis_extensions_upgrade();
 
 modificare il file gisserver.conf per aggiungere la cartella dove vengono salvati i file **`.pg_service.conf`** e **`.pgpass`**
 ```bash
-sudo nano /etc/apache2/sites-available/gisserver.conf
+sudo nano /etc/apache2/sites-available/disipio.conf
 ```
 ed aggiungiamo il percorso dove verranno salvati i due file
 ```bash
