@@ -140,8 +140,6 @@ sudo touch /gisserver/qgisserverdb/qgis-auth.db
 ```bash
 # cartella progetti QGIS
 sudo mkdir -p /gisserver/
-# diamo i permessi a gisadmin
-sudo chown -R gisadmin:gisadmin /gisserver
 ```
 
 ---
