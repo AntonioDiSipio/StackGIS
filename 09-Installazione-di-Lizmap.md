@@ -40,6 +40,11 @@ quindi `sudo nano /etc/apache2/mods-available/fcgid.conf` ed incollare questo va
 FcgidInitialEnv QGIS_SERVER_LIZMAP_REVEAL_SETTINGS True
 ```
 
+```bash
+sudo a2enmod fcgid
+sudo systemctl reload apache2
+```
+
 Configurazioni locali
 Per semplicità, puoi configurare il server con la codifica UTF-8 di default.
 
