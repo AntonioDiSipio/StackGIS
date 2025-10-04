@@ -39,6 +39,10 @@ quindi `sudo nano /etc/apache2/mods-available/fcgid.conf` ed incollare questo va
 ```bash
 FcgidInitialEnv QGIS_SERVER_LIZMAP_REVEAL_SETTINGS True
 ```
+ed aggiungiamo anche dove sono situati i plugins di lizmap
+```bash
+FcgidInitialEnv QGIS_PLUGINPATH "/var/www/lizmap-web-client-3.8.3/lizmap/plugins"
+```
 
 ```bash
 sudo a2enmod fcgid
