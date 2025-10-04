@@ -41,7 +41,7 @@ FcgidInitialEnv QGIS_SERVER_LIZMAP_REVEAL_SETTINGS True
 ```
 ed aggiungiamo anche dove sono situati i plugins di lizmap
 ```bash
-FcgidInitialEnv QGIS_PLUGINPATH "/var/www/lizmap-web-client-3.8.3/lizmap/plugins"
+FcgidInitialEnv QGIS_PLUGINPATH "/var/www/lizmap-web-client-3.9.0/lizmap/plugins"
 ```
 
 ```bash
