@@ -274,7 +274,7 @@ systemctl status xvfb.service
 
 Aggiungi alla configurazione Fcgid in Apache il parametro:
 ```bash
-sudo nano /etc/apache2/sites-available/disipio.conf
+sudo nano /etc/apache2/mods-available/fcgid.conf
 ```
 ed incolla questo script
 ```apache
