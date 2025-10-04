@@ -79,10 +79,10 @@ Ora posso installare i plugin desiderati.
 Esempio:  
 
 ```bash
-sudo qgis-plugin-manager install Lizmap server
-sudo qgis-plugin-manager install atlasprint
+sudo qgis-plugin-manager install 'Lizmap server'
+sudo qgis-plugin-manager install 'atlasprint'
 sudo qgis-plugin-manager install 'Data Plotly'
-sudo qgis-plugin-manager install wfsOutputExtension
+sudo qgis-plugin-manager install 'wfsOutputExtension'
 ```
 
 - `Lizmap server`: plugin per pubblicare progetti QGIS sul web tramite Lizmap.  
