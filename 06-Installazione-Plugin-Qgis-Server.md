@@ -109,6 +109,10 @@ Puoi anche:
 - Se usi la cartella di default `/usr/lib/qgis/plugins`, **non serve configurare nulla**.  
 - Se usi una cartella personalizzata (es. `/var/www/qgis-server/plugins`), devi dirlo ad Apache aggiungendo questa riga:  
 
+```bash
+sudo nano /etc/apache2/mods-available/fcgid.conf
+```
+
 ```apache
 FcgidInitialEnv QGIS_PLUGINPATH "/var/www/qgis-server/plugins"
 ```
