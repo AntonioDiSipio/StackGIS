@@ -60,12 +60,12 @@ sudo pip3 install qgis-plugin-manager --break-system-packages
 ---
 
 ### 3. Inizializzare e aggiornare il gestore dei plugin
-- Mi sposto nella cartella dei plugin (default: `/usr/lib/qgis/plugins`).  
+- Mi sposto nella cartella dei plugin (`/var/www/qgis-server/plugins`).  
 - Inizializzo i repository dei plugin (ufficiale QGIS o personalizzati).  
 - Aggiorno l’indice dei plugin disponibili, scaricando la lista compatibile con la versione di QGIS installata.  
 
 ```bash
-cd /usr/lib/qgis/plugins
+cd /var/www/qgis-server/plugins
 sudo qgis-plugin-manager init
 sudo qgis-plugin-manager update
 ```
