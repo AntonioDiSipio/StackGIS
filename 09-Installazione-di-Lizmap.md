@@ -43,6 +43,29 @@ ed aggiungiamo anche dove sono situati i plugins di lizmap
 ```bash
 FcgidInitialEnv QGIS_PLUGINPATH "/var/www/lizmap-web-client-3.9.0/lizmap/plugins"
 ```
+La configurazione finale del file fcgid.conf dovrebbe risultare pressappoco così
+
+```bash
+<IfModule mod_fcgid.c>
+  FcgidConnectTimeout 20
+
+  FcgidInitialEnv DISPLAY ":99"
+  FcgidInitialEnv QGIS_SERVER_LIZMAP_REVEAL_SETTINGS True
+  FcgidInitialEnv QGIS_PLUGINPATH "/var/www/qgis-server/plugins"
+  FcgidInitialEnv QGIS_PLUGINPATH "/var/www/lizmap-web-client-3.9.0/lizmap/plugins"
+
+  # Needed for QGIS HelloServer plugin HTTP BASIC auth
+  <IfModule mod_fcgid.c>
+    RewriteEngine on
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+  </IfModule>
+
+  <IfModule mod_mime.c>
+    AddHandler fcgid-script .fcgi
+  </IfModule>
+</IfModule>
+```
 
 ```bash
 sudo a2enmod fcgid
