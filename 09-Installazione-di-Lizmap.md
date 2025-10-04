@@ -56,8 +56,7 @@ La configurazione finale del file fcgid.conf dovrebbe risultare pressappoco cos√
   FcgidInitialEnv DISPLAY ":99"
   FcgidInitialEnv QGIS_SERVER_LIZMAP_REVEAL_SETTINGS True
   FcgidInitialEnv QGIS_PLUGINPATH "/var/www/qgis-server/plugins"
-  FcgidInitialEnv QGIS_PLUGINPATH "/var/www/lizmap-web-client-3.9.0/lizmap/plugins"
-
+  
   # Needed for QGIS HelloServer plugin HTTP BASIC auth
   <IfModule mod_fcgid.c>
     RewriteEngine on
