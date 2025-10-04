@@ -151,6 +151,7 @@ sudo chown -R gisadmin:gisadmin /gisserver
 Ora possiamo abilitare l’host virtuale e il modulo `fcgid`, se non è già stato fatto:
 
 ```bash
+sudo a2dissite 000-default.conf
 sudo a2enmod fcgid
 sudo a2enmod rewrite
 sudo a2ensite gisserver.conf
