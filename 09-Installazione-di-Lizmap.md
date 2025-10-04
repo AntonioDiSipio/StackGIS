@@ -49,6 +49,10 @@ La configurazione finale del file fcgid.conf dovrebbe risultare pressappoco cos√
 <IfModule mod_fcgid.c>
   FcgidConnectTimeout 20
 
+  <IfModule mod_mime.c>
+    AddHandler fcgid-script .fcgi
+  </IfModule>
+
   FcgidInitialEnv DISPLAY ":99"
   FcgidInitialEnv QGIS_SERVER_LIZMAP_REVEAL_SETTINGS True
   FcgidInitialEnv QGIS_PLUGINPATH "/var/www/qgis-server/plugins"
@@ -61,9 +65,6 @@ La configurazione finale del file fcgid.conf dovrebbe risultare pressappoco cos√
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
   </IfModule>
 
-  <IfModule mod_mime.c>
-    AddHandler fcgid-script .fcgi
-  </IfModule>
 </IfModule>
 ```
 
