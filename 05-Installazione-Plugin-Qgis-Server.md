@@ -106,7 +106,7 @@ Puoi anche:
 - Per abilitare il passaggio, aggiungi questa configurazione:  
 
 ```bash
-sudo nano /etc/apache2/sistes-available/qgis-server.conf
+sudo nano /etc/apache2/sites-available/qgis-server.conf
 ```
 
 ```apache
