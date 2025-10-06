@@ -52,14 +52,14 @@ Questo repository raccoglie la documentazione tecnica necessaria per replicare e
 4. 🪶 [04 - Installazione e configurazione di Apache](04-Installazione%20e%20configurazione%20di%20Apache.md)  
    Configurazione di **Apache** per servire QGIS Server tramite FastCGI.
 
-5. 🧩 [05 - Installazione PHP](06-Installazione-PHP.md)  
+5. 🔌 [05 - Installazione Plugin QGIS Server](05-Installazione-Plugin-Qgis-Server.md)  
+   Installazione e configurazione dei plugin Python per QGIS Server (Lizmap, AtlasPrint, ecc.).
+
+6. 🧩 [06 - Installazione PHP](06-Installazione-PHP.md)  
    Installazione e configurazione di **PHP 8.4** e moduli richiesti per Lizmap Web Client.
 
-6. 🐘 [06 - Installazione PostgreSQL / PostGIS](07-Installazione-Postgresql-PostGIS.md)  
+7. 🐘 [07 - Installazione PostgreSQL / PostGIS](07-Installazione-Postgresql-PostGIS.md)  
    Installazione del database **PostgreSQL** con estensione **PostGIS** e configurazione utenti.
-
-7. 🔌 [07 - Installazione Plugin QGIS Server](05-Installazione-Plugin-Qgis-Server.md)  
-   Installazione e configurazione dei plugin Python per QGIS Server (Lizmap, AtlasPrint, ecc.).
 
 8. 🌐 [08 - Installazione Lizmap Web Client](08-Installazione-di-Lizmap.md)  
    Installazione di **Lizmap Web Client**, configurazione API, plugin e collegamento a QGIS Server.
