@@ -90,6 +90,10 @@ Impostiamo alcune variabili per facilitare le istruzioni. Impostiamo la versione
 VERSION=3.9.0 #metti la versione di tuo interesse
 LOCATION=/lizmapserver/ #metti la location dove vuoi scaricare lizmap
 ```
+cambia il proprietario di /lizmapserver in
+```bash
+sudo chown -R www-data:www-data /lizmapserver/
+```
 Quindi puoi installare il file zip:
 ```bash
 cd $LOCATION
