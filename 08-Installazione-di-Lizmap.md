@@ -102,14 +102,14 @@ sudo wget https://github.com/3liz/lizmap-web-client/releases/download/$VERSION/l
 sudo unzip lizmap-web-client-$VERSION.zip
 
 # virtual link for http://localhost/lizmap/
-sudo ln -s $LOCATION/lizmap-web-client-$VERSION/lizmap/www/ /var/www/html/lizmap
+sudo ln -s /lizmapserver/lizmap-web-client-3.9.2/lizmap/www/ /var/www/lizmap
 # Remove archive
 sudo rm lizmap-web-client-$VERSION.zip
 ```
 Lizmap ha bisogno di un database per memorizzare i propri dati e per accedere ai dati utilizzati nei vostri progetti Qgis, con il suo strumento di editing.
 Creare `profiles.ini.php` in `lizmap/var/config` copiando `profiles.ini.php.dist`.
 ```bash
-cd /var/www/lizmap-web-client-3.9.0/lizmap/var/config
+cd /lizmapserver/lizmap-web-client-3.9.2/lizmap/var/config
 sudo cp profiles.ini.php.dist profiles.ini.php
 cd ../../..
 ```
