@@ -16,7 +16,7 @@ Facciamo una configurazione minima pronta per far funzionare qgis-server e il no
 Installiamo Apache lanciando il comando:
 
 ```bash
-sudo apt install apache2 libapache2-mod-fcgid
+sudo apt install apache2
 ```
 
 Al termine del processo di installazione e dopo aver avviato Apache, se apri un browser e digiti:
