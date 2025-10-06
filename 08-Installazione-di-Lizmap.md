@@ -155,7 +155,7 @@ sudo lizmap/install/set_rights.sh www-data www-data
 Configurazione dell’installazione
 Create `lizmapConfig.ini.php`, `localconfig.ini.php` e modificateli per impostare i parametri specifici della vostra installazione. Potete modificare lizmapConfig.ini.php per impostare l’url di qgis map server e altre cose.
 ```bash
-cd lizmap/var/config
+cd /lizmapserver/lizmap-web-client-3.9.2/lizmap/var/config/
 sudo cp lizmapConfig.ini.php.dist lizmapConfig.ini.php
 sudo cp localconfig.ini.php.dist localconfig.ini.php
 cd ../../..
