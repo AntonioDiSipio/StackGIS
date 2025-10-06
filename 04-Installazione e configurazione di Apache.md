@@ -107,6 +107,7 @@ Ora possiamo abilitare l’host virtuale e il modulo `fcgid`, se non è già sta
 
 ```bash
 sudo a2dissite 000-default.conf
+sudo a2dissite default.ssl.conf
 sudo a2enmod fcgid
 sudo a2enmod rewrite
 sudo a2ensite qgis-server.conf
