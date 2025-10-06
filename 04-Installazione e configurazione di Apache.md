@@ -113,6 +113,16 @@ sudo a2enmod rewrite
 sudo a2ensite qgis-server.conf
 sudo systemctl reload apache2
 ```
+## 🔹 Abilitare la porta 8080 su apache
+
+finita la configurazione del virtualhost diamo da terminale `curl "http://127.0.0.1:8080/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&REQUEST=GetCapabilities"`, se apache dovesse rispondere con un errore simile a questo vuoldire che la porta :8080 non è abilitata.
+
+per abilitarla
+```bash
+sudo nano /etc/apache2/ports.conf
+```
+
+ed aggiungere sotto Listen 80 la stringa `Listen 8080` al file di configurazione.
 
 ---
 
