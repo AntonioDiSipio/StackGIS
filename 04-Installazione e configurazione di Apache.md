@@ -59,7 +59,7 @@ Lascio la configurazione di default di Apache (`000-default.conf`) e creo un nuo
 Creiamo subito il file **`qgis-server.conf`** in `/etc/apache2/sites-available/` con il comando:
 
 ```bash
-sudo nano /etc/apache2/sites-available/qgis-server.conf
+sudo touch /etc/apache2/sites-available/qgis-server.conf
 ```
 
 Con le seguenti impostazioni:
