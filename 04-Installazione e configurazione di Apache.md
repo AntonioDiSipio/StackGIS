@@ -188,9 +188,9 @@ systemctl status xvfb.service
 
 ### 4️⃣ Integrazione con Apache
 
-Aggiungi alla configurazione Fcgid in Apache il parametro:
+Aggiungi alla configurazione qgis-server.conf in Apache il parametro:
 ```bash
-sudo nano /etc/apache2/mods-available/fcgid.conf
+sudo nano /etc/apache2/mods-available/qgis-server.conf
 ```
 ed incolla questo script
 ```apache
