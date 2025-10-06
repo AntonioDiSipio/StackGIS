@@ -190,7 +190,7 @@ systemctl status xvfb.service
 
 Aggiungi alla configurazione qgis-server.conf in Apache il parametro:
 ```bash
-sudo nano /etc/apache2/mods-available/qgis-server.conf
+sudo nano sudo nano /etc/apache2/sites-available/qgis-server.conf
 ```
 ed incolla questo script
 ```apache
