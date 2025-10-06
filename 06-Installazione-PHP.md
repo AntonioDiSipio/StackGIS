@@ -34,3 +34,9 @@ a questo punto abilitare:
 sudo a2enmod proxy_fcgi setenvif
 sudo a2enconf php8.4-fpm
 ```
+poi
+
+```bash
+systemctl restart apache2
+```
+
