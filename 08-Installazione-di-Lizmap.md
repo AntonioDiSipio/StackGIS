@@ -83,10 +83,12 @@ adesso installiamo anche postgresql
 
 finiti i passaggi di instllazoine di php e postgresql installiamo lizmap.
 
+creiamo la cartella dove verrà installato lizmap `sudo mkdir -p /lizmapserver` 
+
 Impostiamo alcune variabili per facilitare le istruzioni. Impostiamo la versione e la posizione in cui verrà installato Lizmap. Adatta questi valori alle tue esigenze
 ```bash
 VERSION=3.9.0 #metti la versione di tuo interesse
-LOCATION=/lizmap/ #metti la location dove vuoi scaricare lizmap
+LOCATION=/lizmapserver/ #metti la location dove vuoi scaricare lizmap
 ```
 Quindi puoi installare il file zip:
 ```bash
