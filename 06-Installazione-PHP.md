@@ -18,7 +18,7 @@ Queste estensioni sono generalmente abilitate di default in una normale installa
 
 ```bash
 sudo apt update # aggiorna la lista pacchetti
-sudo apt install curl openssl libssl3
+apt install curl openssl libssl3
 ```
 
 ---
@@ -26,5 +26,5 @@ sudo apt install curl openssl libssl3
 ## Installare i pacchetti PHP richiesti
 
 ```bash
-sudo apt install libapache2-mod-fcgid libapache2-mod-php8.4 php8.4-fpm php8.4-cli php8.4-bz2 php8.4-curl php8.4-gd php8.4-intl php8.4-mbstring php8.4-pgsql php8.4-sqlite3 php8.4-xml php8.4-ldap php8.4-redis xauth htop curl php8.4-cgi php8.4-xmlrpc
+apt install php8.2-fpm php8.2-cli php8.2-bz2 php8.2-curl php8.2-gd php8.2-intl php8.2-mbstring php8.2-pgsql php8.2-sqlite3 php8.2-xml php8.2-ldap php8.2-redis
 ```
