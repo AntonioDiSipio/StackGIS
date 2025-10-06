@@ -79,6 +79,9 @@ Con le seguenti impostazioni:
   FcgidInitialEnv LC_ALL "en_US.UTF-8"
   FcgidInitialEnv PYTHONIOENCODING "UTF-8"
   FcgidInitialEnv LANG "en_US.UTF-8"
+  FcgidInitialEnv DISPLAY ":99"
+  FcgidInitialEnv QGIS_SERVER_LIZMAP_REVEAL_SETTINGS True
+  FcgidInitialEnv QGIS_PLUGINPATH "/usr/lib/qgis/plugins"
 
   # QGIS log
   FcgidInitialEnv QGIS_SERVER_LOG_STDERR 1
@@ -92,6 +95,14 @@ Con le seguenti impostazioni:
     Options +ExecCGI -MultiViews -SymLinksIfOwnerMatch
     Require all granted
   </Directory>
+
+  # Needed for QGIS HelloServer plugin HTTP BASIC auth
+  <IfModule mod_fcgid.c>
+    RewriteEngine on
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+  </IfModule>
+
 
   <IfModule mod_fcgid.c>
   FcgidMaxRequestLen 26214400
