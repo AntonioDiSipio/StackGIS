@@ -98,25 +98,6 @@ Puoi anche:
   ```bash
   qgis-plugin-manager list
   ```
-
----
-
-## ⚙️ Configurazione di Apache per QGIS Server
-
-### 🔹 Indicare a FastCGI dove si trovano i plugin
-- Se usi la cartella di default `/usr/lib/qgis/plugins`, **non serve configurare nulla**.  
-- Se usi una cartella personalizzata (es. `/var/www/qgis-server/plugins`), devi dirlo ad Apache aggiungendo questa riga:  
-
-```bash
-sudo nano /etc/apache2/mods-available/fcgid.conf
-```
-
-```apache
-FcgidInitialEnv QGIS_PLUGINPATH "/var/www/qgis-server/plugins"
-```
-
-👉 Così QGIS Server saprà dove cercare i plugin.  
-
 ---
 
 ### 🔹 Abilitare autenticazione HTTP Basic
@@ -125,7 +106,7 @@ FcgidInitialEnv QGIS_PLUGINPATH "/var/www/qgis-server/plugins"
 - Per abilitare il passaggio, aggiungi questa configurazione:  
 
 ```bash
-sudo nano /etc/apache2/mods-available/fcgid.conf
+sudo nano /etc/apache2/sistes-available/qgis-server.conf
 ```
 
 ```apache
