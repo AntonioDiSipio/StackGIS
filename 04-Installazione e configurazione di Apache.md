@@ -56,10 +56,10 @@ Per far funzionare QGIS Server su Apache e quindi esporre i servizi, bisogna con
 
 Lascio la configurazione di default di Apache (`000-default.conf`) e creo un nuovo Virtual Host con la configurazione suggerita dalla guida, ma apportando alcune modifiche necessarie al mio caso.  
 
-Creiamo subito il file **`gisserver.conf`** in `/etc/apache2/sites-available/` con il comando:
+Creiamo subito il file **`qgis-server.conf`** in `/etc/apache2/sites-available/` con il comando:
 
 ```bash
-sudo nano /etc/apache2/sites-available/disipio.conf
+sudo nano /etc/apache2/sites-available/qgis-server.conf
 ```
 
 Con le seguenti impostazioni:
