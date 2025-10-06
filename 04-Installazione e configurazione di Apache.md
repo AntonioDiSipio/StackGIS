@@ -99,37 +99,6 @@ Con le seguenti impostazioni:
   </IfModule>
 </VirtualHost>
 ```
-
----
-
-## 🔹 Creazione cartelle necessarie
-
-Per comodità metterò i dati nella cartella root del server. Questo ha una duplice finalità:  
-1. accorciare l’URL della chiamata MAP  
-2. bypassare le restrizioni di un’eventuale installazione nella cartella utente.  
-
-Creiamo ora le cartelle che ospiteranno i progetti, i registri di QGIS Server e il database di autenticazione:
-
-```bash
-# cartella log dedicata a QGIS Server
-sudo mkdir -p /var/log/qgis/
-```
-
-```bash
-# cartella database di autenticazione
-sudo mkdir -p /gisserver/qgisserverdb
-```
-
-```bash
-# file database autenticazione (se non già presente)
-sudo touch /gisserver/qgisserverdb/qgis-auth.db
-```
-
-```bash
-# cartella progetti QGIS
-sudo mkdir -p /gisserver/
-```
-
 ---
 
 ## 🔹 Abilitazione Virtual Host e moduli
