@@ -118,7 +118,7 @@ Per la modifica dei livelli PostGIS in Web Client Lizmap, installare il supporto
 sudo apt install php8.4-pgsql
 ```
 ```bash
-service php8.4-fpm restart
+sudo service php8.4-fpm restart
 ```
 Per i log di Lizmap, gli utenti e i gruppi, possono essere memorizzati in SqLite o PostgreSQL. Per memorizzare queste informazioni in PostgreSQL, seguire queste istruzioni.
 
