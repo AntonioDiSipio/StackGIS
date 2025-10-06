@@ -23,15 +23,6 @@ questo installerà la versione di default di postgresql, ovvero ad oggi su Debia
 
 ----
 
-# Amministrare postgresql
-
-Entrare nel database con
-```bash
-sudo -u postgres psql
-```
-
------
-
 # Aggiungere l'estensione spaziale Postgis
 
 ```bash
