@@ -111,6 +111,7 @@ sudo a2dissite default.ssl.conf
 sudo a2enmod fcgid
 sudo a2enmod rewrite
 sudo a2ensite qgis-server.conf
+sudo systemctl reload apache2
 ```
 
 ---
