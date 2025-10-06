@@ -124,6 +124,14 @@ sudo nano /etc/apache2/ports.conf
 
 ed aggiungere sotto Listen 80 la stringa `Listen 8080` al file di configurazione.
 
+fatto questo ricarichiamo apache con
+```bash
+sudo systemctl reload apache2
+```
+
+e verifichiamo che funzioni con ```bash sudo curl "http://127.0.0.1:8080/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&REQUEST=GetCapabilities"```
+
+
 ---
 
 ## 🔹 Riavvio e verifica di Apache
