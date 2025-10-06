@@ -18,7 +18,7 @@ Queste estensioni sono generalmente abilitate di default in una normale installa
 
 ```bash
 sudo apt update # aggiorna la lista pacchetti
-apt install curl openssl libssl3
+sudo apt install curl openssl libssl3
 ```
 
 ---
