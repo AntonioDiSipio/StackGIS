@@ -129,7 +129,10 @@ fatto questo ricarichiamo apache con
 sudo systemctl reload apache2
 ```
 
-e verifichiamo che funzioni con ```bash sudo curl "http://127.0.0.1:8080/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&REQUEST=GetCapabilities"```
+e verifichiamo che funzioni con 
+```bash
+sudo curl "http://127.0.0.1:8080/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&REQUEST=GetCapabilities"
+```
 
 
 ---
