@@ -134,6 +134,10 @@ e verifichiamo che funzioni con
 sudo curl "http://127.0.0.1:8080/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&REQUEST=GetCapabilities"
 ```
 
+questo indica che sta funzionanndo:
+```
+<ServerException>Project file error. For OWS services: please provide a SERVICE and a MAP parameter pointing to a valid QGIS project file</Se          rverException>
+```
 
 ---
 
