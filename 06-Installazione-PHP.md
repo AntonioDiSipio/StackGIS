@@ -37,6 +37,6 @@ sudo a2enconf php8.4-fpm
 poi
 
 ```bash
-systemctl restart apache2
+sudo systemctl restart apache2
 ```
 
