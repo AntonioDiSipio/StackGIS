@@ -171,6 +171,11 @@ su [qgiswrapper] modifica allowFcgi in on e decommenta la riga così:
 allowFcgi=on
 ```
 
+inoltre aggiungi alla configurazione
+```bash
+[general]
+basePath="/lizmap"
+```
 Lanciare il programma di installazione
 
 Dopo aver creato i file di configurazione, potete lanciare il programma di installazione
