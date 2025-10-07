@@ -211,6 +211,54 @@ cd /var/www/lizmap-web-client-3.9.0/
 sudo lizmap/install/set_rights.sh www-data www-data
 ```
 
+questa è la configurazione finale del file ```/etc/apache2/sites-available/disipio.conf```
+ 
+```bash
+<VirtualHost *:80>
+    ServerName www.disipio.io
+    DocumentRoot /var/www/disipio
+
+    ErrorLog ${APACHE_LOG_DIR}/disipio_error.log
+    CustomLog ${APACHE_LOG_DIR}/disipio_access.log combined
+
+    # =========================
+    # HOMEPAGE
+    # =========================
+    <Directory /var/www/disipio>
+        Options FollowSymLinks
+        AllowOverride All
+        Require all granted
+        DirectoryIndex index.html index.php
+    </Directory>
+
+    # =========================
+    # LIZMAP (in sottocartella /lizmap)
+    # =========================
+    Alias /lizmap /lizmapserver/lizmap-web-client-3.9.2/lizmap/www
+
+    <Directory /lizmapserver/lizmap-web-client-3.9.2/lizmap/www>
+        Options FollowSymLinks
+        AllowOverride All
+        Require all granted
+
+        # URL puliti (necessari per Lizmap)
+        RewriteEngine On
+        RewriteBase /lizmap/
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteCond %{REQUEST_FILENAME} !-d
+        RewriteRule ^(.*)$ index.php [QSA,L]
+
+        # Gestione PHP-FPM
+        <FilesMatch "\.php$">
+            SetHandler "proxy:unix:/run/php/php8.4-fpm.sock|fcgi://localhost/"
+        </FilesMatch>
+    </Directory>
+
+    # Variabile per QGIS Server
+    SetEnv LIZMAP_WMS_SERVICES "http://127.0.0.1:8080/cgi-bin/qgis_mapserv.fcgi"
+</VirtualHost>
+```
+
 ------
 
 ### Molto bene!!! Verificato che tutto funzioni si può passare all'Hardening del Server.
