@@ -178,6 +178,18 @@ inoltre se la tua configurazione prevede che lizmap giri su una sottocartella de
 [general]
 basePath="/lizmap"
 ```
+Inoltre se nel file qgis-server.conf hai impostato una porta diversa da :80 aggiungila alla configurazione di lizmapConfig.ini.php
+
+;Services
+;list the different map services (servers, generic parameters, etc.)
+[services]
+;URL to QGIS Server for OGC web services
+wmsServerURL="http://127.0.0.1:8080/cgi-bin/qgis_mapserv.fcgi"
+;WMS subdomain URLs list (optional)
+wmsPublicUrlList=
+;URL to the API exposed by the Lizmap plugin for QGIS Server if needed
+lizmapPluginAPIURL=
+
 Lanciare il programma di installazione
 
 Dopo aver creato i file di configurazione, potete lanciare il programma di installazione
