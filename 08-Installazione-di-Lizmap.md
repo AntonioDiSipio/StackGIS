@@ -131,7 +131,7 @@ host=localhost
 port=5432
 database=lizmap
 user=lizmapadmin
-password=74038695
+password=tuapassword
 search_path=public
 
 [jdb:lizlog]
@@ -140,7 +140,7 @@ host=localhost
 port=5432
 database=lizmap
 user=lizmapadmin
-password=74038695
+password=tuapassword
 search_path=public
 ```
 
