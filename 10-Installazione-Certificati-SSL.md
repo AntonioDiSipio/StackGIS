@@ -4,8 +4,10 @@ Recati sulla pagina di [Certbot](https://certbot.eff.org/) e segui le istruzioni
 
 Scegli Apache, Linux (snap), installa Snapd
 
+```bash
 sudo apt update
 sudo apt install snapd
+```
 
 
 
