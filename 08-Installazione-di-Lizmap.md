@@ -190,18 +190,6 @@ wmsPublicUrlList=
 ;URL to the API exposed by the Lizmap plugin for QGIS Server if needed
 lizmapPluginAPIURL=
 ```
-Lanciare il programma di installazione
-
-Dopo aver creato i file di configurazione, potete lanciare il programma di installazione
-```bash
-sudo php lizmap/install/installer.php
-```
-
-Primo test
-
-Per testare lanciare: http://localhost/lizmap nel vostro browser.
-
-Se ottieni un errore 500 - internal server error, riesegui:
 
 ```bash
 cd /var/www/lizmap-web-client-3.9.0/
@@ -257,6 +245,12 @@ questa è la configurazione finale del file ```/etc/apache2/sites-available/disi
     # Variabile per QGIS Server
     SetEnv LIZMAP_WMS_SERVICES "http://127.0.0.1:8080/cgi-bin/qgis_mapserv.fcgi"
 </VirtualHost>
+```
+Lanciare il programma di installazione
+
+Dopo aver creato i file di configurazione, potete lanciare il programma di installazione
+```bash
+sudo php lizmap/install/installer.php
 ```
 
 ------
