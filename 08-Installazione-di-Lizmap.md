@@ -160,7 +160,9 @@ sudo cp lizmapConfig.ini.php.dist lizmapConfig.ini.php
 sudo cp localconfig.ini.php.dist localconfig.ini.php
 cd ../../..
 ```
-su [qgiswrapper] modifica allowFcgi in on e decommenta la riga così:
+aggiungi al file localconfig.ini.php la seguente configurazine.
+
+in [qgiswrapper] modifica allowFcgi in on e decommenta la riga così:
 
 ```bash
 [qgisWrapper]
