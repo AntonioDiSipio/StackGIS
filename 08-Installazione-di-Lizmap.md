@@ -160,6 +160,17 @@ sudo cp lizmapConfig.ini.php.dist lizmapConfig.ini.php
 sudo cp localconfig.ini.php.dist localconfig.ini.php
 cd ../../..
 ```
+su [qgiswrapper] modifica allowFcgi in on e decommenta la riga così:
+
+```bash
+[qgisWrapper]
+; If off, FCGI is not allowed, only Py-QGIS-Server or QJazz
+; https://docs.lizmap.com/current/en/install/py-qgis-server.html
+; https://docs.3liz.org/py-qgis-server/
+; https://github.com/3liz/qjazz
+allowFcgi=on
+```
+
 Lanciare il programma di installazione
 
 Dopo aver creato i file di configurazione, potete lanciare il programma di installazione
