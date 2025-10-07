@@ -173,7 +173,7 @@ in [qgiswrapper] modifica allowFcgi in on e decommenta la riga così:
 allowFcgi=on
 ```
 
-inoltre aggiungi alla configurazione
+inoltre se la tua configurazione prevede che lizmap giri su una sottocartella della configurazione principale tipo wwww.disipio.io/lizmap, aggiungi alla configurazione
 ```bash
 [general]
 basePath="/lizmap"
