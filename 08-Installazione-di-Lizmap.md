@@ -213,4 +213,4 @@ sudo lizmap/install/set_rights.sh www-data www-data
 
 ------
 
-Molto bene!!! Verificato che tutto funzioni si può passare all'Hardening del Server.
+### Molto bene!!! Verificato che tutto funzioni si può passare all'Hardening del Server.
