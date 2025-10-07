@@ -1,5 +1,9 @@
-Installazione dei certificati SSL
+Installazione dei certificati SSL.
 
-recati sulla pagina di [Certbot](https://certbot.eff.org/) e segui le istruzioni presenti nel sito.
+Recati sulla pagina di [Certbot](https://certbot.eff.org/) e segui le istruzioni presenti nel sito.
+
+Scegli Apache, Linux ()snap
+
+
 
 
