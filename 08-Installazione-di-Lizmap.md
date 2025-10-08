@@ -99,7 +99,7 @@ sudo chown -R www-data:www-data /lizmapserver/
 
 Impostare alcune variabili d’ambiente per comodità:
 ```bash
-VERSION=3.9.0
+VERSION=3.9.2
 LOCATION=/lizmapserver/
 ```
 
