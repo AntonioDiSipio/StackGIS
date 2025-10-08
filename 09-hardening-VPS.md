@@ -79,7 +79,7 @@ sudo nano /etc/fail2ban/jail.local
 
 Configurare la sezione dedicata al servizio SSH, adattando la porta se differente da quella predefinita (22):
 
-```
+```bash
 [sshd]
 enabled  = true                # Attiva la jail per SSH
 port     = 22                  # Monitora la porta SSH
