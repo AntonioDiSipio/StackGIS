@@ -1,61 +1,75 @@
-# 🌍 StackGIS — Infrastruttura GIS su VPS (QGIS Server + Lizmap)
+# 🌍 StackGIS / VPS / QGIS / QGIS Server / Lizmap
 
-**StackGIS** è un progetto open-source dedicato alla **configurazione completa di una VPS** per l’erogazione di servizi GIS basati su **QGIS Server** e **Lizmap Web Client**.  
-Il repository funge da **documentazione tecnica** e da **guida operativa** per installare, configurare e mantenere un’infrastruttura geospaziale scalabile e sicura.
+***StackGIS*** è un progetto dedicato all’installazione, configurazione e gestione di una VPS per l’erogazione di servizi GIS con **QGIS Server** e **Lizmap**.  
+Questo repository raccoglie la documentazione tecnica necessaria per replicare e mantenere l’infrastruttura, facilitando sia la gestione sistemistica sia l’aggiornamento dei servizi cartografici.
 
 ---
 
-## 🛠️ Tecnologie principali
+## 🛠️ Tecnologie
 
 <table align="center">
   <tr>
-    <td align="center" style="border: none; padding: 0 40px;">
+    <td align="center" style="border: none; padding: 0 50px;">
       <img src="https://www.debian.org/logos/openlogo-nd-100.png" height="70"/><br/>
-      <b>Debian 13</b>
+      <b>Debian</b>
     </td>
-    <td align="center" style="border: none; padding: 0 40px;">
+    <td align="center" style="border: none; padding: 0 50px;">
       <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/QGIS_logo_new.svg" height="70"/><br/>
-      <b>QGIS Server</b>
+      <b>QGIS</b>
     </td>
-    <td align="center" style="border: none; padding: 0 40px;">
+    <td align="center" style="border: none; padding: 0 50px;">
       <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Apache_Feather_Logo.svg" height="70"/><br/>
-      <b>Apache HTTP Server</b>
+      <b>Apache</b>
     </td>
-    <td align="center" style="border: none; padding: 0 40px;">
+    <td align="center" style="border: none; padding: 0 50px;">
       <img src="https://postgis.net/brand.svg" height="70"/><br/>
-      <b>PostgreSQL + PostGIS</b>
+      <b>PostGIS</b>
     </td>
-    <td align="center" style="border: none; padding: 0 40px;">
+    <td align="center" style="border: none; padding: 0 50px;">
       <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" height="70"/><br/>
       <b>Python</b>
     </td>
-    <td align="center" style="border: none; padding: 0 40px;">
-      <img src="https://docs.lizmap.com/3.9/it/_static/logo.png" height="70"/><br/>
-      <b>Lizmap Web Client</b>
+    <td align="center" style="border: none; padding: 0 50px;">
+      <img src="https://docs.lizmap.com/3.8/it/_static/logo.png" height="70"/><br/>
+      <b>Lizmap</b>
     </td>
-  </tr>
+</tr>
 </table>
 
 ---
 
-## 📂 Contenuto del repository
+## 📂 Contenuto
 
-| # | File | Descrizione |
-|--|--|--|
-| 01 | [01-server-data.md](01-server-data.md) | Specifiche tecniche della VPS e configurazione iniziale. |
-| 02 | [02-creazione-utenti.md](02-creazione-utenti.md) | Creazione e hardening dell’utente amministrativo. |
-| 03 | [03-Installazione-qgis-server.md](03-Installazione-qgis-server.md) | Installazione di **QGIS Server** su Debian 13. |
-| 04 | [04-Installazione e configurazione di Apache.md](04-Installazione%20e%20configurazione%20di%20Apache.md) | Configurazione di **Apache HTTP Server** e integrazione FastCGI. |
-| 05 | [05-Installazione-Plugin-Qgis-Server.md](05-Installazione-Plugin-Qgis-Server.md) | Installazione e gestione dei plugin di QGIS Server. |
-| 06 | [06-Installazione-PHP.md](06-Installazione-PHP.md) | Installazione e configurazione di **PHP 8.4** per Lizmap. |
-| 07 | [07-Installazione-Postgresql-PostGIS.md](07-Installazione-Postgresql-PostGIS.md) | Installazione e configurazione di **PostgreSQL + PostGIS**. |
-| 08 | [08-Installazione-di-Lizmap.md](08-Installazione-di-Lizmap.md) | Installazione e configurazione di **Lizmap Web Client**. |
-| 09 | [09-hardening-VPS.md](09-hardening-VPS.md) *(da aggiungere)* | Sicurezza e ottimizzazione del sistema. |
-| 10 | [10-Installazione-Certificati-SSL.md](10-Installazione-Certificati-SSL.md) | Installazione di **Certbot** e configurazione HTTPS con Let’s Encrypt. |
+1. 🖥️ [01 - Dati della macchina](01-server-data.md)  
+   Dettagli tecnici e caratteristiche della VPS (sistema operativo, risorse, configurazione iniziale).
+
+2. 👤 [02 - Creazione utenti](02-creazione-utenti.md)  
+   Creazione e configurazione dell’utente `gisadmin` con accesso SSH e privilegi amministrativi.
+
+3. 🗺️ [03 - Installazione QGIS Server](03-Installazione-qgis-server.md)  
+   Installazione e verifica del servizio **QGIS Server** su Debian 13.
+
+4. 🪶 [04 - Installazione e configurazione di Apache](04-Installazione%20e%20configurazione%20di%20Apache.md)  
+   Configurazione di **Apache** per servire QGIS Server tramite FastCGI.
+
+5. 🔌 [05 - Installazione Plugin QGIS Server](05-Installazione-Plugin-Qgis-Server.md)  
+   Installazione e configurazione dei plugin Python per QGIS Server (Lizmap, AtlasPrint, ecc.).
+
+6. 🧩 [06 - Installazione PHP](06-Installazione-PHP.md)  
+   Installazione e configurazione di **PHP 8.4** e moduli richiesti per Lizmap Web Client.
+
+7. 🐘 [07 - Installazione PostgreSQL / PostGIS](07-Installazione-Postgresql-PostGIS.md)  
+   Installazione del database **PostgreSQL** con estensione **PostGIS** e configurazione utenti.
+
+8. 🌐 [08 - Installazione Lizmap Web Client](08-Installazione-di-Lizmap.md)  
+   Installazione di **Lizmap Web Client**, configurazione API, plugin e collegamento a QGIS Server.
+
+9. 🔒 [09 - Hardening VPS](09-hardening-VPS.md)  
+   Messa in sicurezza finale della VPS con **UFW**, **Fail2ban** e aggiornamenti automatici.
 
 ---
 
-## 🏗️ Architettura generale
+## 🏗️ Architettura
 
 ```mermaid
 flowchart TD
@@ -69,46 +83,23 @@ flowchart TD
 
 ---
 
-## ⚙️ Requisiti minimi
+## 🎯 Obiettivo
 
-| Componente | Specifica consigliata |
-|-------------|-----------------------|
-| **CPU** | 2 vCore o superiore |
-| **RAM** | 4 GB o superiore |
-| **Disco** | 100 GB SSD |
-| **OS** | Debian 13 (Trixie) o compatibile |
-| **Accesso** | SSH con chiave pubblica |
-| **Porte** | 80 (HTTP), 443 (HTTPS), 8080 (QGIS Server) |
+Questo repository funge da **documentazione tecnica** e da **promemoria** delle operazioni effettuate sulla VPS, utile per riprodurre o mantenere la configurazione in futuro.
 
----
-
-## 🎯 Obiettivo del progetto
-
-Fornire una **guida strutturata e riproducibile** per implementare un’infrastruttura GIS completa:
-- **Server cartografico** basato su QGIS Server  
-- **Frontend web** Lizmap per la pubblicazione di mappe  
-- **Database spaziale** PostgreSQL/PostGIS  
-- **Sicurezza e hardening** della VPS  
-- **Gestione certificati** e HTTPS automatizzato  
-
----
-
-## 🔒 Privacy e anonimizzazione
-
-Il progetto è concepito come **template open-source**:  
-tutti i riferimenti a domini o utenti reali sono stati sostituiti da valori generici (`example.io`, `stackgis.local`, ecc.) per garantire la privacy.
+👉 Obiettivo finale: **un’infrastruttura GIS completa**, sicura e documentata, pronta per la pubblicazione di servizi cartografici con **QGIS Server + Lizmap**.
 
 ---
 
 ## 🧾 Licenza
 
-Questo progetto è distribuito sotto licenza **MIT**.  
-È consentito l’uso, la modifica e la ridistribuzione del materiale, a condizione di mantenere l’attribuzione originale e la licenza.
+Questo progetto è distribuito con licenza **MIT**.  
+Puoi riutilizzare e adattare i contenuti, citando la fonte originale.
 
 ---
 
-## 📘 Stato del progetto
+## 👨‍💻 Autore
 
-🧩 Documentazione: completa fino al livello applicativo  
-🛡️ Sicurezza: in corso di integrazione (09-hardening-VPS.md)  
-🚀 Obiettivo finale: infrastruttura GIS pronta alla produzione
+**Antonio Di Sipio**  
+🌐 [github.com/AntonioDiSipio](https://github.com/AntonioDiSipio)  
+📧 *Contatti e collaborazione su richiesta.*
