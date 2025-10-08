@@ -92,10 +92,3 @@ Il repository funge da **documentazione tecnica** e da **promemoria operativo** 
 Serve come riferimento per riprodurre, aggiornare o mantenere nel tempo l’intera infrastruttura GIS.  
 
 👉 Obiettivo finale: realizzare un’**infrastruttura GIS completa**, sicura e documentata, pronta per la pubblicazione di servizi cartografici basati su **QGIS Server + Lizmap**.
-
----
-
-## 🧾 Licenza
-
-Il progetto è distribuito con licenza **MIT**.  
-I contenuti possono essere riutilizzati e adattati liberamente, citando la fonte originale.
