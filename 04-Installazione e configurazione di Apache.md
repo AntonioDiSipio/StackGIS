@@ -1,215 +1,32 @@
-# Apache HTTP Server
+# 🌐 Installazione e configurazione di Apache
 
-[Apache HTTP Server](https://httpd.apache.org/), spesso chiamato semplicemente **Apache**, è un server web open source molto diffuso, sviluppato e mantenuto dalla Apache Software Foundation.  
+Apache HTTP Server gestisce le richieste web e funge da interfaccia per QGIS Server.
 
-Il suo scopo principale è gestire le richieste HTTP provenienti dai client (ad esempio i browser), servendo pagine web, risorse statiche (immagini, file CSS/JS) oppure instradando applicazioni web dinamiche tramite moduli.  
-
-Progettato per essere **sicuro**, **efficiente** ed **estensibile**, Apache offre un’architettura modulare che consente di aggiungere funzionalità come il rewriting degli URL, l’autenticazione o l’utilizzo come proxy, adattandosi a diverse esigenze.
-
-Facciamo una configurazione minima pronta per far funzionare qgis-server e il nostro sito con apache:
---
-
----
-
-## 🔹 Installazione di Apache
-
-Installiamo Apache lanciando il comando:
+## Installazione
 
 ```bash
 sudo apt install apache2 libapache2-mod-fcgid
 ```
 
-Al termine del processo di installazione e dopo aver avviato Apache, se apri un browser e digiti:
+Creare `/etc/apache2/sites-available/qgis-server.conf` e inserire la configurazione del virtual host su porta 8080, mantenendo i percorsi:
 
-```
-http://tuo-server/
-```
-
-dovrebbe comparire la pagina web di default di Apache.
-
-<p align="center">
-  <img src="img/apachedefaultpage.jpg" width="800">
-</p>
-
-⚠️ **Nota bene:**  
-Se la pagina di default di Apache non dovesse essere visibile, verifica che il **firewall** non stia bloccando la porta **80** (HTTP).  
-
-Su sistemi con `ufw`, ad esempio, puoi aprire la porta con:  
-
-```bash
-sudo ufw allow 80/tcp
-sudo ufw reload
-```
-
-Se invece usi HTTPS, ricordati di aprire anche la porta **443**:  
-
-```bash
-sudo ufw allow 443/tcp
-sudo ufw reload
-```
-
----
-
-## 🔹 Configurazione Virtual Host per QGIS Server
-
-Per far funzionare QGIS Server su Apache e quindi esporre i servizi, bisogna configurare un Virtual Host.  
-
-Lascio la configurazione di default di Apache (`000-default.conf`) e creo un nuovo Virtual Host con la configurazione suggerita dalla guida, ma apportando alcune modifiche necessarie al mio caso.  
-
-Creiamo subito il file **`qgis-server.conf`** in `/etc/apache2/sites-available/` con il comando:
-
-```bash
-sudo touch /etc/apache2/sites-available/qgis-server.conf
-```
-
-Con le seguenti impostazioni:
-
-```bash
+```apache
 <VirtualHost 127.0.0.1:8080>
   ServerAdmin webmaster@localhost
   ServerName qgis-server.local
-
-  # Apache logs (different than QGIS Server log)
-  ErrorLog ${APACHE_LOG_DIR}/qgis-server.error.log
-  CustomLog ${APACHE_LOG_DIR}/qgis-server.access.log combined
-
-  # Longer timeout for WPS... default = 40
-  FcgidIOTimeout 120
-
-  FcgidInitialEnv LC_ALL "en_US.UTF-8"
-  FcgidInitialEnv PYTHONIOENCODING "UTF-8"
-  FcgidInitialEnv LANG "en_US.UTF-8"
-  FcgidInitialEnv DISPLAY ":99"
-  FcgidInitialEnv QGIS_SERVER_LIZMAP_REVEAL_SETTINGS True
-  FcgidInitialEnv QGIS_PLUGINPATH "/usr/lib/qgis/plugins"
-
-  # QGIS log
-  FcgidInitialEnv QGIS_SERVER_LOG_STDERR 1
-  FcgidInitialEnv QGIS_SERVER_LOG_LEVEL 0
-
-  # if qgis-server is installed from packages in debian based distros this is usually /usr/lib/cgi-bin/
-  # run "locate qgis_mapserv.fcgi" if you don't know where qgis_mapserv.fcgi is
   ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
   <Directory "/usr/lib/cgi-bin/">
     AllowOverride None
     Options +ExecCGI -MultiViews -SymLinksIfOwnerMatch
     Require all granted
   </Directory>
-
-  # Needed for QGIS HelloServer plugin HTTP BASIC auth
-  <IfModule mod_fcgid.c>
-    RewriteEngine on
-    RewriteCond %{HTTP:Authorization} .
-    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
-  </IfModule>
-
-
-  <IfModule mod_fcgid.c>
-  FcgidMaxRequestLen 26214400
-  FcgidConnectTimeout 60
-  </IfModule>
 </VirtualHost>
 ```
----
 
-## 🔹 Abilitazione Virtual Host e moduli
-
-Ora possiamo abilitare l’host virtuale e il modulo `fcgid`, se non è già stato fatto:
+Abilitare e riavviare:
 
 ```bash
-sudo a2dissite 000-default.conf
-sudo a2dissite default.ssl.conf
-sudo a2enmod fcgid
-sudo a2enmod rewrite
+sudo a2enmod fcgid rewrite
 sudo a2ensite qgis-server.conf
 sudo systemctl reload apache2
-```
-## 🔹 Abilitare la porta 8080 su apache
-
-finita la configurazione del virtualhost diamo da terminale `curl "http://127.0.0.1:8080/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&REQUEST=GetCapabilities"`, se apache dovesse rispondere con un errore simile a questo vuoldire che la porta :8080 non è abilitata.
-
-per abilitarla
-```bash
-sudo nano /etc/apache2/ports.conf
-```
-
-ed aggiungere sotto Listen 80 la stringa `Listen 8080` al file di configurazione.
-
-fatto questo ricarichiamo apache con
-```bash
-sudo systemctl reload apache2
-```
-
-e verifichiamo che funzioni con 
-```bash
-sudo curl "http://127.0.0.1:8080/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&REQUEST=GetCapabilities"
-```
-
-questo indica che sta funzionanndo:
-```
-<ServerException>Project file error. For OWS services: please provide a SERVICE and a MAP parameter pointing to a valid QGIS project file</ServerException>
-```
-
----
-
-## 🔹 Xvfb
-
-QGIS Server ha bisogno di un server X funzionante per essere pienamente utilizzabile, in particolare per la stampa.  
-Sui server si raccomanda di non installare un server grafico, quindi si può usare **xvfb** per avere un ambiente X virtuale.  
-
----
-
-### 1️⃣ Installazione di xvfb
-
-```bash
-sudo apt install xvfb
-```
-
----
-
-### 2️⃣ Configurazione del servizio
-
-Crea il file di servizio `/etc/systemd/system/xvfb.service`
-```bash
-sudo nano /etc/systemd/system/xvfb.service
-```
-incollando questo contenuto:
-```ini
-[Unit]
-Description=X Virtual Frame Buffer Service
-After=network.target
-
-[Service]
-ExecStart=/usr/bin/Xvfb :99 -screen 0 1024x768x24 -ac +extension GLX +render -noreset
-
-[Install]
-WantedBy=multi-user.target
-```
-
----
-
-### 3️⃣ Abilitazione e avvio del servizio
-
-```bash
-sudo systemctl enable --now xvfb.service
-systemctl status xvfb.service
-```
-
----
-
-### 4️⃣ Integrazione con Apache
-
-Aggiungi alla configurazione qgis-server.conf in Apache il parametro:
-```bash
-sudo nano sudo nano /etc/apache2/sites-available/qgis-server.conf
-```
-ed incolla questo script
-```apache
-FcgidInitialEnv DISPLAY ":99"
-```
-
-Poi riavvia Apache affinché la nuova configurazione venga presa in carico:
-
-```bash
-sudo systemctl restart apache2
 ```
